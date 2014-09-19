@@ -13,6 +13,8 @@ The initial set of files here are the ones I emailed out to colleagues in the fi
 
 I'm hosting all this on GitHub so that others can make and share refinements to the resDocSty.sty file as necessary.
 
+As of September 2014, two Pacific assessments (Rock Sole and Silvergray) have been submitted to our local CSAS office, but they haven't attempted the 'web accessbility' part yet (based on the instructions in READresDocTemplate.txt). 
+
 
 __Next actions / wish list__
 
