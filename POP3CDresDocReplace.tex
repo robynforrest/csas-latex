@@ -1,0 +1,287 @@
+% POP3CDresDocReplace.tex - POP 3CD assessment. 31st May 2013.
+% POP3CDwpReplace.tex - POP 3CD assessment, 
+%     texi2dvi --pdf POP3CDwpReplace.tex
+% then put these pages into main one in Adobe. 21st October 2012.
+
+\documentclass[11pt]{book}   
+\usepackage{resDocSty}      % Res Doc .sty file
+\usepackage{appendix}
+
+% AME adding - should add to template or to .sty file. Maybe to
+%  a CSDiff also.
+\usepackage{longtable,array} % need array when specifying a ragged right column:  >{\raggedright\arraybackslash}{p2in}. Rowan needs.
+% \renewcommand{\chaptername}{Appendix}
+% \renewcommand*{\chaptername}{Appendix}
+% \addto\captionsenglish{\renewcommand\chaptername{Part}}
+\usepackage{import}    % for figures in chapter subdirectories
+
+% \usepackage{epstopdf}    % RH said for texi2dvi --pdf ***.tex
+                           %  but didn't work for me ('pdflatex 
+                           %  failed - see log file') but didn't
+                           %  try too hard.
+% Had these for YMR Eqns appendix:
+% \renewcommand{\footrulewidth}{0.4pt}
+% \renewcommand{\headrulewidth}{0pt}
+
+
+
+% For Rowan's Appendices:
+\usepackage{graphicx}
+\usepackage{verbatim,fancyvrb}    % Check - may be in .sty file
+\usepackage{xifthen}         % provides \ifthenelse and \isempty
+\usepackage{color, colortbl}
+\usepackage{arydshln}  % dashed lines in tables 
+                       %  (has to be loaded after other stuff)
+% \usepackage{pdfpages} - to try and include .pdf files, but best
+%  just to manually do at the end.
+
+\definecolor{rowclr}{RGB}{255, 192, 203}
+\newcommand{\sQuote}[1]{`#1'}
+\newcommand{\dQuote}[1]{``#1''}
+\newcommand{\eqn}[1]{\begin{equation}#1\end{equation}}
+\newcommand{\gfrac}[2]{\genfrac{}{}{}{0}{#1}{#2}}
+
+\newcommand\bestfig[5]{ % #1=filename, #2=main caption, #3=figure height, #4=short caption #5=file extension
+	% needs package epstopdf to work
+	\begin{figure}[htpb] %[htbp]
+	\centering
+	\ifthenelse{ \isempty{#5} \OR \equal{#5}{eps} }
+		{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#1.eps}}
+		{\setlength\fboxsep{0pt}
+		 \setlength\fboxrule{0pt}
+		 \fbox{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#1.#5}}}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+	\ifthenelse{\isempty{#4}}
+		{\caption[#2]{#2}}  % \vspace{-2ex}} AME removing
+		{\caption[#4]{#2}}  % \vspace{-2ex}}  ``
+	\label{fig:#1}
+	\end{figure}
+        }
+% End: For Rowan's Appendix H
+
+% From Rowan's Appendix E:
+
+% \hypersetup{colorlinks, plainpages=true, linkcolor=black, citecolor=black, urlcolor=blue, }
+
+\newcommand\pbsfig[4]{    % #1=filename, #2=main caption, #3=figure height, #4=short caption
+	\begin{figure}[tp] %[htbp]  Rowan had ht! 
+	\centering
+%	\epsfxsize=6.5in
+%	\epsfysize=#3in
+%	\epsfbox{#1.eps}
+	\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#1.eps}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+	\ifthenelse{\isempty{#4}}
+		{\caption[#2]{#2}\vspace{-2ex}}
+		{\caption[#4]{#2}\vspace{-2ex}}
+	\label{fig:#1}
+	\end{figure}
+	%\clearpage
+}
+
+
+% End: AME adding
+
+% Headers and footers
+% For Res Doc, best to have a left and a right footer 
+%  (and/or header), not just one (for double-sided printing).
+% 
+\lhead{} %DRAFT -- Non-citable working paper}  % Omit for final ResDoc.
+\rhead{}
+\lfoot{Pacific Ocean Perch}  
+\rfoot{Area 3CD}
+%\rfoot{WP 2012/P02a}        % Change to appendix number for appendices
+                          % Will probably delete footers in main text
+                          %  for final Res Doc.
+
+% \linenumbers        % uncomment to add in line numbers
+% \modulolinenumbers[5]   % just number every 5th line
+
+\bibliographystyle{ecology}
+
+
+% \def\AppLet{F}                   % Appendix letter - we had this
+                                   %  to number equations in Appendix
+                                   %  F as (F.17) etc.
+% \def\StartP{102}                   % page start
+\newcommand{\Bmsy}{B_\mathrm{MSY}} % Useful.
+\newcommand{\umsy}{u_\mathrm{MSY}} % Useful.
+
+% I often make up this sort of thing to include figures easily, 
+%  see the example at the end:
+\newcommand\onefig[4]{ % filename is #1, text is #2, label is #3
+  \begin{figure}[htp]             %  fig width is #4
+  \begin{center}
+  \epsfxsize=#4 in
+  \epsfbox{#1.eps}     % Include the directory name here if needed.
+  \end{center}
+  \caption{#2 }
+  \label{fig:#3} 
+  \end{figure}
+  % \clearpage  
+}
+
+\newcommand{\MCMCfigdir}{C:/awatea/POP12/POP3CD/POPrun20/MCMC.20.01}
+
+\newcommand{\MCMCsOnedir}{C:/awatea/POP12/POP3CD/POPrun21/MCMC.21.01}
+\newcommand{\MCMCsTwodir}{C:/awatea/POP12/POP3CD/POPrun22/MCMC.22.01}
+% Can't have a number in a newcommand!
+
+% For MCMC figures, base run:
+\newcommand\ymrfig[2]{    % filename is #1, text is #2
+  \begin{figure}[htp]
+  \begin{center}
+  \epsfxsize=6in
+  \epsfbox{\MCMCfigdir/#1.eps}
+  \end{center}
+  \caption{#2 }
+  \label{fig:#1} 
+  \end{figure}
+  % \clearpage  
+}
+
+\newcommand{\numMCMC}{1,000}
+
+
+% Set numbering as F.17 etc. for equations in appendix F. Remove
+%  these if not in an Appendix.:
+% Think this will get done automatically
+% \renewcommand{\theequation}{\AppLet.\arabic{equation}}
+% \renewcommand{\thefigure}{\AppLet.\arabic{figure}}
+% \renewcommand{\thetable}{\AppLet.\arabic{table}}
+
+% newcommands can go here, for example to abbreviate our two model
+%  runs:
+\newcommand{\EstM}{`Estimate \emph{M}'}   
+\newcommand{\FixM}{`Fix \emph{M}'}
+
+\newcommand{\popQCS}{Edwards-etal:2012pop}
+\newcommand{\ymr}{Edwards-etal:2012ymr}
+\newcommand{\area}{3CD}
+\newcommand{\other}{5DE}
+\newcommand{\otherCite}{Edwards-etal:20135DE}
+
+
+
+
+% ****************** end macros ********************
+
+\begin{document} 
+
+% \input{preamble}              % Table of contents, etc.
+
+
+% \setcounter{chapter}{0} 
+% \setcounter{table}{0}
+% \setcounter{figure}{0}	
+\setcounter{secnumdepth}{3}    % To number subsubheadings-ish
+
+% To number sections, tables etc. as 1, 2, 3, not 1.1 etc. (where
+%  the first 1 would be chapter number).
+\renewcommand{\thesection}{\arabic{section}}   
+\renewcommand{\thetable}{\arabic{table}}    
+\renewcommand{\thefigure}{\arabic{figure}}  
+\renewcommand{\theequation}{\arabic{equation}}
+
+% \input{main}
+% \subimport{mainDoc/}{mainDoc}
+
+\setcounter{page}{17}
+\begin{figure}[htpb] %[htbp]
+\centering
+%	\ifthenelse{ \isempty{#5} \OR \equal{#5}{eps} }
+%		{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#1.eps}}
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0pt}
+\fbox{\includegraphics[width=6.5in,height=7in,keepaspectratio=TRUE]{mainDoc/gma-popymr-amend.png}}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+\caption{Pacific Marine Fisheries Commission (PMFC) major areas (outlined in dark blue) compared with Groundfish Management Unit areas for POP (shaded). For reference, map indicates Queen Charlotte Sound (QCS) and Goose Island Gully (GIG). This assessment is for the stock in PMFC areas 3C and 3D (termed area 3CD).}
+\label{fig:areas}
+\end{figure}
+
+% \bestfig{}{Pacific Marine Fisheries Commission major areas (purple borders) compared with Groundfish Management Unit areas for POP (shaded). For reference, map indicates Queen Charlotte Sound (QCS) and Goose Island Gully (GIG)}{7.0}{PMFC major areas compared to GMU areas}{png}
+
+\clearpage
+
+% \addcontentsline{toc}{chapter}{Appendices}
+% \addtocontents{toc}{\par {\bf APPENDICES} \par}
+%\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\appendix           % Everything from now on will be an Appendix
+% \begin{appendices}
+
+% \renewcommand{\appendixname}{Appendix} - doesn't work
+% \renewcommand*{\chaptername}{Appendix} - never worked
+% Also tried in .sty file.
+
+% Now want to number sections, tables etc. as A.1, A.2, etc.
+% Thought these wouldn't be with the appendix package, as
+%  automatic, but do need them even if use \begin{appendices}:
+\renewcommand{\thesection}{\thechapter.\arabic{section}}   
+\renewcommand{\thetable}{\thechapter.\arabic{table}}    
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}  
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+% Not including Appendix figures and tables in contents, and just
+%  including the Appendix (chapter) names (not sections or
+%  subsections):
+% Wait for Jaclyn to say how.
+% Also to have Appendix title as   Appendix A   not just A. Tried
+%  the above but no luck. May have to use the appendix package, and
+%  understand better the options. Think it may be getting overridden
+%  by the \renewcommand{\chapter}{\@startsection    in resDocSty.sty
+  
+
+\lfoot{Pacific Ocean Perch 3CD}
+
+\clearpage
+
+\setcounter{page}{31}
+
+\chapter{REQUEST FOR SCIENCE INFORMATION AND ADVICE} 
+
+\rfoot{Appendix A -- Request for Advice}
+%\subimport{appA-RSIA/}{AppA-RSIAdummy}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=6.5in,height=8.5in,keepaspectratio=TRUE]{appA-RSIA/RSIA-POP-2012-p1.png}
+\end{figure}
+
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=6.5in,height=8.5in,keepaspectratio=TRUE]{appA-RSIA/RSIA-POP-2012-p2.png}
+\end{figure}
+
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=6.5in,height=8.5in,keepaspectratio=TRUE]{appA-RSIA/RSIA-POP-2012-p3.png}
+\end{figure}
+
+\clearpage
+% \includepdf[pages={-}]{appA-RSIA/RSIA_2012-13-P02_POP.pdf} - didn't work
+
+\setcounter{page}{125}
+
+\setcounter{chapter}{8}   % 8=H 
+% \setcounter{table}{0}
+\setcounter{figure}{5}	
+
+\rfoot{Appendix H -- Habitat}
+
+% \subimport{appH-Habitat/}{AppH-Habitat} % figures are in subdir      
+
+\begin{figure}[htpb] %[htbp]
+\centering
+%	\ifthenelse{ \isempty{#5} \OR \equal{#5}{eps} }
+%		{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#1.eps}}
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0pt}
+\fbox{\includegraphics[width=6.5in,height=7in,keepaspectratio=TRUE]{appH-Habitat/bathy396-3CD.png}}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+\caption{Highlighted bathymetry (blue) between 128 and 581~m serves as a proxy for benthic Pacific Ocean Perch habitat along the WCVI. Highlighted region covers 11,675~km$^2$; however, the shaded region in 3C covers 4,993~km$^2$ and in 3D covers 2,828~km$^2$ for a total area of 7,821~km$^2$ in PMFC 3CD.}
+\label{fig:bathy396-3CD}
+\end{figure}
+
+
+\end{document}
