@@ -171,8 +171,6 @@ It seems Word equations come out as individual figures, but if you highlight a w
 
 CSAS office asked me to add bookmarks. To add bookmarks, you just need to select the text and do CTRL + B, then if you have sub-titles, you will need to drag them under their main title, and that can be a bit tricky at first. Rowan said to 'fit page' for each bookmark.  I can't get Adobe Acrobat 8 to show bookmark panel, and I think in the end it was automatically done in the .pdf.
 
-Hopefully you're there. The CSAS office accepted my final version, though still "recommended I use Word in the future", which wasn't very helpful. But submitted Word Res Docs are held up at our local CSAS office right now. 
-
 
 FILES
 *****
