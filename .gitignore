@@ -1,0 +1,14 @@
+*.log
+*.aux
+*.bbl
+*.blg
+*~
+*.dvi
+*.ps
+.RData
+.RHistory
+*.7z
+*.toc
+POP3CDresDocSubmit.pdf
+POP3CDresDocSubmitAccess9.pdf
+
