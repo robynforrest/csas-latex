@@ -1,12 +1,10 @@
-% mainDocRev.tex - revisions for ResDoc. 11 Feb 2013.
-% mainDoc.tex for 3CD.
-
+% mainDoc.tex - Main part of the document
 
 \nonumsection*{ABSTRACT}\addcontentsline{toc}{section}{ABSTRACT}
 
-Pacific Ocean Perch (\emph{Sebastes alutus}, POP) is a commercially important species of rockfish that inhabits the marine canyons along the coast of British Columbia. The status of POP off the west coast of Vancouver Island, British Columbia, is assessed here under the assumption that it is a single stock harvested entirely in Pacific Marine Fisheries Commission (PMFC) major areas 3C and 3D. This is the first time that a population model has been used to assess this stock.
+Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is an important component of the trawl fishery in British Columbia. TO BE CONTINUED...
 
-
+THE REST OF THE ABSTRACT IS OLD POP DIALOGUE...
 We used an annual two-sex catch-at-age model tuned to: three fishery-independent trawl survey series, annual estimates of commercial catch since 1940, and age composition data from the commercial fishery (15 years of data) and from one of the survey series (four years of data). The model starts from an assumed unfished equilibrium state in 1940, and the survey data cover the period 1967 to 2012 (although not all years are represented). The model was implemented in a Bayesian framework (using the Markov Chain Monte Carlo procedure) to quantify uncertainty of estimated quantities.
 
 
@@ -38,13 +36,15 @@ Ten-year projections, for constant catches of 600~t, indicate essentially no cha
 
 \section{INTRODUCTION}
 
-This stock assessment is for Pacific Ocean Perch in combined Pacific Marine Fisheries Commission (PMFC) major areas 3C and 3D, off the west coast of Vancouver Island, British Columbia (Figure~\ref{fig:areas}). A concurrent stock assessment for Pacific Ocean Perch in PMFC major areas 5D and 5E, off the coast of Haida Gwaii, is documented in \citet{\otherCite}. The same modelling approach is used for both stocks. Given that almost all the input data and all the results are different for the two stocks, it was deemed preferable to produce two independent stand-alone documents rather than one larger one, although there will inevitably be some overlap between the two documents. Some background information is taken from \citet{\popQCS}.
+This stock assessment is for Arrowtooth Flounder in combined Pacific Marine Fisheries Commission (PMFC) major areas 3C, 3D, 5A, 5B, 5C, 5D, and 5E off the west coast of British Columbia (Figure~\ref{fig:areas}). Arrowtooth Flounder make up a large component of the trawl fishery, but most are and have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, which makes the flesh very mushy and unpalatable. There is a market in Korea for the frills, and a market for the fillets if they are frozen at sea, very shortly after capture.
+
+CHANGE: Some background information is taken from  CHANGECITE: \citet{\popQCS}.
 
 This main section presents background information, an overview of the assessment model and input data, the main model results and the advice to managers. Further technical details are given in the relevant Appendices.
 
 \subsection{BIOLOGICAL BACKGROUND}
 
-Pacific Ocean Perch (\emph{Sebastes alutus}, POP) is a long-lived, commercially important species of rockfish found along the rim of the North Pacific Ocean. Its commercial attractiveness stems from the bright red colour and long shelf life when properly processed. It is also the most abundant rockfish species on Canada's west coast and has been the mainstay of the shelf/slope trawl fishery for decades. A distinguishing feature of POP is a prominent forward-thrusting knob on the lower jaw \citep{lyt02}.
+Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is a species of flatfish found along the rim of the Northeast Pacific Ocean. The most distinguishing feature of Arrowtooth Flounder is its large teeth, for which it was named. CHANGECITE: \citep{lyt02}. As juveniles (<380mm), Arrowtooth Flounder are monomorphic. Arrowtooth Flounder are sexually dimorphic, with adult females being larger than males (Figure~\ref{fig:agelength}).
 
 The life history of POP follows similar patterns to other \emph{Sebastes} species, with release of larvae that spend periods ranging from about three to twelve months as free-swimming pelagic larvae before settling to the bottom as juveniles. Reproduction appears to follow onshore-offshore migration patterns where females move onshore for insemination and then migrate deeper to the entrances of submarine gullies where they release larvae from February to May \citep{lyt02}. The larvae depend on vertical upwelling to bring them into the upper pelagic zone to facilitate growth and dispersal. The larvae can spend up to a year in the water column before settling on benthic habitat \citep{kl86}. Juvenile benthic habitat is shallow (100-200~m), compared to the depths occupied by adult POP, and comprises either rough rocky bottoms or high relief features such as boulders, anemones, sponges, and corals \citet{cs81, rbz07}. The maximum known age appears to be 103~y for a female specimen from Moresby Gully at 364~m in 2002, from the Department of Fisheries and Oceans Canada (DFO) Groundfish database GFBio \citep{\popQCS}.
 
@@ -75,6 +75,7 @@ Advice for managers was requested (see Appendix~A) to be guided by the DFO Susta
 A DFO Technical Working Group provided valuable guidance with respect to many of the decisions that were made in the course of this work.
 
 \section{CATCH DATA}
+*Table with history of quota and catch from 1996-present
 
 The preparation methods and the full catch history for this assessment are given in Appendix~B. Catches were estimated back to 1940. Poorly reported historical catches by foreign fleets were reconstructed based on sparse historical sampling data, and minor catches from other capture methods have been added to the totals. All available discard estimates were added to the catches, with estimates of historical discards based on current observed levels. The resulting time series of catch data that is used as model input is shown in Figure~\ref{fig:catchRecon-3CD}, and reaches a peak of 7,753~t in 1966 (during a period of intense fishing by foreign fleets) and a recent (2007-2011) average catch of 547~t. Catch data were only available for part of 2012, and so, for input to the model, the 2012 catch total was assumed to be the same as for 2011. Information about other species caught concurrently with POP commercial catches is presented in Appendix~H.
 
@@ -120,23 +121,26 @@ Survey age samples were only available from the WCVI synoptic survey series for 
 
 Growth parameters for both sexes were taken from the POP QCS assessment \citep{\popQCS}, which estimated parameters from biological samples collected from 1978 to 2009 by research surveys and from the commercial fishery (Appendix~D). Estimates of growth parameters were compared across the major assessment areas (3CD, 5ABC and 5DE) and across sample origins (research and commercial), and found to be consistent in all comparisons \citep{\popQCS}. Consequently, the same sex-specific growth parameters have been used for all three assessment areas, with sex-specific growth specified as a three-parameter von Bertalanffy model that estimates length-at-age. Weights-at-age, used to convert population numbers to biomass, were given by an allometric length-weight relationship. See Appendix~D for details. 
 
-\subsection{MATURITY AND FECUNDITY}
+\subsection{MATURITY}
 
-The maturity ogive was also taken from \citet{\popQCS}. Stage of maturity was determined macroscopically, partitioning the samples into one of seven maturity stages \citep{sk00} during the months of January to June. The analysis was restricted to this period because it is the period of maximum expected maturity \citep{\popQCS}. Fish assigned to stages 1 or 2 were considered immature while those assigned to stages 3-7 were considered mature. Data representing staged and aged females (using the break and burn method) were pooled from all sampling sources and the observed proportion mature at each age was calculated, and a model fitted (see Appendix~D). Fecundity was assumed to be proportional to the female body weight.
+The maturity ogive was also taken from \citet{\popQCS}. Stage of maturity was determined macroscopically, partitioning the samples into one of seven maturity stages \citep{sk00} during the months of January to June. The analysis was restricted to this period because it is the period of maximum expected maturity \citep{\popQCS}. Fish assigned to stages 1 or 2 were considered immature while those assigned to stages 3-7 were considered mature. Data representing staged and aged females (using the break and burn method) were pooled from all sampling sources and the observed proportion mature at each age was calculated, and a model fitted (see Appendix~D).
 
 \subsection{NATURAL MORTALITY}
+
+PAST ASSESSMENTS have assumed M.... etc.. cite Fargo Starr and Alaska center assessments. Very sensitive to assumptions in the model iscam.
 
 Male and female natural mortalities were estimated as parameters of the model (see Appendix~F), using an informed prior based on the marginal posterior distributions from the QCS POP assessment \citep{\popQCS}, specifically a normal prior with mean 0.07 and standard deviation 0.007 for both sexes (see Appendix~F). The QCS assessment used a prior based on a POP assessment for the Gulf of Alaska \citep{hshfi09}, with mean 0.06 and standard deviation 0.006.
 
 In recent assessments \citep{\ymr, \popQCS}, model runs that fixed natural mortality were also used to provide the final advice to managers. However, because we were able to develop a prior based on Canadian POP data, and since the resulting Bayesian estimates of natural mortality and steepness (defined below) are uncorrelated (Appendix~G), only runs that estimate natural mortality are used in this assessment (as agreed upon by the Technical Working Group). Prior distributions for all estimated parameters are given in Table F.4.
 
-\subsection{STEEPNESS}
-
-A Beverton-Holt stock-recruitment function was used to generate average recruitment estimates in each year, based on the biomass of female spawners (Appendix~F). Recruitments, defined as numbers of age-1 fish, were allowed to deviate from this average in order to improve the fit of the model to the data, constrained by an assumed recruitment standard deviation. The Beverton-Holt function was parameterised using a steepness parameter, $h$, which specified the proportion of the maximum recruitment that was available at $0.2B_0$, where $B_0$ is the unexploited equilibrium spawning biomass (mature females). The parameter $h$ was estimated in all model runs, constrained by a prior developed for west coast rockfish by \citet{fmdms10}, after removing all information for QCS POP (R.~Forrest, DFO, pers. comm.). This prior took the form of a beta distribution with mean 0.674 and standard deviation 0.168. This approach is the same as that in our previous rockfish assessments \citep{\ymr, \popQCS}.
-
 \section{AGE-STRUCTURED MODEL}
 
-A two-sex, age-structured stochastic model was used to reconstruct the population trajectory of POP in area \area~from 1940 to the beginning of 2013. Ages were tracked from 1 to 30, with 30 being an accumulator age class. Although an accumulator age class of 60 was used in the QCS assessment \citep{\popQCS}, initial exploration runs for this assessment did not perform well using 60 for the accumulator age class. Better model performance was obtained using age 30, which is consistent with the earlier Goose Island Gully POP assessment by \citet{shks01}. 
+We attempted a two-sex, age-structured stochastic model to reconstruct the population trajectory of Arrowtooth Flounder in area \area~from ....
+*Reference Appendix for model outputs and sensitivities...
+
+REASONS model was rejected.
+
+1940 to the beginning of 2013. Ages were tracked from 1 to 30, with 30 being an accumulator age class. Although an accumulator age class of 60 was used in the QCS assessment \citep{\popQCS}, initial exploration runs for this assessment did not perform well using 60 for the accumulator age class. Better model performance was obtained using age 30, which is consistent with the earlier Goose Island Gully POP assessment by \citet{shks01}. 
 
 The population at the beginning of the reconstruction was assumed to be in equilibrium with average recruitment and no fishing. Selectivities by sex for one of the surveys and the commercial fishery were estimated using three parameters describing a half-Gaussian function (that is set to 1 above a certain age). The model equations and implementation are described in Appendix~F.
 
@@ -152,6 +156,8 @@ Initial model fits to the data gave sensible and consistent results. Numerous se
 
 \section{RESULTS}
 
+MOVE TO APPENDIX FOR MODEL RESULTS
+
 The base case model run had credible fits to the data, as demonstrated by visual examination of the MPD fits and the patterns of residuals (results in Appendix G). The MCMC results showed satisfactory convergence of the MCMC search process (Appendix G). Priors and marginal posteriors of the estimated parameters are also given in Appendix G, along with the values of the estimated parameters (Table \ref{tab:MCMCpar}). For example, natural mortality is estimated as having median (and 5-95\% credible interval) of 0.069~(0.060-0.079) for females and 0.072~(0.063-0.082) for males. Steepness is estimated to be 0.70~(0.48-0.91). The remaining MCMC results, of more general interest, are given here.
 
 Figure \ref{fig:VBcatch} shows the MCMC results for the estimated vulnerable biomass, together with the reconstructed historical catches, and Figure \ref{fig:BVBnorm} shows the estimated medians of vulnerable and spawning (mature females only) biomass relative to their unfished values. (The full MCMC results for spawning biomass are included later in Figure \ref{fig:Bproj} regarding projections). These demonstrate a slight decline in biomass from 1940 to 1960 with the onset of fishing, followed by a very sharp decline in the 1960s due to heavy fishing (primarily by foreign fleets). After the cessation of foreign fishing, the biomass increased through the remainder of the 1970s. The biomass then declined through the 1980s until the mid-1990s, and has since increased, with median values of relative biomass now above the 1980 values.
@@ -165,7 +171,9 @@ Figure \ref{fig:exploitMCMC} shows the estimated exploitation rates (ratio of to
 
 Estimates of further quantities of interest, such as absolute values of biomass (rather than relative values), are also given in Table \ref{tab:MCMCderived}, as well as quantities based on MSY, discussed below. 
 
-\section{ADVICE FOR MANAGERS}
+\section{RECCOMENTDATIONS AND YIELD OPTIONS}
+1. Recommend catch for yield with and without 2005 Catch data.
+2. the unused proportion of the quota
 
 \subsection{CURRENT STOCK LEVEL}
 

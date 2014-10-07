@@ -1,27 +1,17 @@
-% Trying on new laptop. 3/5/13.
-
-% POP3CDresDoc.tex - POP 3CD assessment, incorporating revisions
-%  to become the Res Doc. 11th February 2013.
-% POP3CDwp.tex - POP 3CD assessment - 21st September 2012.
-% master.tex - idea is to run   latex master.tex   on this file,
-%  which calls in the other files:
-%   preamble.tex - Table of Contents, Abstract etc.
-%   main.tex - main text, figures and tables (and bibliography).
-%   appendixExample.tex - an example appendix - just create more
-%    of these. 
+% resDoc.tex
 %  So COMMENT OUT \input{filename} when not working on filename.tex
 %   and just include them all for the final document.
 %   24th August 2012.
 % resDocSty3.tex - further formatting by Jaclyn Cleary and Andrew
 %  Edwards. Aug 2012.
-% resDocSty3.tex - have updated .sty file, and taking out some 
+% resDocSty3.tex - have updated .sty file, and taking out some
 %  of the extra tables. 12th April 2012
 % resDocSty2.tex - putting the formatting into resDocSty.sty,
 %  17th January 2012.
 % resDocSty.tex - LaTeX formatting for a CSAS Research Document.
 %  Andrew Edwards, Andrew.Edwards@dfo-mpo.gc.ca, 4th January 2012.
 
-\documentclass[11pt]{book}   
+\documentclass[11pt]{book}
 \usepackage{resDocSty}      % Res Doc .sty file
 \usepackage{appendix}
 
@@ -34,21 +24,19 @@
 \usepackage{import}    % for figures in chapter subdirectories
 
 % \usepackage{epstopdf}    % RH said for texi2dvi --pdf ***.tex
-                           %  but didn't work for me ('pdflatex 
+                           %  but didn't work for me ('pdflatex
                            %  failed - see log file') but didn't
                            %  try too hard.
 % Had these for YMR Eqns appendix:
 % \renewcommand{\footrulewidth}{0.4pt}
 % \renewcommand{\headrulewidth}{0pt}
 
-
-
 % For Rowan's Appendices:
 \usepackage{graphicx}
 \usepackage{verbatim,fancyvrb}    % Check - may be in .sty file
 \usepackage{xifthen}         % provides \ifthenelse and \isempty
 \usepackage{color, colortbl}
-\usepackage{arydshln}  % dashed lines in tables 
+\usepackage{arydshln}  % dashed lines in tables
                        %  (has to be loaded after other stuff)
 % \usepackage{pdfpages} - to try and include .pdf files, but best
 %  just to manually do at the end.
@@ -82,7 +70,7 @@
 % \hypersetup{colorlinks, plainpages=true, linkcolor=black, citecolor=black, urlcolor=blue, }
 
 \newcommand\pbsfig[5]{    % #1=filename, #2=main caption, #3=figure height, #4=short caption, #5=directory
-	\begin{figure}[tp] %[htbp]  Rowan had ht! 
+	\begin{figure}[tp] %[htbp]  Rowan had ht!
 	\centering
 %	\epsfxsize=6.5in
 %	\epsfysize=#3in
@@ -101,35 +89,35 @@
 % End: AME adding
 
 % Headers and footers
-% For Res Doc, best to have a left and a right footer 
+% For Res Doc, best to have a left and a right footer
 %  (and/or header), not just one (for double-sided printing).
-% 
+%
 % \lhead{DRAFT -- Non-citable working paper}  % Omit for final ResDoc.
 \lhead{}
 \rhead{}
-\lfoot{Pacific Ocean Perch}  
-\rfoot{Area 3CD}
-%\rfoot{WP 2012/P02a}        % Change to appendix number for appendices
-                          % Will probably delete footers in main text
-                          %  for final Res Doc.
+\lfoot{Arrowtooth Flounder}
+\rfoot{Coastwide}           % The area of the assessment
+%\rfoot{WP 2012/P02a}       % Change to appendix number for appendices
+                            % Will probably delete footers in main text
+                            %  for final Res Doc.
 
-% \linenumbers        % uncomment to add in line numbers
-% \modulolinenumbers[5]   % just number every 5th line
+% \linenumbers              % uncomment to add in line numbers
+% \modulolinenumbers[5]     % just number every 5th line
 
 % \bibliographystyle{ecology}
 % \bibliographystyle{cjfas}
 % \bibliographystyle{cjfas2}
-% \bibliographystyle{resDoc}  - have to move to mainDocRev.tex to get flatex 
+% \bibliographystyle{resDoc}  - have to move to mainDoc.tex to get flatex
 %  to work
 
 % \def\AppLet{F}                   % Appendix letter - we had this
                                    %  to number equations in Appendix
                                    %  F as (F.17) etc.
 % \def\StartP{102}                   % page start
-\newcommand{\Bmsy}{B_\mathrm{MSY}} % Useful.
-\newcommand{\umsy}{u_\mathrm{MSY}} % Useful.
+\newcommand{\Bmsy}{B_\mathrm{MSY}} % Useful shortcuts
+\newcommand{\umsy}{u_\mathrm{MSY}}
 
-% I often make up this sort of thing to include figures easily, 
+% I often make up this sort of thing to include figures easily,
 %  see the example at the end:
 \newcommand\onefig[4]{ % filename is #1, text is #2, label is #3
   \begin{figure}[htp]             %  fig width is #4
@@ -138,13 +126,12 @@
   \epsfbox{#1.eps}     % Include the directory name here if needed.
   \end{center}
   \caption{#2 }
-  \label{fig:#3} 
+  \label{fig:#3}
   \end{figure}
-  % \clearpage  
+  % \clearpage
 }
 
 \newcommand{\MCMCfigdir}{C:/andy/awatea/POP12/POP3CD/POPrun20/MCMC.20.01}
-
 \newcommand{\MCMCsOnedir}{C:/andy/awatea/POP12/POP3CD/POPrun21/MCMC.21.01}
 \newcommand{\MCMCsTwodir}{C:/andy/awatea/POP12/POP3CD/POPrun22/MCMC.22.01}
 % Can't have a number in a newcommand!
@@ -159,13 +146,12 @@
   \epsfbox{\MCMCfigdir/#1.eps}
   \end{center}
   \caption{#2 }
-  \label{fig:#1} 
+  \label{fig:#1}
   \end{figure}
-  % \clearpage  
+  % \clearpage
 }
 
 \newcommand{\numMCMC}{1,000}
-
 
 % Set numbering as F.17 etc. for equations in appendix F. Remove
 %  these if not in an Appendix.:
@@ -176,7 +162,7 @@
 
 % newcommands can go here, for example to abbreviate our two model
 %  runs:
-\newcommand{\EstM}{`Estimate \emph{M}'}   
+\newcommand{\EstM}{`Estimate \emph{M}'}
 \newcommand{\FixM}{`Fix \emph{M}'}
 
 \newcommand{\popQCS}{esh12} % {Edwards-etal:2012pop}
@@ -184,7 +170,7 @@
 \newcommand{\area}{3CD}
 \newcommand{\other}{5DE}
 \newcommand{\otherCite}{ehs13area5DE}   % {Edwards-etal:20135DE}
-\newcommand{\currYear}{2013} 
+\newcommand{\currYear}{2013}
 
 %% Need to add this here, according to
 %% http://emeryblogger.com/2011/01/14/diff-your-latex-files-with-latexdiff/
@@ -211,26 +197,26 @@
 
 % ****************** end macros ********************
 
-\begin{document} 
+\begin{document}
 
 
 \input{preamble}              % Table of contents, etc.
 
 
-% \setcounter{chapter}{0} 
+% \setcounter{chapter}{0}
 % \setcounter{table}{0}
-% \setcounter{figure}{0}	
+% \setcounter{figure}{0}
 \setcounter{secnumdepth}{3}    % To number subsubheadings-ish
 
 % To number sections, tables etc. as 1, 2, 3, not 1.1 etc. (where
 %  the first 1 would be chapter number).
-\renewcommand{\thesection}{\arabic{section}}   
-\renewcommand{\thetable}{\arabic{table}}    
-\renewcommand{\thefigure}{\arabic{figure}}  
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
 \renewcommand{\theequation}{\arabic{equation}}
 
 % \subimport{mainDoc/}{mainDocRev}
-\input{mainDoc/mainDocRev}
+\input{mainDoc/mainDoc}
 
 \clearpage
 
@@ -247,9 +233,9 @@
 % Now want to number sections, tables etc. as A.1, A.2, etc.
 % Thought these wouldn't be with the appendix package, as
 %  automatic, but do need them even if use \begin{appendices}:
-\renewcommand{\thesection}{\thechapter.\arabic{section}}   
-\renewcommand{\thetable}{\thechapter.\arabic{table}}    
-\renewcommand{\thefigure}{\thechapter.\arabic{figure}}  
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
 \renewcommand{\theequation}{\thechapter.\arabic{equation}}
 
 % Not including Appendix figures and tables in contents, and just
@@ -260,9 +246,8 @@
 %  the above but no luck. May have to use the appendix package, and
 %  understand better the options. Think it may be getting overridden
 %  by the \renewcommand{\chapter}{\@startsection    in resDocSty.sty
-  
 
-\lfoot{Pacific Ocean Perch 3CD}
+\lfoot{Arrowtooth Flounder - Coastwide}
 % \subimport  for figures that are in subdirectory
 
 \rfoot{Appendix A -- Request for Advice}
@@ -285,18 +270,18 @@
 \input{appE-Biology/AppE-AgesRev}
 
 \rfoot{Appendix F -- Model Equations}
-\input{appF-Eqns/AppF-EqnsRev}        
+\input{appF-Eqns/AppF-EqnsRev}
 
 \rfoot{Appendix G -- Results}
-\input{appG-Results/AppG-ResultsRev} % results figures are 
-                                        %  actually still in Awatea 
+\input{appG-Results/AppG-ResultsRev} % results figures are
+                                        %  actually still in Awatea
                                         %  folders
 \rfoot{Appendix H -- Habitat}
-\input{appH-Habitat/AppH-HabitatRev} % figures are in subdir      
+\input{appH-Habitat/AppH-HabitatRev} % figures are in subdir
 
 \rfoot{Appendix I -- Sensitivities}
-\input{appI-Sensitivities/AppI-SensitivitiesRev} 
+\input{appI-Sensitivities/AppI-SensitivitiesRev}
                                         % figures are in subdir or
-                                        %  Awatea folders.      
+                                        %  Awatea folders.
 
 \end{document}
