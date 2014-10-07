@@ -2,9 +2,10 @@
 del *.aux
 del *.bbl
 del *.blg
-del *.bst
 del *.dvi
 del *.log
 del *.pdf
 del *.ps
 del *.toc
+del *.out
+del *.synctex.gz

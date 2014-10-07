@@ -2,24 +2,8 @@
 
 \nonumsection*{ABSTRACT}\addcontentsline{toc}{section}{ABSTRACT}
 
-Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is an important component of the trawl fishery in British Columbia. TO BE CONTINUED...
-
-THE REST OF THE ABSTRACT IS OLD POP DIALOGUE...
-We used an annual two-sex catch-at-age model tuned to: three fishery-independent trawl survey series, annual estimates of commercial catch since 1940, and age composition data from the commercial fishery (15 years of data) and from one of the survey series (four years of data). The model starts from an assumed unfished equilibrium state in 1940, and the survey data cover the period 1967 to 2012 (although not all years are represented). The model was implemented in a Bayesian framework (using the Markov Chain Monte Carlo procedure) to quantify uncertainty of estimated quantities.
-
-
-Estimated exploitation rates were calculated as the ratio of total catch to the vulnerable biomass in the middle of each year. Rates peaked in the mid-1960s due to large catches by foreign fleets, and peaked again (though not as high) in the early 1990s. Exploitation rates have remained low since the mid-1990s, with the exploitation rate for 2012 estimated as 0.035~(0.018-0.077), denoting median and 5th and 95th quantiles of the Bayesian posterior distribution.
-
-The spawning biomass (mature females only) at the beginning of 2013 is estimated to be 0.41~(0.19-0.68) of unfished spawning biomass. It is estimated to be 1.53~(0.55-3.32) of $\Bmsy$, where $\Bmsy$ is the equilibrium spawning biomass that would support the maximum sustainable yield (MSY). 
-
-Advice to managers is presented as a set of decision tables that provide probabilities of exceeding limit and upper stock reference points for ten-year projections across a range of constant catch scenarios. The primary reference points used are a limit reference point of 0.4$\Bmsy$ and an upper stock reference point of 0.8$\Bmsy$, which are the Fisheries and Oceans Canada Precautionary Approach provisional reference points. Decision tables are also presented with respect to alternative reference points based on proportions of unfished equilibrium biomass, on current biomass and on the exploitation rate at MSY.
-
-The estimated spawning biomass at the beginning of 2013 has a 0.99
-probability of being above the limit reference point of 0.4$\Bmsy$, and a 0.87 probability of being above the upper stock reference point of 0.8$\Bmsy$.
-
-The estimated median MSY (tonnes) is 1,048~(700-1,509), compared to the recent mean catch (from 2007-2011) of 547~t. The probability that the exploitation rate in 2012 is below that associated with MSY is 0.89.
-
-Ten-year projections, for constant catches of 600~t, indicate essentially no change in the aforementioned probabilities of the spawning biomass being above the reference points, and indicate a projected increase in the median spawning biomass.
+Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is an important component of the trawl fishery in British Columbia.
+See figure~\ref{fig:cpue} for cpue.
 
 % \newpage	%French abstract must appear on new page
 
@@ -38,39 +22,37 @@ Ten-year projections, for constant catches of 600~t, indicate essentially no cha
 
 This stock assessment is for Arrowtooth Flounder in combined Pacific Marine Fisheries Commission (PMFC) major areas 3C, 3D, 5A, 5B, 5C, 5D, and 5E off the west coast of British Columbia (Figure~\ref{fig:areas}). Arrowtooth Flounder make up a large component of the trawl fishery, but most are and have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, which makes the flesh very mushy and unpalatable. There is a market in Korea for the frills, and a market for the fillets if they are frozen at sea, very shortly after capture.
 
-CHANGE: Some background information is taken from  CHANGECITE: \citet{\popQCS}.
-
-This main section presents background information, an overview of the assessment model and input data, the main model results and the advice to managers. Further technical details are given in the relevant Appendices.
+CHANGE: Some background information is taken from  CHANGECITE: \citet{arf1999a}, \citet{arf1999b}, \citet{arf2000}, \citet{arf2001}, \citet{arf2003}, \citet{arf2006},\citet{arf2013}.
 
 \subsection{BIOLOGICAL BACKGROUND}
 
-Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is a species of flatfish found along the rim of the Northeast Pacific Ocean. The most distinguishing feature of Arrowtooth Flounder is its large teeth, for which it was named. CHANGECITE: \citep{lyt02}. As juveniles (<380mm), Arrowtooth Flounder are monomorphic. Arrowtooth Flounder are sexually dimorphic, with adult females being larger than males (Figure~\ref{fig:agelength}).
+Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is a species of flatfish found along the rim of the Northeast Pacific Ocean. The most distinguishing feature of Arrowtooth Flounder is its large teeth, for which it was named. As juveniles (<380mm), Arrowtooth Flounder are monomorphic. Arrowtooth Flounder are sexually dimorphic, with adult females being larger than males (Figure~\ref{fig:agelength}).
 
-The life history of POP follows similar patterns to other \emph{Sebastes} species, with release of larvae that spend periods ranging from about three to twelve months as free-swimming pelagic larvae before settling to the bottom as juveniles. Reproduction appears to follow onshore-offshore migration patterns where females move onshore for insemination and then migrate deeper to the entrances of submarine gullies where they release larvae from February to May \citep{lyt02}. The larvae depend on vertical upwelling to bring them into the upper pelagic zone to facilitate growth and dispersal. The larvae can spend up to a year in the water column before settling on benthic habitat \citep{kl86}. Juvenile benthic habitat is shallow (100-200~m), compared to the depths occupied by adult POP, and comprises either rough rocky bottoms or high relief features such as boulders, anemones, sponges, and corals \citet{cs81, rbz07}. The maximum known age appears to be 103~y for a female specimen from Moresby Gully at 364~m in 2002, from the Department of Fisheries and Oceans Canada (DFO) Groundfish database GFBio \citep{\popQCS}.
+The life history of POP follows similar patterns to other \emph{Sebastes} species, with release of larvae that spend periods ranging from about three to twelve months as free-swimming pelagic larvae before settling to the bottom as juveniles. Reproduction appears to follow onshore-offshore migration patterns where females move onshore for insemination and then migrate deeper to the entrances of submarine gullies where they release larvae from February to May  larvae depend on vertical upwelling to bring them into the upper pelagic zone to facilitate growth and dispersal. The larvae can spend up to a year in the water column before settling on benthic habitat . Juvenile benthic habitat is shallow (100-200~m), compared to the depths occupied by adult POP, and comprises either rough rocky bottoms or high relief features such as boulders, anemones, sponges, and corals  maximum known age appears to be 103~y for a female specimen from Moresby Gully at 364~m in 2002, from the Department of Fisheries and Oceans Canada (DFO) Groundfish database GFBio.
 
 \subsection{RANGE AND DISTRIBUTION}
 
-Pacific Ocean Perch occur along the North Pacific rim, ranging from Honshu (Japan), through the Bering Sea, along the Aleutian Islands (Alaska), then southward through BC down to central Baja California \citep{lyt02}. They appear to be most abundant north of 50$^\circ$~N \citep{as88}. In BC (Figure~\ref{fig:cpue}), hotspots ($\geq$ the 0.95 quantile of catch per unit effort (CPUE) from trawl tows from 1996-2012) occur southeast of Moresby Island (Moresby Gully), southwest of Moresby Island (Anthony Island), northwest of Graham Island (Langara Spit), and in Dixon Entrance north of Graham Island; catch rates are relatively low in PMFC areas 3C and 3D, off the west coast of Vancouver Island. Pacific Ocean Perch has been encountered by the BC trawl fleet over an estimated 46,240~km$^2$ (Figure~\ref{fig:cpue}). For PMFC areas 3C and 3D, 98\% of the commercial captures of POP lie between depths 128~m and 581~m (Appendix~H).
+Pacific Ocean Perch occur along the North Pacific rim, ranging from Honshu (Japan), through the Bering Sea, along the Aleutian Islands (Alaska), then southward through BC down to central Baja California. They appear to be most abundant north of 50$^\circ$~N . In BC (Figure~\ref{fig:cpue}), hotspots ($\geq$ the 0.95 quantile of catch per unit effort (CPUE) from trawl tows from 1996-2012) occur southeast of Moresby Island (Moresby Gully), southwest of Moresby Island (Anthony Island), northwest of Graham Island (Langara Spit), and in Dixon Entrance north of Graham Island; catch rates are relatively low in PMFC areas 3C and 3D, off the west coast of Vancouver Island. Pacific Ocean Perch has been encountered by the BC trawl fleet over an estimated 46,240~km$^2$ (Figure~\ref{fig:cpue}). For PMFC areas 3C and 3D, 98\% of the commercial captures of POP lie between depths 128~m and 581~m (Appendix~H).
 
 \subsection{OVERVIEW OF FISHERY}
 
-Pacific Ocean Perch supports the largest rockfish fishery in British Columbia (BC) with an annual coastwide TAC (total allowable catch) of 5,448~t in 2010, which is being progressively reduced to 5,189~t over three years (see Appendix~B). The mean annual coastwide catch was about 5,000~t from 2006-2010 and the mean coastwide landed value of the POP catch for 2007-2010 was \$4.4~million (landed value data from D.~Lau, DFO Economics Sector). The trawl fishery accounts for 99.98\% of the coastwide TAC, with the rest allocated to the hook and line fishery. A detailed history of the POP fishery prior to the inception of the observer trawl program in 1996 can be found in \citet{ro96}. 
+Pacific Ocean Perch supports the largest rockfish fishery in British Columbia (BC) with an annual coastwide TAC (total allowable catch) of 5,448~t in 2010, which is being progressively reduced to 5,189~t over three years (see Appendix~B). The mean annual coastwide catch was about 5,000~t from 2006-2010 and the mean coastwide landed value of the POP catch for 2007-2010 was \$4.4~million (landed value data from D.~Lau, DFO Economics Sector). The trawl fishery accounts for 99.98\% of the coastwide TAC, with the rest allocated to the hook and line fishery. A detailed history of the POP fishery prior to the inception of the observer trawl program in 1996 can be found in  
 
 \section{ASSESSMENT BOUNDARIES AND BACKGROUND}
 
 For this assessment, we use PMFC major areas 3C and 3D (herein referred to as area 3CD), covering most of the west coast of Vancouver Island (Figure~\ref{fig:areas}). The PMFC areas are similar but not identical to the groundfish management areas (GMAs) used by the DFO Groundfish Management Unit (GMU); those areas (Figure~\ref{fig:areas}) are more attuned to the pattern of fishing for a range of demersal species. We have not used the GMAs because reporting from these areas has only been available since 1996 and there is no procedure to alter historical landings to conform to current boundaries. The TAC for GMA 3CD has been 530~t since 1998. The mean catch from 2007-2011 in PMFC area 3CD was 547~t.
 
-This is the first quantitative stock assessment for the stock of POP in area \area. The most recent POP assessment for BC waters considered only Queen Charlotte Sound (QCS, combined PMFC area 5ABC, \citealt{\popQCS}), the primary fishing grounds for POP. Previous population modelling for POP \citep{sr95schnute, rs98, shks01} focused on Goose Island Gully, one of the three main gullies in QCS. \citet{shks01} extended their results to the rest of the BC coast. % based on CPUE analysis. 
+This is the first quantitative stock assessment for the stock of POP in area \area. The most recent POP assessment for BC waters considered only Queen Charlotte Sound (QCS, combined PMFC area 5ABC,  primary fishing grounds for POP. Previous population modelling for POP focused on Goose Island Gully, one of the three main gullies in QCS. extended their results to the rest of the BC coast. % based on CPUE analysis. 
 
 % ******AE: edit numbers for 5DE, last sentence here into Abstract:
 
-We follow several recent west coast Canadian rockfish assessments \citep{sso09, \ymr, \popQCS}, in using a modified version of the Coleraine statistical catch-at-age software \citep{hmpeps03}, called Awatea, to implement the model (Appendix~F). The model is an annual two-sex catch-at-age model tuned to: three fishery-independent trawl survey series, annual estimates of commercial catch since 1940, and age composition data from the commercial fishery (15 years of data) and from one survey series (four years of data). 
+We follow several recent west coast Canadian rockfish assessments , in using a modified version of the Coleraine statistical catch-at-age software  Awatea, to implement the model (Appendix~F). The model is an annual two-sex catch-at-age model tuned to: three fishery-independent trawl survey series, annual estimates of commercial catch since 1940, and age composition data from the commercial fishery (15 years of data) and from one survey series (four years of data). 
 
 The model estimates parameters from the stock-recruitment function, natural mortality (independently for females and males), catchability coefficients for the three survey series, and selectivity parameters for the commercial fishery and the one survey series for which age data are available.
 
 The model is used to estimate the past and present vulnerable biomass (the biomass that is vulnerable to capture by the fishery, taking into account selectivity), spawning stock biomass (mature females only) and population age structure. Estimated parameters are then used to calculate maximum sustainable yield (MSY) and reference points. Projections are performed to estimate future probabilities of the spawning biomass being greater than the reference points under a range of constant catch scenarios. All of these calculations are made in a Bayesian context to capture the uncertainty associated with parameter estimation. Uncertainty relative to some data sets is explored through sensitivity runs (Appendix~I).
 
-Advice for managers was requested (see Appendix~A) to be guided by the DFO Sustainable Fisheries Framework, particularly the Fishery Decision-making Framework Incorporating the Precautionary Approach \citep{dfo09}. Consequently, advice to managers is presented as a set of decision tables that provide probabilities of exceeding reference points for various years of projections across a range of constant catch scenarios. 
+Advice for managers was requested (see Appendix~A) to be guided by the DFO Sustainable Fisheries Framework, particularly the Fishery Decision-making Framework Incorporating the Precautionary Approach . Consequently, advice to managers is presented as a set of decision tables that provide probabilities of exceeding reference points for various years of projections across a range of constant catch scenarios. 
 
 A DFO Technical Working Group provided valuable guidance with respect to many of the decisions that were made in the course of this work.
 
@@ -87,11 +69,11 @@ Appendix~B summarises all management actions taken for POP (coastwide) since 197
 
 \section{OVER-HARVESTING EXPERIMENT}
 
-In the 1980s, experimental over-harvesting of POP stocks was attempted in two regions along the BC coast \citep{ls93, leam98}. The objectives of the experiments included (i)~ground-truthing trawl survey biomass estimates, (ii)~estimating fishing mortality, (iii)~validating ageing techniques by introducing a large negative anomaly in the age composition, (iv)~exploring stock-recruitment relationships, and (v)~involving industry in research and management.
+In the 1980s, experimental over-harvesting of POP stocks was attempted in two regions along the BC coast  objectives of the experiments included (i)~ground-truthing trawl survey biomass estimates, (ii)~estimating fishing mortality, (iii)~validating ageing techniques by introducing a large negative anomaly in the age composition, (iv)~exploring stock-recruitment relationships, and (v)~involving industry in research and management.
 
-The first experiment occurred off the WCVI where a specified overharvest was set (TAC~= 500~t) from 1980 to 1984 before returning to a level deemed sustainable at 300~t \citep{stoc81}. The experiment experienced no implementation problems and reporting by industry was deemed acceptable. The 3C TAC was subsequently reduced to 100~t in 1986 and remained low until 1993. 
+The first experiment occurred off the WCVI where a specified overharvest was set (TAC~= 500~t) from 1980 to 1984 before returning to a level deemed sustainable at 300~t  experiment experienced no implementation problems and reporting by industry was deemed acceptable. The 3C TAC was subsequently reduced to 100~t in 1986 and remained low until 1993. 
 
-The second overharvesting experiment occurred in the Langara Spit area of PMFC 5E off the WCHG region. This experiment differed from the WCVI one in that quotas were removed entirely in 1983 to allow five years of unrestricted fishing followed by five years of severely limited fishing. However, a scheduled closure set for 1988 did not occur because the harvesters and the region had become dependent on the higher harvest levels \citep{leam98}. Some of the fishers maintained that there was little or no evidence of over-exploitation, and misreporting of catch could not be controlled. Discussions involving harvesters, politicians, and DFO managers (excluding the original researchers) negotiated extensions of the fishery, but eventually the Langara Spit area was closed in 1993.
+The second overharvesting experiment occurred in the Langara Spit area of PMFC 5E off the WCHG region. This experiment differed from the WCVI one in that quotas were removed entirely in 1983 to allow five years of unrestricted fishing followed by five years of severely limited fishing. However, a scheduled closure set for 1988 did not occur because the harvesters and the region had become dependent on the higher harvest levels. Some of the fishers maintained that there was little or no evidence of over-exploitation, and misreporting of catch could not be controlled. Discussions involving harvesters, politicians, and DFO managers (excluding the original researchers) negotiated extensions of the fishery, but eventually the Langara Spit area was closed in 1993.
 
 \section{SURVEY DESCRIPTIONS}
 
@@ -112,26 +94,26 @@ Pre-1996 commercial catch and effort data were also investigated with the intent
 
 \subsection{BIOLOGICAL SAMPLES}
 
-Commercial catches of rockfish by trawl gear have been sampled for age proportions since the 1960s. However, only POP otoliths aged using the `break and burn' method have been included in the age samples for this assessment because the earlier surface ageing method is known to be biased \citep{beam79}, especially with increasing age. Practically, this means that no usable age data were available for this assessment prior to 1982. Commercial fishery age samples were summarised for each quarter, with samples combined within a trip and weighted by the POP catch weight for the sampled trip. The quarterly samples were then scaled by the quarterly landed commercial catch weights to give annual proportions-at-age data (details are in Appendix~E; Table F.1 gives the years of data).
+Commercial catches of rockfish by trawl gear have been sampled for age proportions since the 1960s. However, only POP otoliths aged using the `break and burn' method have been included in the age samples for this assessment because the earlier surface ageing method is known to be biased  with increasing age. Practically, this means that no usable age data were available for this assessment prior to 1982. Commercial fishery age samples were summarised for each quarter, with samples combined within a trip and weighted by the POP catch weight for the sampled trip. The quarterly samples were then scaled by the quarterly landed commercial catch weights to give annual proportions-at-age data (details are in Appendix~E; Table F.1 gives the years of data).
 
 Survey age samples were only available from the WCVI synoptic survey series for even years from 2004 to 2010 (the 2012 samples have not yet been aged). These samples were scaled to represent the total survey in a manner similar to that used for the commercial samples (see Appendix~E).
 
 
 \subsection{GROWTH PARAMETERS}
 
-Growth parameters for both sexes were taken from the POP QCS assessment \citep{\popQCS}, which estimated parameters from biological samples collected from 1978 to 2009 by research surveys and from the commercial fishery (Appendix~D). Estimates of growth parameters were compared across the major assessment areas (3CD, 5ABC and 5DE) and across sample origins (research and commercial), and found to be consistent in all comparisons \citep{\popQCS}. Consequently, the same sex-specific growth parameters have been used for all three assessment areas, with sex-specific growth specified as a three-parameter von Bertalanffy model that estimates length-at-age. Weights-at-age, used to convert population numbers to biomass, were given by an allometric length-weight relationship. See Appendix~D for details. 
+Growth parameters for both sexes were taken from the POP QCS assessment , which estimated parameters from biological samples collected from 1978 to 2009 by research surveys and from the commercial fishery (Appendix~D). Estimates of growth parameters were compared across the major assessment areas (3CD, 5ABC and 5DE) and across sample origins (research and commercial), and found to be consistent in all comparisons . Consequently, the same sex-specific growth parameters have been used for all three assessment areas, with sex-specific growth specified as a three-parameter von Bertalanffy model that estimates length-at-age. Weights-at-age, used to convert population numbers to biomass, were given by an allometric length-weight relationship. See Appendix~D for details. 
 
 \subsection{MATURITY}
 
-The maturity ogive was also taken from \citet{\popQCS}. Stage of maturity was determined macroscopically, partitioning the samples into one of seven maturity stages \citep{sk00} during the months of January to June. The analysis was restricted to this period because it is the period of maximum expected maturity \citep{\popQCS}. Fish assigned to stages 1 or 2 were considered immature while those assigned to stages 3-7 were considered mature. Data representing staged and aged females (using the break and burn method) were pooled from all sampling sources and the observed proportion mature at each age was calculated, and a model fitted (see Appendix~D).
+The maturity ogive was also taken from . Stage of maturity was determined macroscopically, partitioning the samples into one of seven maturity stages  the months of January to June. The analysis was restricted to this period because it is the period of maximum expected maturity  assigned to stages 1 or 2 were considered immature while those assigned to stages 3-7 were considered mature. Data representing staged and aged females (using the break and burn method) were pooled from all sampling sources and the observed proportion mature at each age was calculated, and a model fitted (see Appendix~D).
 
 \subsection{NATURAL MORTALITY}
 
 PAST ASSESSMENTS have assumed M.... etc.. cite Fargo Starr and Alaska center assessments. Very sensitive to assumptions in the model iscam.
 
-Male and female natural mortalities were estimated as parameters of the model (see Appendix~F), using an informed prior based on the marginal posterior distributions from the QCS POP assessment \citep{\popQCS}, specifically a normal prior with mean 0.07 and standard deviation 0.007 for both sexes (see Appendix~F). The QCS assessment used a prior based on a POP assessment for the Gulf of Alaska \citep{hshfi09}, with mean 0.06 and standard deviation 0.006.
+Male and female natural mortalities were estimated as parameters of the model (see Appendix~F), using an informed prior based on the marginal posterior distributions from the QCS POP assessment , specifically a normal prior with mean 0.07 and standard deviation 0.007 for both sexes (see Appendix~F). The QCS assessment used a prior based on a POP assessment for the Gulf of Alaska , with mean 0.06 and standard deviation 0.006.
 
-In recent assessments \citep{\ymr, \popQCS}, model runs that fixed natural mortality were also used to provide the final advice to managers. However, because we were able to develop a prior based on Canadian POP data, and since the resulting Bayesian estimates of natural mortality and steepness (defined below) are uncorrelated (Appendix~G), only runs that estimate natural mortality are used in this assessment (as agreed upon by the Technical Working Group). Prior distributions for all estimated parameters are given in Table F.4.
+In recent assessments , model runs that fixed natural mortality were also used to provide the final advice to managers. However, because we were able to develop a prior based on Canadian POP data, and since the resulting Bayesian estimates of natural mortality and steepness (defined below) are uncorrelated (Appendix~G), only runs that estimate natural mortality are used in this assessment (as agreed upon by the Technical Working Group). Prior distributions for all estimated parameters are given in Table F.4.
 
 \section{AGE-STRUCTURED MODEL}
 
@@ -140,7 +122,7 @@ We attempted a two-sex, age-structured stochastic model to reconstruct the popul
 
 REASONS model was rejected.
 
-1940 to the beginning of 2013. Ages were tracked from 1 to 30, with 30 being an accumulator age class. Although an accumulator age class of 60 was used in the QCS assessment \citep{\popQCS}, initial exploration runs for this assessment did not perform well using 60 for the accumulator age class. Better model performance was obtained using age 30, which is consistent with the earlier Goose Island Gully POP assessment by \citet{shks01}. 
+1940 to the beginning of 2013. Ages were tracked from 1 to 30, with 30 being an accumulator age class. Although an accumulator age class of 60 was used in the QCS assessment , initial exploration runs for this assessment did not perform well using 60 for the accumulator age class. Better model performance was obtained using age 30, which is consistent with the earlier Goose Island Gully POP assessment by . 
 
 The population at the beginning of the reconstruction was assumed to be in equilibrium with average recruitment and no fishing. Selectivities by sex for one of the surveys and the commercial fishery were estimated using three parameters describing a half-Gaussian function (that is set to 1 above a certain age). The model equations and implementation are described in Appendix~F.
 
@@ -148,7 +130,7 @@ The model was fit to the available data (three sets of survey indices, 15 annual
 
 The MCMC procedure was run for 10,000,000 iterations, sampling every 10,000th, to give 1,000 samples. These samples were used to estimate parameters and quantities of interest, including stock sizes and the probabilities of being above reference points.
 
-Initial model fits to the data gave sensible and consistent results. Numerous sensitivity runs that systematically explored the effect of different components of the data on model results did not seem justified, given the small amount of available data when spread over the long period of stock reconstruction (particularly for the early years). Two sensitivity runs are presented in Appendix~I, one exploring possible systematic catch mis-reporting from 1987-1995 and the other dropping the early (1967-1970) GB Reed survey series. We did not explore ageing error. Such a sensitivity run was conducted for the Yellowmouth Rockfish assessment \citep{\ymr}, with the conclusion that a full investigation of ageing error would require an independent dedicated analysis, which was beyond the capacity of the current assessment.
+Initial model fits to the data gave sensible and consistent results. Numerous sensitivity runs that systematically explored the effect of different components of the data on model results did not seem justified, given the small amount of available data when spread over the long period of stock reconstruction (particularly for the early years). Two sensitivity runs are presented in Appendix~I, one exploring possible systematic catch mis-reporting from 1987-1995 and the other dropping the early (1967-1970) GB Reed survey series. We did not explore ageing error. Such a sensitivity run was conducted for the Yellowmouth Rockfish assessment , with the conclusion that a full investigation of ageing error would require an independent dedicated analysis, which was beyond the capacity of the current assessment.
 
 
 % FROM SWEAVE:
@@ -165,7 +147,7 @@ Figure \ref{fig:VBcatch} shows the MCMC results for the estimated vulnerable bio
 Estimates of various quantities of interest are given in Table \ref{tab:MCMCderived}. In particular, the median (and 5-95\% credible interval) for $B_{2013}/B_0$, the ratio of current spawning biomass ($B_{2013}$) to the unfished equilibrium level ($B_0$), is 0.41~(0.19-0.68); thus 0.41 is the value for the final circle in Figure \ref{fig:BVBnorm}.
 % (This ratio is sometimes known as depletion).
 
-The estimated recruitments (age-1 fish, Figure \ref{fig:recruitsMCMC}) in part further explain the aforementioned stock trajectory. There was lower-than-average recruitment in the early 1970s, which may, together with increased catches, explain why the vulnerable biomass declined through the 1980s (note the approximate ten-year lag from recruitment to fish becoming fully selected by the commercial fishery). There are a number of year classes with approximately double the long-term average recruitment. This is unlike the patterns observed for the QCS area 5ABC stock (Figure 5 of \citealt{\popQCS}) and the companion assessment for area 5DE \citep{\otherCite}, which both exhibited a dominant 1976 year class (age-1 recruits in 1977) that was approximately five times larger than the long-term average recruitment.    
+The estimated recruitments (age-1 fish, Figure \ref{fig:recruitsMCMC}) in part further explain the aforementioned stock trajectory. There was lower-than-average recruitment in the early 1970s, which may, together with increased catches, explain why the vulnerable biomass declined through the 1980s (note the approximate ten-year lag from recruitment to fish becoming fully selected by the commercial fishery). There are a number of year classes with approximately double the long-term average recruitment. This is unlike the patterns observed for the QCS area 5ABC stock (Figure 5 of  and the companion assessment for area 5DE , which both exhibited a dominant 1976 year class (age-1 recruits in 1977) that was approximately five times larger than the long-term average recruitment.    
 
 Figure \ref{fig:exploitMCMC} shows the estimated exploitation rates (ratio of total catch to the vulnerable biomass in the middle of the year), which peaked in the mid-1960s due to the large foreign catches, and then peaked again (although not as high) in the early 1990s due to increased domestic exploitation. Exploitation rates have remained low since the mid-1990s, with $u_{2012}$, the exploitation rate for 2012, estimated to be 0.035~(0.018-0.077).
 
@@ -187,19 +169,19 @@ As noted above, $B_{2013}/B_0$, the ratio of current spawning biomass to the unf
 
 Decision tables are presented with respect to two sets of reference points as determined from consultation with N.~Davis (DFO Groundfish Management Unit, pers.~comm.); see below for rationale for the reference points. Each set is based on either $\Bmsy$ or $B_0$. Decision tables are also given with respect to additional reference points based on current biomass and $\umsy$. All reference points and the associated probabilities were derived from the posterior distributions of Bayesian output from the model.
 
-As part of the Sustainable Fisheries Framework, \citet{dfo09} suggested provisional reference points to guide management and to assess harvest in relation to sustainability. Because alternative reference points for Canadian west coast groundfish species have not been specified by policy, the suggested provisional DFO limit and upper stock reference points of $0.4 \Bmsy$ and $0.8 \Bmsy$ have been adopted here. These were the reference points used for the POP stock in QCS \citep{\popQCS}. Note that no modelling has been carried out to determine the suitability of these reference points for these stocks, nor have acceptable levels of risk been specified.
+As part of the Sustainable Fisheries Framework, suggested provisional reference points to guide management and to assess harvest in relation to sustainability. Because alternative reference points for Canadian west coast groundfish species have not been specified by policy, the suggested provisional DFO limit and upper stock reference points of $0.4 \Bmsy$ and $0.8 \Bmsy$ have been adopted here. These were the reference points used for the POP stock in QCS . Note that no modelling has been carried out to determine the suitability of these reference points for these stocks, nor have acceptable levels of risk been specified.
 
-The zone below the limit reference point ($0.4 \Bmsy$) is termed the ``critical zone'' while the zone lying between the two reference points is termed the ``cautious zone''.  The region above the upper stock reference point ($0.8 \Bmsy$) is termed the ``healthy zone''.  $\Bmsy$ is also reported here as an additional reference point because it ``provides a useful basis for comparing stocks'' \citep{rmjb11} when conducting meta-analyses of assessment results. 
+The zone below the limit reference point ($0.4 \Bmsy$) is termed the ``critical zone'' while the zone lying between the two reference points is termed the ``cautious zone''.  The region above the upper stock reference point ($0.8 \Bmsy$) is termed the ``healthy zone''.  $\Bmsy$ is also reported here as an additional reference point because it ``provides a useful basis for comparing stocks'' when conducting meta-analyses of assessment results. 
 
 Figure \ref{fig:compBmsy} shows the distribution of $B_{2013}/\Bmsy$ relative to the DFO Precautionary Approach provisional reference points of $0.4 \Bmsy$ and $0.8 \Bmsy$. The stock is estimated to be currently above the critical zone with probability P$(B_{2013} > 0.4 \Bmsy) = 0.99$, and in the healthy zone with probability P$(B_{2013} > 0.8 \Bmsy) = 0.87$. For comparison, Figure \ref{fig:compBmsy} also shows the estimated status of the other two POP stocks, where the status for the 5ABC stock is based on a different year.
 
-A second component of the provisional harvest rule of \citet{dfo09} concerns the relationship of the exploitation rate relative to that associated with MSY under equilibrium conditions ($\umsy$). The rule specifies that the exploitation rate should be at or below $\umsy$ when the stock is in the healthy zone, it should be ramped down when in the cautious zone, and it should be kept to an absolute minimum when in the critical zone. Figure \ref{fig:snail} shows the exploitation rate in 2012 relative to that at $\umsy$ (red dot and vertical red line). The estimated ratio of $u_{2012}/\umsy$ is $0.38~(0.13-1.43)$. The probability that the current exploitation rate is below that associated with MSY is P$(u_{2012} < \umsy) = 0.89$.
+A second component of the provisional harvest rule of concerns the relationship of the exploitation rate relative to that associated with MSY under equilibrium conditions ($\umsy$). The rule specifies that the exploitation rate should be at or below $\umsy$ when the stock is in the healthy zone, it should be ramped down when in the cautious zone, and it should be kept to an absolute minimum when in the critical zone. Figure \ref{fig:snail} shows the exploitation rate in 2012 relative to that at $\umsy$ (red dot and vertical red line). The estimated ratio of $u_{2012}/\umsy$ is $0.38~(0.13-1.43)$. The probability that the current exploitation rate is below that associated with MSY is P$(u_{2012} < \umsy) = 0.89$.
 
 % ***Last line into Abstract for 5DE.
 
 The blue and grey circles in Figure \ref{fig:snail} show that, based on medians, the stock is estimated to have been in the healthy zone since the start of fishing. The median exploitation rate has been $>\umsy$ for a total of 18 years, the most recent being 1995.  
 
-Other agencies and jurisdictions often use `proxy' reference points that are expressed in terms of $B_0$ rather than $\Bmsy$ (e.g.~\citealt{nzmf07, nzmf11}), because $\Bmsy$ is often poorly estimated as it is dependent on a consistent fishery. Therefore, the reference points of $0.2 B_0$ and $0.4 B_0$ are also presented here (see decision tables described below), as for the Yellowmouth Rockfish assessment \citep{\ymr}. These reference points are the respective default values used in New Zealand as a `soft' limit (below which management action needs to be taken) and a `target' biomass for low productivity stocks (a mean around which the biomass is expected to vary).
+Other agencies and jurisdictions often use `proxy' reference points that are expressed in terms of $B_0$ rather than $\Bmsy$ (e.g. $\Bmsy$ is often poorly estimated as it is dependent on a consistent fishery. Therefore, the reference points of $0.2 B_0$ and $0.4 B_0$ are also presented here (see decision tables described below), as for the Yellowmouth Rockfish assessment . These reference points are the respective default values used in New Zealand as a `soft' limit (below which management action needs to be taken) and a `target' biomass for low productivity stocks (a mean around which the biomass is expected to vary).
 
 \subsection{PROJECTION RESULTS AND DECISION TABLES}
 
@@ -241,7 +223,7 @@ We expect that the results from the several surveys initiated in the previous de
 
 The following issues could be considered when planning future stock assessments and management evaluations for Pacific Ocean Perch:
 
-1. Continue the suite of fishery-independent trawl surveys that have been established along the BC coast. This includes obtaining age and length composition samples, which will allow the estimation of survey-specific selectivity ogives. 
+1. Continue the suite of fishery-independent trawl surveys that have been established along the BC coast. This includes obtaining age and length composition samples, which will allow the estimation of survey-specific selectivity ogives.
 
 2. Review and potentially improve the commercial sampling program for POP age composition with the goal of continuing the representative sampling of all fisheries that take significant amounts of POP.
 
@@ -250,24 +232,23 @@ The following issues could be considered when planning future stock assessments 
 
 \section{ACKNOWLEDGEMENTS}
 
-We thank the members of the POP Technical Working Group (Greg Workman, Rob Kronlund, Rick Stanley, Nathan Taylor and Barry Ackerman) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rob Kronlund for chairing. We especially thank Peter Hulson (NOAA) and Jaclyn Cleary for their written reviews of the working paper. Allan Hicks (NOAA) has kindly supported the Awatea version of the Coleraine stock assessment model used in this assessment, and we are thankful to Arni Magnusson and Ian Stewart (NOAA) for producing their MCMCscape and scape R packages, which we adapted and used extensively for this assessment. We also thank Shayne MacLellan, Darlene Gillespie, and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of Pacific Ocean Perch otoliths. 
+We thank the members of the Arrowtooth Flounder Technical Working Group (Rowan Haigh, Kendra Holt, Rob Kronlund, Barry Ackerman, Greg Workman) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rowan Haigh for chairing. We especially thank James Thorsen (NOAA) and Joanne Morgan (DFO) for their written reviews of the working paper. We also thank Steve Wichkowski and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of Arrowtooth Flounder otoliths. 
 
 % \clearpage
 
-\addcontentsline{toc}{section}{BIBLIOGRAPHY}   % May get page number wrong 
-\bibliographystyle{resDoc}  
-\bibliography{../../abbrev4}                   %  if starting a new page
+\addcontentsline{toc}{section}{BIBLIOGRAPHY}
+\bibliographystyle{resDoc}
+\bibliography{../../all}
 
-% Will use \cite{***} (or \citet etc.) as appropriate for 
-%  reference ***. Andy's system is that the reference is 
+% Will use \cite{***} (or \citet etc.) as appropriate for
+%  reference ***. Andy's system is that the reference is
 %  given in the bib file as {abc12}, where a,b,c are the initials
-%  of the authors, and 12 is the year. DFO12 etc. for DFO 
+%  of the authors, and 12 is the year. DFO12 etc. for DFO
 %  documents, though be careful in case there are multiple
 %  with the same name. (Maybe DFO12a etc., or something similar).
 % If >6 authors then first 4 letters of the first author's name.
 
 \clearpage
-
 
 %% Need figure, though this one didn't save well as an .eps
 %\begin{figure}[htp]
@@ -277,22 +258,21 @@ We thank the members of the POP Technical Working Group (Greg Workman, Rob Kronl
 %%\epsfbox{gma.popymr.amend.eps}
 %\end{center}
 %\caption{DUMMY FIGURE FOR NOW**. Pacific Marine Fisheries Commission (PMFC) major areas (outlined in dark blue) compared with Groundfish Management Unit areas for POP (shaded). For reference, map indicates Queen Charlotte Sound (QCS) and Goose Island Gully (GIG). This assessment is for the stock in PMFC areas 3C and 3D (termed area 3CD).} % ***5DE
-%\label{fig:areas} 
+%\label{fig:areas}
 %\end{figure}
-
 
 \begin{figure}[htp]
 \begin{center}
-\epsfxsize=6in
-\epsfbox{mainDoc/U-396-d(960217-120913)-z(0-1200)-fid(1).eps}
+\includegraphics[width=6in,keepaspectratio=true]{cpueFigures/ARF-1996-2014-CPUE.eps}
 \end{center}
-\vspace{-17mm}
-\caption{Mean catch-per-unit-effort (CPUE, kg/h) of POP in grid cells 0.075$^\circ$ longitude by 0.055$^\circ$ latitude (roughly 32~km$^2$). The shaded cells give an approximation of the area where POP was encountered by fishing events from the groundfish trawl fishery from February 1996 to September 2012. Named gullies are to the northeast of their labels. Contours are 200 m and 1000 m isobaths.}
-\label{fig:cpue} 
+\vspace{0mm}
+% To get the grid size in km^2 for the caption:
+% While in the gui for the map, type mean(xtcall(PBSmap)$pdata$area) for the map you currently have loaded.
+\caption{Mean catch-per-unit-effort (CPUE, kg/h) of Arrowtooth Flounder in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where Arrowtooth Flounder was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
+\label{fig:cpue}
 \end{figure}
 
-
-% Figures from Sweave (this gets copied pretty much as is straight from our 
+% Figures from Sweave (this gets copied pretty much as is straight from our
 %  Sweave output from our R package PBSawatea):
 
 % \ymrfig{VBcatch}{Estimated vulnerable biomass (boxplots) and commercial catch (vertical bars), in tonnes, over time. Boxplots show the 2.5, 25, 50, 75 and 97.5 percentiles from the MCMC results. Catch is shown to compare its magnitude to the estimated vulnerable biomass.}
@@ -309,10 +289,9 @@ We thank the members of the POP Technical Working Group (Greg Workman, Rob Kronl
 \epsfxsize=6in
 \epsfbox{mainDoc/CompBmsy-POP-(3CD,5ABC,5DE).eps}
 \end{center}
-\caption{Current status of the three Canadian POP stocks relative to the DFO Precautionary Approach provisional reference points of $0.4 \Bmsy$ and $0.8 \Bmsy$. The value of $B_t / \Bmsy$ is for $t=2013$ for 3CD (this assessment) and 5DE \citep{\otherCite}, and for $t=2011$ for area 5ABC (run `Estimate $M \& h$' from \citealt{\popQCS}). Boxplots show the 5, 25, 50, 75 and 95 percentiles from the MCMC results.}
+\caption{Current status of the three Canadian POP stocks relative to the DFO Precautionary Approach provisional reference points of $0.4 \Bmsy$ and $0.8 \Bmsy$. The value of $B_t / \Bmsy$ is for $t=2013$ for 3CD (this assessment) and 5DE , and for $t=2011$ for area 5ABC (run `Estimate $M \& h$' from  show the 5, 25, 50, 75 and 95 percentiles from the MCMC results.}
 \label{fig:compBmsy} 
 \end{figure}
-
 
 %\ymrfig{snail}{Phase plot through time of the medians of the ratios $B_t / B_\mathrm{MSY}$ (the spawning biomass in year $t$ relative to $B_\mathrm{MSY}$) and $u_t / u_\mathrm{MSY}$ (the exploitation rate in year $t$ relative to $u_\mathrm{MSY}$). Blue filled circle is the starting year (1940). Years then proceed from light grey through to dark grey with the final year (2012) as a filled red circle, and the red lines represent the 10\% and 90\% percentiles of the posterior distributions for the final year. Vertical grey lines indicate the Precautionary Approach provisional limit and upper stock reference points of 0.4$B_\mathrm{MSY}$ and 0.8$B_\mathrm{MSY}$, and horizontal grey line indicates $u_\mathrm{MSY}$.}
 
@@ -327,7 +306,6 @@ We thank the members of the POP Technical Working Group (Greg Workman, Rob Kronl
 \clearpage
 
 % From Sweave:
-
 
 \begin{table}[tp]
 \centering
@@ -561,13 +539,13 @@ strategy & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020 & 2021 & 2022 &
 \begin{tabular}{rrrrrrrrrrrr}
 \multicolumn{12}{l}{P$(u_t > u_\mathrm{MSY})$} \\
   \hline
- & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020 & 2021 & 2022 & 2023 \\ 
+       & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020 & 2021 & 2022 & 2023 \\ 
   \hline
-0 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  200 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
-  400 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
-  600 & 0.12 & 0.12 & 0.12 & 0.12 & 0.11 & 0.11 & 0.10 & 0.10 & 0.10 & 0.11 & 0.11 \\ 
-  800 & 0.20 & 0.20 & 0.20 & 0.21 & 0.21 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
+     0 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+   200 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.01 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+   400 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+   600 & 0.12 & 0.12 & 0.12 & 0.12 & 0.11 & 0.11 & 0.10 & 0.10 & 0.10 & 0.11 & 0.11 \\ 
+   800 & 0.20 & 0.20 & 0.20 & 0.21 & 0.21 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 & 0.20 \\ 
   1000 & 0.28 & 0.29 & 0.30 & 0.31 & 0.31 & 0.31 & 0.30 & 0.30 & 0.31 & 0.31 & 0.31 \\ 
   1200 & 0.38 & 0.40 & 0.40 & 0.41 & 0.40 & 0.40 & 0.41 & 0.41 & 0.41 & 0.42 & 0.43 \\ 
   1400 & 0.46 & 0.48 & 0.49 & 0.51 & 0.52 & 0.52 & 0.52 & 0.53 & 0.54 & 0.55 & 0.57 \\ 
@@ -579,9 +557,4 @@ strategy & 2013 & 2014 & 2015 & 2016 & 2017 & 2018 & 2019 & 2020 & 2021 & 2022 &
 \end{center}
 \end{table}
 
-
-
-
 \clearpage
-
-
