@@ -35,6 +35,8 @@
 \usepackage{color, colortbl}
 \usepackage{arydshln}          % dashed lines in tables (has to be loaded after other stuff)
 \usepackage{hyperref}          % For hyperlinked references (figures and citations, etc.) in the document
+\usepackage{subfig}            % For two-panel plots
+\usepackage{scrextend}         % For indenting blocks of text with 'addmargin'
 
 \definecolor{rowclr}{RGB}{255, 192, 203}
 \newcommand{\sQuote}[1]{`#1'}
@@ -249,7 +251,7 @@
 \setcounter{page}{68}
 
 \rfoot{Appendix D -- Biological Data}
-%\input{appD-Biology/AppD-BiologyRev}
+\input{appD-Biology/AppD-Biology}
 
 \rfoot{Appendix E -- Age Data}
 %\input{appE-Biology/AppE-AgesRev}
