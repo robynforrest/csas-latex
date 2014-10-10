@@ -33,10 +33,11 @@
 \usepackage{verbatim,fancyvrb} % Check - may be in .sty file
 \usepackage{xifthen}           % provides \ifthenelse and \isempty
 \usepackage{color, colortbl}
-\usepackage{arydshln}          % dashed lines in tables (has to be loaded after other stuff)
+\usepackage{arydshln}          % For dashed lines in tables (has to be loaded after other stuff)
 \usepackage{hyperref}          % For hyperlinked references (figures and citations, etc.) in the document
 \usepackage{subfig}            % For two-panel plots
 \usepackage{scrextend}         % For indenting blocks of text with 'addmargin'
+\usepackage{relsize}           % For mathlarger, which makes equations bigger
 
 \definecolor{rowclr}{RGB}{255, 192, 203}
 \newcommand{\sQuote}[1]{`#1'}
@@ -74,6 +75,19 @@
 	%\clearpage
 }
 
+% eor - Show two things with a vertical bar between them
+\newcommand{\eor}[2]{{#1$\Vert$#2}}
+% bM - makes equations larger
+\newcommand{\bM}[1]{\mathlarger{\mathlarger{#1}}}
+% Allow newline breaks in a table cell: syntax is \specialcell{first line\\secondline}
+\newcommand{\specialcell}[2][c]{%
+  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+% fishname - Common name of the species being assessed
+\newcommand{\fishname}{Arrowtooth Flounder}
+% sciencename - Science name for the species being assessed
+\newcommand{\sciencename}{Atheresthes stomias}
+
 % Headers and footers
 % For Res Doc, best to have a left and a right footer
 %  (and/or header), not just one (for double-sided printing).
@@ -81,8 +95,8 @@
 % \lhead{DRAFT -- Non-citable working paper}  % Omit for final ResDoc.
 \lhead{}
 \rhead{}
-\lfoot{Arrowtooth Flounder}
-\rfoot{Coastwide}           % The area of the assessment
+\lfoot{\fishname}           % Species common name for left footer
+\rfoot{Coastwide}           % The area of the assessment for right footer
 %\rfoot{WP 2012/P02a}       % Change to appendix number for appendices
                             % Will probably delete footers in main text
                             %  for final Res Doc.
@@ -90,106 +104,22 @@
 % \linenumbers              % uncomment to add in line numbers
 % \modulolinenumbers[5]     % just number every 5th line
 
-% \bibliographystyle{ecology}
-% \bibliographystyle{cjfas}
-% \bibliographystyle{cjfas2}
-% \bibliographystyle{resDoc}  - have to move to mainDoc.tex to get flatex
-%  to work
+% \def\AppLet{F}            % Appendix letter - we had this
+                            %  to number equations in Appendix
+                            %  F as (F.17) etc.
+% \def\StartP{102}          % page start
 
-% \def\AppLet{F}                   % Appendix letter - we had this
-                                   %  to number equations in Appendix
-                                   %  F as (F.17) etc.
-% \def\StartP{102}                   % page start
-\newcommand{\Bmsy}{B_\mathrm{MSY}} % Useful shortcuts
+\newcommand{\Bmsy}{B_\mathrm{MSY}}
 \newcommand{\umsy}{u_\mathrm{MSY}}
-
-% I often make up this sort of thing to include figures easily,
-%  see the example at the end:
-\newcommand\onefig[4]{ % filename is #1, text is #2, label is #3
-  \begin{figure}[htp]             %  fig width is #4
-  \begin{center}
-  \epsfxsize=#4 in
-  \epsfbox{#1.eps}     % Include the directory name here if needed.
-  \end{center}
-  \caption{#2 }
-  \label{fig:#3}
-  \end{figure}
-  % \clearpage
-}
-
-%\newcommand{\MCMCfigdir}{C:/andy/awatea/POP12/POP3CD/POPrun20/MCMC.20.01}
-%\newcommand{\MCMCsOnedir}{C:/andy/awatea/POP12/POP3CD/POPrun21/MCMC.21.01}
-%\newcommand{\MCMCsTwodir}{C:/andy/awatea/POP12/POP3CD/POPrun22/MCMC.22.01}
-% Can't have a number in a newcommand!
-%\newcommand\MPDfigdir{C:/andy/awatea/POP12/POP3CD/POPrun20/MPD.20.01}
 \newcommand{\MapData}{C:/Work/ArrowtoothFlounder/2014Assessment/data/MapData}
 
-
-% For MCMC figures, base run:
-\newcommand\ymrfig[2]{    % filename is #1, text is #2
-  \begin{figure}[htp]
-  \begin{center}
-  \epsfxsize=6in
-  \epsfbox{\MCMCfigdir/#1.eps}
-  \end{center}
-  \caption{#2 }
-  \label{fig:#1}
-  \end{figure}
-  % \clearpage
-}
-
-\newcommand{\numMCMC}{1,000}
-
-% Set numbering as F.17 etc. for equations in appendix F. Remove
-%  these if not in an Appendix.:
-% Think this will get done automatically
-% \renewcommand{\theequation}{\AppLet.\arabic{equation}}
-% \renewcommand{\thefigure}{\AppLet.\arabic{figure}}
-% \renewcommand{\thetable}{\AppLet.\arabic{table}}
-
-% newcommands can go here, for example to abbreviate our two model
-%  runs:
 \newcommand{\EstM}{`Estimate \emph{M}'}
 \newcommand{\FixM}{`Fix \emph{M}'}
-
-\newcommand{\popQCS}{esh12} % {Edwards-etal:2012pop}
-\newcommand{\ymr}{ehs12}    % {Edwards-etal:2012ymr}
-\newcommand{\area}{3CD}
-\newcommand{\other}{5DE}
-\newcommand{\otherCite}{ehs13area5DE}   % {Edwards-etal:20135DE}
-\newcommand{\currYear}{2013}
-
-%% Need to add this here, according to
-%% http://emeryblogger.com/2011/01/14/diff-your-latex-files-with-latexdiff/
-%%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
-%%DIF UNDERLINE PREAMBLE
-%\RequirePackage[normalem]{ulem}
-%%%%%\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1}
-%\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}}
-%\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}
-%%DIF SAFE PREAMBLE
-%\providecommand{\DIFaddbegin}{}
-%\providecommand{\DIFaddend}{}
-%\providecommand{\DIFdelbegin}{}
-%\providecommand{\DIFdelend}{}
-%%DIF FLOATSAFE PREAMBLE
-%\providecommand{\DIFaddFL}[1]{\DIFadd{#1}}
-%\providecommand{\DIFdelFL}[1]{\DIFdel{#1}}
-%\providecommand{\DIFaddbeginFL}{}
-%\providecommand{\DIFaddendFL}{}
-%\providecommand{\DIFdelbeginFL}{}
-%\providecommand{\DIFdelendFL}{}
-%%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
-
-
-% ****************** end macros ********************
 
 \begin{document}
 
 
 \input{preamble}              % Table of contents, etc.
-
-
 % \setcounter{chapter}{0}
 % \setcounter{table}{0}
 % \setcounter{figure}{0}
@@ -245,15 +175,23 @@
 \rfoot{Appendix B -- Catch Data}
 %\input{appB-Catch/AppB-CatchRev}
 
-\rfoot{Appendix C -- Trawl Surveys}
-%\input{appC-Surveys/AppC-Surveys}   % Dummy to replace with Word
+%\rfoot{Appendix C -- Trawl Surveys}
+%\input{appC-Surveys/AppC-Surveys}
+
+\rfoot{Appendix C -- CPUE Analyses}
+\input{appC-CPUE/AppC-CPUE}
 
 \setcounter{page}{68}
 
 \rfoot{Appendix D -- Biological Data}
-\input{appD-Biology/AppD-Biology}
+% DONE
+%\input{appD-Biology/AppD-Biology}
 
-\rfoot{Appendix E -- Age Data}
+\rfoot{Appendix E -- Age Composition weighting}
+% DONE
+%\input{appE-AgeCompWeighting/AppE-AgeCompWeighting}
+
+%\rfoot{Appendix E -- Age Data}
 %\input{appE-Biology/AppE-AgesRev}
 
 \rfoot{Appendix F -- Model Equations}

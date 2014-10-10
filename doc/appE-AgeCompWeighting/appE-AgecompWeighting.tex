@@ -1,4 +1,6 @@
-\section{Weighted age proportions}
+\clearpage
+
+\chapter{Weighted age proportions}
 
 This appendix summarizes a method for representing commercial and survey age structures for a given species through weighting observed age frequencies~$x_a$ or proportions~$x^\prime_a$ by \eor{catch}{density} in defined strata. 
 (Throughout this section, we use the symbol \sQuote{$\Vert$} to delimit parallel values for commercial and survey analyses, respectively, as the mechanics of the weighting procedure are similar for both.) 
@@ -16,32 +18,35 @@ Notation is summarised in Table~\ref{tab:wtdAges}.
 
 \usefont{\encodingdefault}{\familydefault}{\seriesdefault}{\shapedefault}\small
 \begin{longtable}[1]{l>{\raggedright\arraybackslash}p{0.85\textwidth} }
-\caption{Equations for weighting age frequencies or proportions for \fishname.\\(\bold{c})~= commercial, (\bold{s})~= survey}
+%\caption{Equations for weighting age frequencies or proportions for \fishname.\\(\bold{c})~= commercial, (\bold{s})~= survey}
+\caption{Equations for weighting age frequencies or proportions for Arrowtooth Flounder.\\(\textbf{c})~= commercial, (\textbf{s})~= survey}
 \label{tab:wtdAges} \\
 \hline
-Symbol & Description \tstrut \bstrut \\
+Symbol & Description \\ %\tstrut \bstrut \\
 \hline
-& \tstrut \bold{Indices} \bstrut \\
+%& \tstrut \textbf{Indices} \bstrut \\
+& \textbf{Indices} \\
 $\bM{a}$ & age class (1 to $A$, where $A$ is an accumulator age-class) \\
-$\bM{d}$ & (\bold{c}) trip IDs as sample units \\
-& (\bold{s}) sample IDs as sample units \\
-$\bM{h}$ & (\bold{c}) quarters (1 to 4), 91.5 days each \\
-& (\bold{s}) strata (area-depth combinations) \\
-$\bM{i}$ & (\bold{c}) calendar years (1977 to present) \\
-& (\bold{s}) survey IDs in survey series (e.g., QCS Synoptic) \bstrut \\
+$\bM{d}$ & (\textbf{c}) trip IDs as sample units \\
+& (\textbf{s}) sample IDs as sample units \\
+$\bM{h}$ & (\textbf{c}) quarters (1 to 4), 91.5 days each \\
+& (\textbf{s}) strata (area-depth combinations) \\
+$\bM{i}$ & (\textbf{c}) calendar years (1977 to present) \\
+& (\textbf{s}) survey IDs in survey series (e.g., QCS Synoptic) \\ %\bstrut \\
 \hline
-& \tstrut \bold{Data} \bstrut \\
+%& \tstrut \textbf{Data} \bstrut \\
+& \textbf{Data} \\
 $\bM{x_{adhi}}$ & observations-at-age $a$ for sample unit $d$ in \eor{quarter}{stratum} $h$ of \eor{year}{survey} $i$ \\
 $\bM{x^\prime_{adhi}}$ & proportion-at-age $a$ for sample unit $d$ in \eor{quarter}{stratum} $h$ of \eor{year}{survey} $i$ \\
-$\bM{C_{dhi}}$ & (\bold{c}) commercial catch (kg) of a given species for sample unit $d$ in quarter $h$ of year $i$ \\
-& (\bold{s}) density (kg/km$^2$) of a given species for sample unit $d$ in stratum $h$ of survey $i$ \\
+$\bM{C_{dhi}}$ & (\textbf{c}) commercial catch (kg) of a given species for sample unit $d$ in quarter $h$ of year $i$ \\
+& (\textbf{s}) density (kg/km$^2$) of a given species for sample unit $d$ in stratum $h$ of survey $i$ \\
 $\bM{C^\prime_{dhi}}$ & $C_{dhi}$ as a proportion of total \eor{catch}{density} $C_{hi} = \sum_{d} C_{dhi}$ \\
 $\bM{y_{ahi}}$ & weighted age frequencies at age $a$ in \eor{quarter}{stratum} $h$ of \eor{year}{survey} $i$ \\
-$\bM{K_{hi}}$ & (\bold{c}) total commercial catch (kg) of species in quarter $h$ of year $i$ \\
-& (\bold{s}) stratum area (km$^2$) of stratum $h$ in survey $i$ \\
+$\bM{K_{hi}}$ & (\textbf{c}) total commercial catch (kg) of species in quarter $h$ of year $i$ \\
+& (\textbf{s}) stratum area (km$^2$) of stratum $h$ in survey $i$ \\
 $\bM{K_{hi}^\prime}$ & $K_{hi}$ as a proportion of total \eor{catch}{area} $K_i = \sum_{h} K_{hi}$ \\
 $\bM{p_{ai}}$ & weighted frequencies at age $a$ in \eor{year}{survey} $i$ \\
-$\bM{p_{ai}^\prime}$ & weighted proportions at age $a$ in \eor{year}{survey} $i$ \bstrut \\
+$\bM{p_{ai}^\prime}$ & weighted proportions at age $a$ in \eor{year}{survey} $i$ \\ %\bstrut \\
 \hline 
 % \end{tabular}
 % \end{center}
