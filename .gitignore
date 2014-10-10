@@ -9,6 +9,5 @@
 .RHistory
 *.7z
 *.toc
-POP3CDresDocSubmit.pdf
-POP3CDresDocSubmitAccess9.pdf
-
+*.out
+resDoc.pdf
