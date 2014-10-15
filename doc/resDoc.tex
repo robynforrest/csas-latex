@@ -38,6 +38,7 @@
 \usepackage{subfig}            % For two-panel plots
 \usepackage{scrextend}         % For indenting blocks of text with 'addmargin'
 \usepackage{relsize}           % For mathlarger, which makes equations bigger
+\usepackage{enumitem}          % To remove spacing between list items [noitemsep,nolistsep]
 
 \definecolor{rowclr}{RGB}{255, 192, 203}
 \newcommand{\sQuote}[1]{`#1'}
@@ -178,14 +179,15 @@
 %\rfoot{Appendix C -- Trawl Surveys}
 %\input{appC-Surveys/AppC-Surveys}
 
-\rfoot{Appendix C -- CPUE Analyses}
-\input{appC-CPUE/AppC-CPUE}
+%\rfoot{Appendix C -- CPUE Analyses}
+% Gave up because Paul won't give me the figures in eps format.
+%\input{appC-CPUE/AppC-CPUE}
 
 \setcounter{page}{68}
 
 \rfoot{Appendix D -- Biological Data}
 % DONE
-%\input{appD-Biology/AppD-Biology}
+\input{appD-Biology/AppD-Biology}
 
 \rfoot{Appendix E -- Age Composition weighting}
 % DONE

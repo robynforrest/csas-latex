@@ -46,12 +46,13 @@ A DFO Technical Working Group provided valuable guidance with respect to many of
 
 \section{FISHERIES MANAGEMENT}
 
+\clearpage
 
 \section{SURVEY DESCRIPTIONS}
 
 Six sets of fishery independent survey indices of abundance were used:
 
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
   \item the West Coast Vancouver Island Synoptic Survey series, from 2004-2014 (even years only), referred to here as the `WCVISS series'.
   \item the Hecate Strait Synoptic Survey series, from 2005-2013 (odd years only), referred to here as the `HSSS series'.
   \item the Hecate Strait Multispecies Assemblage Survey, for 1996, 1998, 2000, 2002, and 2003, referred to here as `HSMAS'.
@@ -60,9 +61,15 @@ Six sets of fishery independent survey indices of abundance were used:
   \item the Queen Charlotte Sound Shrimp Trawl Survey, from 1999-2013 (all years), referred to here as `QCSSTS'.
 \end{enumerate}
 
+The suitability of each survey was examined (Table~\ref{tab:surveySuitability}). The WCVISS, HSSS, HSMSAS, and QCSSS were all designed to produce indices for the demersal fish species of the Northeast Pacific, and the two shrimp trawl surveys WCVISTS and QCSSTS were designed to generate shrimp indices. The depth ranges differ by a large amount, with the 4 groundfish surveys having ranges from 18 m to 660 m. The shrimp trawl surveys have a maximum depth of 251 m and 305 m for the WCVISTS and QCSSTS respectively (Table~\ref{tab:surveySuitability}). The depth range for \fishname\ is 50 m to 900 m (\citet{arf2001}); the shrimp trawl surveys cover much less of the habitable depth range than the groundfish surveys do, 
+
+suggesting that they might not be suitable as an index of stock for
+
 The relative biomass survey indices are used as data in the model along with the associated relative error for each index value.
 
 Pre-1996 commercial catch and effort data were also investigated with the intent of creating CPUE-based abundance indices for use in the stock assessment model. This approach was abandoned because it was felt that there were problems with the reliability of the data as well as questions as to the representative nature of the resulting indices, given the schooling behaviour of the species and the capacity of fishers to target these schools. Given the concern that the resulting indices would be hyperstable, they were not used in this assessment.
+
+\clearpage
 
 \section{BIOLOGICAL INFORMATION}
 
@@ -104,7 +111,7 @@ Figure \ref{fig:exploitMCMC} shows the estimated exploitation rates (ratio of to
 
 Estimates of further quantities of interest, such as absolute values of biomass (rather than relative values), are also given in Table \ref{tab:MCMCderived}, as well as quantities based on MSY, discussed below.
 
-\section{RECCOMENTDATIONS AND YIELD OPTIONS}
+\section{RECCOMENDATIONS AND YIELD OPTIONS}
 
 \subsection{CURRENT STOCK LEVEL}
 
@@ -136,5 +143,26 @@ We thank the members of the Arrowtooth Flounder Technical Working Group (Rowan H
 \caption{Mean catch-per-unit-effort (CPUE, kg/h) of Arrowtooth Flounder in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where Arrowtooth Flounder was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
 \label{fig:cpue}
 \end{figure}
+
+\begin{table}[b]
+\tiny
+\centering
+\caption{\label{tab:surveySuitability} Attributes of fishery-independent surveys and evaluation of suitability for stock indexing. RS=Random stratified design, BT=Bottom trawl gear.}
+\begin{tabular}{lcccccc}
+\hline
+Attribute                &        WCVISS &          HSSS &         HSMSAS &         QCSSS &        WCVISTS &         QCSSTS \\
+\hline
+Design                   &            RS &            RS &             RS &            RS &             RS &             RS \\
+Gear                     &            BT &            BT &             BT &            BT &             BT &             BT \\
+Year Range (years)       & 2004-2014 (6) & 2005-2013 (5) & 1984-2003 (11) & 2003-2013 (7) & 1977-2014 (38) & 1998-2013 (16) \\
+Set Range (avg)          & 106-179 (153) & 156-236 (189) &   88-161 (105) & 260-281 (269) &   67-204 (131) &   92-204 (175) \\
+PFMA Areas               &         3C,3D &         5C,5D &          5C,5D &         5A,5B &          3C,3D &          5A,5B \\
+Depth Range (m)          &        41-660 &        19-420 &         18-232 &        41-626 &         15-251 &         15-305 \\
+Ageing done (yrs)        &       Yes (5) &       Yes (5) &        Yes (1) &            No &             No &             No \\
+Comment                  &               &               &                &               & \specialcell{Targets\\shrimp} & \specialcell{Targets\\shrimp} \\
+\hline
+\end{tabular}
+\end{table}
+
 
 \clearpage
