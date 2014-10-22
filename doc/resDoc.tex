@@ -1,28 +1,15 @@
 % resDoc.tex
-%  COMMENT OUT \input{filename} when not working on filename.tex
-%   and just include them all for the final document.
-%   24th August 2012.
-% resDocSty3.tex - further formatting by Jaclyn Cleary and Andrew
-%  Edwards. Aug 2012.
-% resDocSty3.tex - have updated .sty file, and taking out some
-%  of the extra tables. 12th April 2012
-% resDocSty2.tex - putting the formatting into resDocSty.sty,
-%  17th January 2012.
-% resDocSty.tex - LaTeX formatting for a CSAS Research Document.
-%  Andrew Edwards, Andrew.Edwards@dfo-mpo.gc.ca, 4th January 2012.
 
 \documentclass[11pt]{book}
-\usepackage{resDocSty}       % Res Doc .sty file
+\usepackage{resDocSty}         % Res Doc .sty file
 \usepackage{appendix}
-\usepackage{cite}            % Necessary for bibtex usage?
+\usepackage{cite}
 
-% AME adding - should add to template or to .sty file. Maybe to
-%  a CSDiff also.
-\usepackage{longtable,array} % need array when specifying a ragged right column:  >{\raggedright\arraybackslash}{p2in}. Rowan needs.
+\usepackage{longtable,array}   % need array when specifying a ragged right column:  >{\raggedright\arraybackslash}{p2in}.
 % \renewcommand{\chaptername}{Appendix}
 % \renewcommand*{\chaptername}{Appendix}
 % \addto\captionsenglish{\renewcommand\chaptername{Part}}
-\usepackage{import}    % for figures in chapter subdirectories
+\usepackage{import}            % for figures in chapter subdirectories
 
 % Had these for YMR Eqns appendix:
 % \renewcommand{\footrulewidth}{0.4pt}
@@ -34,7 +21,37 @@
 \usepackage{xifthen}           % provides \ifthenelse and \isempty
 \usepackage{color, colortbl}
 \usepackage{arydshln}          % For dashed lines in tables (has to be loaded after other stuff)
-\usepackage{hyperref}          % For hyperlinked references (figures and citations, etc.) in the document
+
+% For hyperlinked references (figures and citations, etc.). The bookmarksdepthlevel allows
+%  the TOC to be shown in the bookmarks tree in the output PDF.
+\usepackage[bookmarks,bookmarksopen,bookmarksdepth=4]{hyperref}
+\hypersetup{                   % Set up the hyperref options here
+    pdftitle={Arrowtooth Flounder},
+    pdfauthor={Chris Grandin},
+    pdfsubject={Stock Assessment},
+    %pdfkeywords={keyword1, keyword2},
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    colorlinks=true,
+    allcolors=blue,
+    citecolor=cyan,
+    pdfstartview=Fit,
+    pdfpagemode=UseOutlines
+    %pdfpagelayout=TwoPageRight
+}
+% Use the following codes for references within the document.
+%   chap: chapter
+%    sec: section
+% subsec: subsection
+%    fig: figure
+%    tab: table
+%     eq: equation
+%    lst: code listing
+%    itm: enumerated list item
+%    app: appendix subsection
+\usepackage{hypcap}            % So links will anchor at figure, not caption
+
 \usepackage{subfig}            % For two-panel plots
 \usepackage{scrextend}         % For indenting blocks of text with 'addmargin'
 \usepackage{relsize}           % For mathlarger, which makes equations bigger
@@ -82,10 +99,8 @@
 % bM - makes equations larger
 \newcommand{\bM}[1]{\mathlarger{\mathlarger{#1}}}
 % Allow newline breaks in a table cell: syntax is \specialcell{first line\\secondline}
-\newcommand{\specialcell}[2][c]{%
-  \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 
-% fishname - Common name of the species being assessed
 \newcommand{\fishname}{Arrowtooth Flounder}
 % sciencename - Science name for the species being assessed
 \newcommand{\sciencename}{Atheresthes stomias}
@@ -140,7 +155,7 @@
 \clearpage
 
 % \addcontentsline{toc}{chapter}{Appendices}
-\addtocontents{toc}{\par {\bf APPENDICES} \par}
+\addtocontents{toc}{\par {\bf \vspace{10mm} APPENDICES} \par}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
 \appendix           % Everything from now on will be an Appendix
 % \begin{appendices}
