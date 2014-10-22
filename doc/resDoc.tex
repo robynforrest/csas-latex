@@ -1,7 +1,7 @@
 % resDoc.tex
 
 \documentclass[11pt]{book}
-\usepackage{resDocSty}         % Res Doc .sty file
+\usepackage{resDocSty}
 \usepackage{appendix}
 \usepackage{cite}
 
@@ -21,6 +21,7 @@
 \usepackage{xifthen}           % provides \ifthenelse and \isempty
 \usepackage{color, colortbl}
 \usepackage{arydshln}          % For dashed lines in tables (has to be loaded after other stuff)
+\usepackage{pdfpages}          % So we can import PDFs into the document (e.g. request for science advice).
 
 % For hyperlinked references (figures and citations, etc.). The bookmarksdepthlevel allows
 %  the TOC to be shown in the bookmarks tree in the output PDF.
@@ -183,19 +184,17 @@
 
 \lfoot{Arrowtooth Flounder - Coastwide}
 
-\rfoot{Appendix A -- Biological Data}
+\rfoot{Appendix A -- Request for Science Advice}
+\input{app-requestforscienceadvice/app-requestforscienceadvice}
+
+\rfoot{Appendix B -- Biological Data}
 \input{app-biology/app-biology}
 
-\rfoot{Appendix B -- Age Composition weighting}
+\rfoot{Appendix C -- Age Composition weighting}
 \input{app-agecompweighting/app-agecompweighting}
 
-\rfoot{Appendix C -- Model Equations}
+\rfoot{Appendix D -- Model Equations}
 \input{app-equations/app-equations}
-
-%\rfoot{Appendix A -- Request for Advice}
-%\input{appA-RSIA/AppA-RSIAdummy}
-
-% \includepdf[pages={-}]{appA-RSIA/RSIA_2012-13-P02_POP.pdf} - didn't work
 
 %\rfoot{Appendix B -- Catch Data}
 %\input{app-catch/app-catch}
