@@ -135,7 +135,7 @@
 \renewcommand{\theequation}{\arabic{equation}}
 
 % \subimport{mainDoc/}{mainDocRev}
-\input{mainDoc/mainDoc}
+\input{maindoc/maindoc}
 
 \clearpage
 
@@ -167,49 +167,42 @@
 %  by the \renewcommand{\chapter}{\@startsection    in resDocSty.sty
 
 \lfoot{Arrowtooth Flounder - Coastwide}
-% \subimport  for figures that are in subdirectory
 
-\rfoot{Appendix A -- Request for Advice}
+\rfoot{Appendix A -- Biological Data}
+\input{app-biology/app-biology}
+
+\rfoot{Appendix B -- Age Composition weighting}
+\input{app-agecompweighting/app-agecompweighting}
+
+\rfoot{Appendix C -- Model Equations}
+\input{app-equations/app-equations}
+
+%\rfoot{Appendix A -- Request for Advice}
 %\input{appA-RSIA/AppA-RSIAdummy}
 
 % \includepdf[pages={-}]{appA-RSIA/RSIA_2012-13-P02_POP.pdf} - didn't work
 
-\rfoot{Appendix B -- Catch Data}
-%\input{appB-Catch/AppB-CatchRev}
+%\rfoot{Appendix B -- Catch Data}
+%\input{app-catch/app-catch}
 
 %\rfoot{Appendix C -- Trawl Surveys}
-%\input{appC-Surveys/AppC-Surveys}
+%\input{app-surveys/app-surveys}
 
 %\rfoot{Appendix C -- CPUE Analyses}
-% Gave up because Paul won't give me the figures in eps format.
-%\input{appC-CPUE/AppC-CPUE}
+%\input{app-cpue/app-cpue}
 
-\setcounter{page}{68}
+%\setcounter{page}{68}
 
-\rfoot{Appendix D -- Biological Data}
-% DONE
-%\input{appD-Biology/AppD-Biology}
+%\rfoot{Appendix E -- Age Data}
+%\input{app-biology/app-agesrev}
 
-\rfoot{Appendix E -- Age Composition weighting}
-% DONE
-%\input{appE-AgeCompWeighting/AppE-AgeCompWeighting}
+%\rfoot{Appendix G -- Results}
+%\input{app-results/app-results}
 
-\rfoot{Appendix E -- Age Data}
-%\input{appE-Biology/AppE-AgesRev}
+%\rfoot{Appendix H -- Habitat}
+%\input{app-habitat/app-habitat}
 
-\rfoot{Appendix E -- Model Equations}
-\input{appF-Eqns/appendix-equations}
-
-\rfoot{Appendix G -- Results}
-%\input{appG-Results/AppG-ResultsRev} % results figures are
-                                        %  actually still in Awatea
-                                        %  folders
-\rfoot{Appendix H -- Habitat}
-%\input{appH-Habitat/AppH-HabitatRev} % figures are in subdir
-
-\rfoot{Appendix I -- Sensitivities}
-%\input{appI-Sensitivities/AppI-SensitivitiesRev}
-                                        % figures are in subdir or
-                                        %  Awatea folders.
+%\rfoot{Appendix I -- Sensitivities}
+%\input{app-sensitivities/app-sensitivities}
 
 \end{document}
