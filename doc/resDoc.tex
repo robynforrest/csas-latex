@@ -10,6 +10,7 @@
 % \renewcommand*{\chaptername}{Appendix}
 % \addto\captionsenglish{\renewcommand\chaptername{Part}}
 \usepackage{import}            % for figures in chapter subdirectories
+%\usepackage{float}             % Allow figures and tables to be controlled better (avoid the floating).
 
 % Had these for YMR Eqns appendix:
 % \renewcommand{\footrulewidth}{0.4pt}
@@ -35,6 +36,7 @@
     bookmarksopen=true,
     bookmarksopenlevel=1,
     colorlinks=true,
+    linkcolor=blue,
     allcolors=blue,
     citecolor=cyan,
     pdfstartview=Fit,
@@ -56,8 +58,27 @@
 \usepackage{subfig}            % For two-panel plots
 \usepackage{scrextend}         % For indenting blocks of text with 'addmargin'
 \usepackage{relsize}           % For mathlarger, which makes equations bigger
+%\usepackage{mathtools}        % For mathmboxes for use in the equations appendix
+\usepackage{algorithm}         % For display of pseudocode
+\usepackage{algpseudocode}     % For display of pseudocode
+\usepackage{linegoal}          % For display of pseudocode
+% A \Let command for defining assignments within the algorithmic environment which
+% supports automatic indentation when the second argument is too long to fit
+% on one line
+\newcommand*{\Let}[2]{\State #1 $\gets$
+\parbox[t]{\linegoal}{#2\strut}}
+% A \State command that supports automatic indentation when the argument's
+% content is too long to fit on one line
+\newcommand*{\LongState}[1]{\State
+\parbox[t]{\linegoal}{#1\strut}}
+
 \usepackage{enumitem}          % To remove spacing between list items [noitemsep,nolistsep]
-%\usepackage{mathtools}         % For mathmboxes for use in the equations appendix
+\newlist{longitem}{enumerate}{5}
+\setlist[longitem,1]{label=\arabic*)}
+\setlist[longitem,2]{label=\alph*)}
+\setlist[longitem,3]{label=\roman*)}
+\setlist[longitem,4]{label=\arabic*)}
+\setlist[longitem,5]{label=\alph*)}
 
 \definecolor{rowclr}{RGB}{255, 192, 203}
 \newcommand{\sQuote}[1]{`#1'}
@@ -195,6 +216,10 @@
 
 \rfoot{Appendix D -- Model Equations}
 \input{app-equations/app-equations}
+
+\rfoot{Appendix E -- Proportion Female Analysis}
+\input{app-propfemale/app-propfemale}
+
 
 %\rfoot{Appendix B -- Catch Data}
 %\input{app-catch/app-catch}

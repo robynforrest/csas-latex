@@ -1,9 +1,10 @@
 % appendix-equations.tex
-% iSCAM model equations
 
+% Some macros for equations found in tables
 \def\beq{\vspace{-5ex} \begin{fleqn} \begin{equation}}
 \def\eeq{\end{equation} \end{fleqn} \vspace{-5ex}}
 \def\tabline{\vspace{2ex} \hrule \vspace{2ex}}
+% new page macro
 \def\newp{\vfill \break}
 
 \clearpage
@@ -13,13 +14,13 @@
 
 \section{INTRODUCTION}
 
-Stock Assessment modelling was conducted using the Integrated Statistical Catch Age Model (iSCAM), developed by Steven J.D. Martell (Martell et al. 2011).  iSCAM is written in AD Model Builder and the source code and documentation for the original iSCAM is available at https://github.com/smartell/iSCAM. Code for the version used in this assessment can be found at https://github.com/cgrandin/iSCAM. iSCAM uses a statistical catch-at-age model implemented in a Bayesian estimation framework.
+Stock Assessment modelling was conducted using the Integrated Statistical Catch Age Model (iSCAM), developed by Steven J.D. Martell (Martell et al. 2011).  iSCAM is written in AD Model Builder and the source code and documentation for the original iSCAM is available at \hyperref[https://github.com/smartell/iSCAM]{\color{blue}https://github.com/smartell/iSCAM}. Code for the version used in this assessment can be found at \hyperref[https://github.com/cgrandin/iSCAM]{\color{blue}https://github.com/cgrandin/iSCAM}. iSCAM uses a statistical catch-at-age model implemented in a Bayesian estimation framework.
 
-Running of iSCAM and compilation of results figures was streamlined using the iscam-gui software package developed by Chris Grandin (pers. comm, Pacific Biological Station, Fisheries and Oceans Canada). iscam-gui is written in the statistical language R, and provides a graphical user interface that allows users to run and show output of multiple iSCAM model runs in a comparative fashion.
+Running of iSCAM and compilation of results figures was streamlined using the iscam-gui software package (\hyperref[https://github.com/cgrandin/iscam-gui]{\color{blue}https://github.com/cgrandin/iscam-gui}). iscam-gui is written in the statistical language R, and provides a graphical user interface that allows users to run and show output of multiple iSCAM model runs in a comparative fashion.
 
 \section{MODEL DESCRIPTION}
 
-This section contains the documentation in mathematical form of the underlying iSCAM age-structured model, and its steady state version that is used to calculate reference points, the observation models used in predicting observations, and the components of the objective function that formulate the statistical criterion (i.e. the objective function) that is used to estimate model parameters. All of the model equations are laid out in tables and are intended to represent the order of operations, or pseudocode, in which to implement the model. A documented list of symbols used in model equations is given in Table~\ref{tab:variables}. The documentation presented here is a revised version of the iscam user-guide written by S. Martell and available at https://github.com/smartell/iSCAM. Much of the text and equations have been taken directly from the original users guide.
+This section contains the documentation in mathematical form of the underlying iSCAM age-structured model, and its steady state version that is used to calculate reference points, the observation models used in predicting observations, and the components of the objective function that formulate the statistical criterion (i.e. the objective function) that is used to estimate model parameters. All of the model equations are laid out in tables and are intended to represent the order of operations, or pseudocode, in which to implement the model. A documented list of symbols used in model equations is given in Table~\ref{tab:variables}. The documentation presented here is a revised version of the iscam user guide available at \hyperref[https://github.com/smartell/iSCAM]{\color{blue}https://github.com/smartell/iSCAM}. Much of the text and equations have been taken directly from the original user guide.
 
 \section{ANALYTIC METHODS: EQUILIBRIUM CONSIDERATIONS}
 
@@ -90,9 +91,6 @@ The relative abundance data are assumed to be proportional to biomass that is vu
 \end{equation}
 where $v_{k,a,s}$ is the sex- and age-specific selectivity of gear $k$, and $w_{a,s}$ is the mean-weight-at-age for sex $s$.  A user-specified fraction of the total mortality $\lambda_{k,t}$ adjusts the numbers-at-age to correct for survey timing. We set $\lambda_{k,t}$ to 0.5 for all index observations in the commercial and recreational CPUE indices since fishery catch and the collection of CPUE data are the same process, and natural mortality occures throughout the fishing season. 
 
-\clearpage
-
-\newp
 % ********************** Table 1 ************************************
 \begin{table}[b]
 \centering
@@ -501,5 +499,3 @@ $k$  & Dataset & \specialcell{Years with\\catch data} & \specialcell{Selectivity
 %% \medskip
 
 \newpage
-
-\end{document}
