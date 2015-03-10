@@ -43,7 +43,8 @@ Male or female only, no unknowns or null fields \\
 Observations within a sample are likely to be correlated due to the small area which is trawled in a single fishing event. Also, trip samples
 are likely to be correlated due to the fact that it is the same vessel and captain. This algorithm calculates a sex-specific mean weight by
 trip, then combines the trips to get a mean weight within the quater of the year based on the total catch weight for the trip. It then combines
-these across quarters by weighting the commercial catch in each quarter.
+these across quarters by weighting the commercial catch in each quarter. The routine was run for an assumed coastwide stock, and as two areas:
+the WCVI, and QCS+HS.
 
 \subsection{Surveys}
 For surveys, the same algorithm is followed except that the quarter of the year is not included in the calculation. This is because the surveys are
@@ -158,31 +159,30 @@ The proportion of females resulting from this analysis are high, ranging from 0.
 \clearpage
 \begin{table}[h]
 \centering
-\caption{\label{tab:propfemale} Proportion of females for the trawl fishery and 4 surveys}
-\begin{tabular}{lccccc}
+\caption{\label{tab:propfemale} Proportion of females for the trawl fishery and 4 surveys Coastwide.}
+\begin{tabular}{lccccccc}
 \hline \\
-Year & Trawl Fishery & QCSSS & HSMSAS & HSSS & WCVISS \\
+Year & \specialcell{Fishery\\Coastwide} & \specialcell{Fishery\\WCVI} & \specialcell{Fishery\\QCS+HS} & \specialcell{Survey\\QCSSS} & \specialcell{Survey\\HSMSAS} & \specialcell{Survey\\HSSS} & \specialcell{Survey\\WCVISS} \\
 \hline \\
-1996 & 0.854 & & & & \\
-1997 & 0.901 & & & & \\
-1998 & 0.778 & & 0.714 & & \\
-1999 & 0.835 & & & & \\
-2000 & 0.834 & & 0.908 & & \\
-2001 & 0.879 & & & & \\
-2002 & 0.857 & & 0.830 & & \\
-
-2003 & 0.754 & 0.825 & & 0.838 & \\
-2004 & 0.868 & 0.812 & & & 0.838 \\
-2005 & 0.867 & 0.844 & & 0.771 & \\
-2006 & 0.849 & & & & 0.897 \\
-2007 & 0.839 & 0.764 & & 0.781 & \\
-2008 & 0.909 & & & & 0.822 \\
-2009 & 0.701 & 0.794 & & 0.763 & \\
-2010 & 0.724 & & & & 0.813 \\
-2011 & 0.739 & 0.748 & & 0.798 & \\
-2012 & 0.827 & & & & 0.786 \\
-2013 & 0.792 & 0.716 & & 0.753 & \\
-2014 & 0.786 & & & & 0.777 \\
+1996 & 0.854 & 0.860 &       &       &       &       & \\
+1997 & 0.901 & 0.787 & 0.905 &       &       &       & \\
+1998 & 0.778 & 0.635 & 0.789 &       & 0.714 &       & \\
+1999 & 0.835 & 0.814 & 0.794 &       &       &       & \\
+2000 & 0.834 & 0.787 & 0.950 &       & 0.908 &       & \\
+2001 & 0.879 & 0.707 & 0.940 &       &       &       & \\
+2002 & 0.857 & 0.869 & 0.855 &       & 0.830 &       & \\
+2003 & 0.754 & 0.786 & 0.803 & 0.825 &       & 0.838 & \\
+2004 & 0.868 & 0.850 & 0.866 & 0.812 &       &       & 0.838 \\
+2005 & 0.867 & 0.915 & 0.847 & 0.844 &       & 0.771 & \\
+2006 & 0.849 & 0.853 & 0.865 &       &       &       & 0.897 \\
+2007 & 0.839 & 0.785 & 0.835 & 0.764 &       & 0.781 & \\
+2008 & 0.909 & 0.920 & 0.924 &       &       &       & 0.822 \\
+2009 & 0.701 & 0.778 & 0.698 & 0.794 &       & 0.763 & \\
+2010 & 0.724 & 0.606 & 0.730 &       &       &       & 0.813 \\
+2011 & 0.739 & 0.812 & 0.709 & 0.748 &       & 0.798 & \\
+2012 & 0.827 & 0.828 & 0.851 &       &       &       & 0.786 \\
+2013 & 0.792 & 0.844 & 0.834 & 0.716 &       & 0.753 & \\
+2014 & 0.786 & 0.623 & 0.821 &       &       &       & 0.777 \\
 \hline \\
 \end{tabular}
 \end{table}

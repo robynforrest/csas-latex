@@ -42,4 +42,7 @@ __Next actions / wish list__
 2. The web accessibility aspects can probably be automated in Latex (rather than doing at the end in the .pdf). Look into this. A web search turns up 
 [this site](http://tex.stackexchange.com/questions/124291/revisiting-producing-structured-pdfs-from-latex) as possibly the most useful. I plan to maybe look into this for our assessment due December 2014, though may not have time. 
 
+20/5/15: UPDATE regarding web accessibility: Ann in CSAP office says they can do with Web Accessibility stuff on the .pdf file, so we shouldn't have to.
+
+updated resDocSty.sty - line 60 change indention from 0.5 to 0cm (CSAS does not want captions indented after first line). 
 
