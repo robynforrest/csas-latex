@@ -11,3 +11,6 @@
 *.toc
 *.out
 resDoc.pdf
+doc/cache/*
+doc/figure/*
+doc/resDoc.tex
