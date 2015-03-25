@@ -1,0 +1,260 @@
+% resDoc.tex
+
+\documentclass[11pt]{book}
+\usepackage{resDocSty}
+\usepackage{appendix}
+\usepackage{cite}
+
+\usepackage{longtable,array}   % need array when specifying a ragged right column:  >{\raggedright\arraybackslash}{p2in}.
+% \renewcommand{\chaptername}{Appendix}
+% \renewcommand*{\chaptername}{Appendix}
+% \addto\captionsenglish{\renewcommand\chaptername{Part}}
+\usepackage{import}            % for figures in chapter subdirectories
+%\usepackage{float}             % Allow figures and tables to be controlled better (avoid the floating).
+
+% Had these for YMR Eqns appendix:
+% \renewcommand{\footrulewidth}{0.4pt}
+% \renewcommand{\headrulewidth}{0pt}
+
+% For appendices:
+\usepackage{graphicx}          % For inclusion of figures
+\usepackage{verbatim,fancyvrb} % Check - may be in .sty file
+\usepackage{xifthen}           % provides \ifthenelse and \isempty
+\usepackage{color, colortbl}
+\usepackage{arydshln}          % For dashed lines in tables (has to be loaded after other stuff)
+\usepackage{pdfpages}          % So we can import PDFs into the document (e.g. request for science advice).
+
+% For hyperlinked references (figures and citations, etc.). The bookmarksdepthlevel allows
+%  the TOC to be shown in the bookmarks tree in the output PDF.
+\usepackage[bookmarks,bookmarksopen,bookmarksdepth=4]{hyperref}
+\hypersetup{                   % Set up the hyperref options here
+    pdftitle={Arrowtooth Flounder},
+    pdfauthor={Chris Grandin},
+    pdfsubject={Stock Assessment},
+    %pdfkeywords={keyword1, keyword2},
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    colorlinks=true,
+    linkcolor=blue,
+    allcolors=blue,
+    citecolor=cyan,
+    pdfstartview=Fit,
+    pdfpagemode=UseOutlines
+    %pdfpagelayout=TwoPageRight
+}
+% Use the following codes for references within the document.
+%   chap: chapter
+%    sec: section
+% subsec: subsection
+%    fig: figure
+%    tab: table
+%     eq: equation
+%    lst: code listing
+%    itm: enumerated list item
+%    app: appendix subsection
+\usepackage{hypcap}            % So links will anchor at figure, not caption
+
+\usepackage{subfig}            % For two-panel plots
+\usepackage{scrextend}         % For indenting blocks of text with 'addmargin'
+\usepackage{relsize}           % For mathlarger, which makes equations bigger
+%\usepackage{mathtools}        % For mathmboxes for use in the equations appendix
+\usepackage{algorithm}         % For display of pseudocode
+\usepackage{algpseudocode}     % For display of pseudocode
+\usepackage{linegoal}          % For display of pseudocode
+% A \Let command for defining assignments within the algorithmic environment which
+% supports automatic indentation when the second argument is too long to fit
+% on one line
+\newcommand*{\Let}[2]{\State #1 $\gets$
+\parbox[t]{\linegoal}{#2\strut}}
+% A \State command that supports automatic indentation when the argument's
+% content is too long to fit on one line
+\newcommand*{\LongState}[1]{\State
+\parbox[t]{\linegoal}{#1\strut}}
+
+\usepackage{enumitem}          % To remove spacing between list items [noitemsep,nolistsep]
+\newlist{longitem}{enumerate}{5}
+\setlist[longitem,1]{label=\arabic*)}
+\setlist[longitem,2]{label=\alph*)}
+\setlist[longitem,3]{label=\roman*)}
+\setlist[longitem,4]{label=\arabic*)}
+\setlist[longitem,5]{label=\alph*)}
+
+\definecolor{rowclr}{RGB}{255, 192, 203}
+\newcommand{\sQuote}[1]{`#1'}
+\newcommand{\dQuote}[1]{``#1''}
+\newcommand{\eqn}[1]{\begin{equation}#1\end{equation}}
+\newcommand{\gfrac}[2]{\genfrac{}{}{}{0}{#1}{#2}}
+
+\newcommand\bestfig[6]{ % #1=filename, #2=main caption, #3=figure height, #4=short caption #5=file extension #6=directory
+	% needs package epstopdf to work
+	\begin{figure}[htpb] %[htbp]
+	\centering
+	\ifthenelse{ \isempty{#5} \OR \equal{#5}{eps} }
+		{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#6#1.eps}}
+		{\setlength\fboxsep{0pt}
+		 \setlength\fboxrule{0pt}
+		 \fbox{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#6#1.#5}}}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+	\ifthenelse{\isempty{#4}}
+		{\caption[#2]{#2}}  % \vspace{-2ex}} AME removing
+		{\caption[#4]{#2}}  % \vspace{-2ex}}  ``
+	\label{fig:#1}
+	\end{figure}
+        }
+
+\newcommand\pbsfig[5]{    % #1=filename, #2=main caption, #3=figure height, #4=short caption, #5=directory
+	\begin{figure}[tp] %[htbp]  Rowan had ht!
+	\centering
+	\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#5#1.eps}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+	\ifthenelse{\isempty{#4}}
+		{\caption[#2]{#2}\vspace{-2ex}}
+		{\caption[#4]{#2}\vspace{-2ex}}
+	\label{fig:#1}
+	\end{figure}
+	%\clearpage
+}
+
+% eor - Show two things with a vertical bar between them
+\newcommand{\eor}[2]{{#1$\Vert$#2}}
+% bM - makes equations larger
+\newcommand{\bM}[1]{\mathlarger{\mathlarger{#1}}}
+% Allow newline breaks in a table cell: syntax is \specialcell{first line\\secondline}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\newcommand{\fishname}{Arrowtooth Flounder}
+% sciencename - Science name for the species being assessed
+\newcommand{\sciencename}{Atheresthes stomias}
+
+% Headers and footers
+% For Res Doc, best to have a left and a right footer
+%  (and/or header), not just one (for double-sided printing).
+%
+% \lhead{DRAFT -- Non-citable working paper}  % Omit for final ResDoc.
+\lhead{}
+\rhead{}
+\lfoot{\fishname}           % Species common name for left footer
+\rfoot{Coastwide}           % The area of the assessment for right footer
+%\rfoot{WP 2012/P02a}       % Change to appendix number for appendices
+                            % Will probably delete footers in main text
+                            %  for final Res Doc.
+
+% \linenumbers              % uncomment to add in line numbers
+% \modulolinenumbers[5]     % just number every 5th line
+
+% \def\AppLet{F}            % Appendix letter - we had this
+                            %  to number equations in Appendix
+                            %  F as (F.17) etc.
+% \def\StartP{102}          % page start
+
+\newcommand{\Bmsy}{B_\mathrm{MSY}}
+\newcommand{\umsy}{u_\mathrm{MSY}}
+\newcommand{\MapData}{C:/Work/ArrowtoothFlounder/2014Assessment/data/MapData}
+
+\newcommand{\EstM}{`Estimate \emph{M}'}
+\newcommand{\FixM}{`Fix \emph{M}'}
+
+\begin{document}
+
+\def \KnitrHomePath {C:/github/csas-latex/doc}
+% Load iscam-gui list object scenarios - Make sure all are set up in correct order before running this
+% Also, set up standard plot sizes for the document
+<<libraries, echo=FALSE, cache=TRUE, warning=FALSE, results='hide', cache.lazy=FALSE, message=FALSE>>=
+setwd('../../iscam-gui')
+source('iscam-gui.r')
+iscam(showgui=FALSE)
+ci=95
+ps=list(pngres=300,pngw=300,pngh=300,res=300,w=300,h=300)
+burnthin=list(0,1)
+@
+
+\input{preamble}              % Table of contents, etc.
+% \setcounter{chapter}{0}
+% \setcounter{table}{0}
+% \setcounter{figure}{0}
+\setcounter{secnumdepth}{3}    % To number subsubheadings-ish
+
+% To number sections, tables etc. as 1, 2, 3, not 1.1 etc. (where
+%  the first 1 would be chapter number).
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\theequation}{\arabic{equation}}
+
+% \subimport{mainDoc/}{mainDocRev}
+<<main-doc, child='maindoc/maindoc.Rnw'>>=
+@
+%\input{maindoc/maindoc}
+
+\clearpage
+
+% \addcontentsline{toc}{chapter}{Appendices}
+\addtocontents{toc}{\par {\bf \vspace{10mm} APPENDICES} \par}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\appendix           % Everything from now on will be an Appendix
+% \begin{appendices}
+
+% \renewcommand{\appendixname}{Appendix} - doesn't work
+% \renewcommand*{\chaptername}{Appendix} - never worked
+% Also tried in .sty file.
+
+% Now want to number sections, tables etc. as A.1, A.2, etc.
+% Thought these wouldn't be with the appendix package, as
+%  automatic, but do need them even if use \begin{appendices}:
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+% Not including Appendix figures and tables in contents, and just
+%  including the Appendix (chapter) names (not sections or
+%  subsections):
+
+\lfoot{Arrowtooth Flounder - Coastwide}
+
+%% \rfoot{Appendix A -- Request for Science Advice}
+%% <<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
+%% @
+
+%% \rfoot{Appendix B -- Biological Data}
+%% <<biological-data, child='app-biology/app-biology.Rnw'>>=
+%% @
+
+%% \rfoot{Appendix C -- Age Composition weighting}
+%% <<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+%% @
+
+%% \rfoot{Appendix D -- Model Equations}
+%% <<model-equations, child='app-equations/app-equations.Rnw'>>=
+%% @
+
+\rfoot{Appendix E -- Proportion Female Analysis}
+<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+@
+
+
+%\rfoot{Appendix B -- Catch Data}
+%\input{app-catch/app-catch}
+
+%\rfoot{Appendix C -- Trawl Surveys}
+%\input{app-surveys/app-surveys}
+
+%\rfoot{Appendix C -- CPUE Analyses}
+%\input{app-cpue/app-cpue}
+
+%\setcounter{page}{68}
+
+%\rfoot{Appendix E -- Age Data}
+%\input{app-biology/app-agesrev}
+
+%\rfoot{Appendix G -- Results}
+%\input{app-results/app-results}
+
+%\rfoot{Appendix H -- Habitat}
+%\input{app-habitat/app-habitat}
+
+%\rfoot{Appendix I -- Sensitivities}
+%\input{app-sensitivities/app-sensitivities}
+
+\end{document}
