@@ -160,13 +160,13 @@
 \def \KnitrHomePath {C:/github/csas-latex/doc}
 % Load iscam-gui list object scenarios - Make sure all are set up in correct order before running this
 % Also, set up standard plot sizes for the document
-<<libraries, echo=FALSE, cache=TRUE, warning=FALSE, results='hide', cache.lazy=FALSE, message=FALSE>>=
+<<>>=
 setwd('../../iscam-gui')
 source('iscam-gui.r')
 iscam(showgui=FALSE)
-ci=95
-ps=list(pngres=300,pngw=300,pngh=300,res=300,w=300,h=300)
-burnthin=list(0,1)
+ci <- 95
+ps <- list(res=300,w=400,h=300)
+burnthin <- list(0,1)
 @
 
 \input{preamble}              % Table of contents, etc.
