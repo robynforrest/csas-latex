@@ -1,6 +1,55 @@
 % resDoc.tex
 
-\documentclass[11pt]{book}
+\documentclass[11pt]{book}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 \usepackage{resDocSty}
 \usepackage{appendix}
 \usepackage{cite}
@@ -154,8 +203,14 @@
 
 \newcommand{\EstM}{`Estimate \emph{M}'}
 \newcommand{\FixM}{`Fix \emph{M}'}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 
 \begin{document}
+
+\def \KnitrHomePath {C:/github/csas-latex/doc}
+% Load iscam-gui list object scenarios - Make sure all are set up in correct order before running this
+% Also, set up standard plot sizes for the document
+
 
 
 \input{preamble}              % Table of contents, etc.
@@ -172,7 +227,181 @@
 \renewcommand{\theequation}{\arabic{equation}}
 
 % \subimport{mainDoc/}{mainDocRev}
-\input{maindoc/maindoc}
+
+% mainDoc.tex - Main part of the document
+
+\nonumsection*{ABSTRACT}\addcontentsline{toc}{section}{ABSTRACT}
+
+\fishname (\emph{\sciencename}, Turbot) is an important component of the trawl fishery in British Columbia, and are caught ubiquitously along the west coast of British Columbia (Figure~\ref{fig:cpue}).
+
+\newpage	%French abstract must appear on new page
+
+% \section*{R\'esum\'e}\addcontentsline{toc}{section}{R\'ESUM\'E}
+\nonumsection*{R\'ESUM\'E}\addcontentsline{toc}{section}{R\'ESUM\'E}
+
+% \addcontentsline{toc}{section}{R\'ESUM\'E}
+
+\clearpage
+
+% Need numbering back to Arabic.
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{INTRODUCTION}
+
+This stock assessment is for \fishname\ in combined Pacific Marine Fisheries Commission (PMFC) major areas 3CD and 5ABCDE off the west coast of British Columbia. \fishname\ make up a large component of the trawl fishery, but most are and have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, which makes the flesh very mushy and unpalatable. There is a market in Korea for the frills, and a market for the fillets if they are frozen at sea, very shortly after capture.
+
+\subsection{PURPOSE OF DOCUMENT}
+
+This document provides stock assessment advice to fisheries managers for Arrowtooth Flounder. This advice was requested by the Groundfish Management Unit (GMU) of the DFO Pacific Region (Appendix A), which specified that the advice be framed in terms of the DFO Sustainable Fisheries Framework (SFF) (see \citet{dfo09}). This advice is presented as a set of decision tables that provide probabilities of exceeding reference points over a range of projection years and across a range of constant catch scenarios (without feedback controls). Reference points are defined below.
+
+CITETEST: \citet{arf1995}, \citet{arf1999a}, \citet{arf1999b}, \citet{arf2000}, \citet{arf2001}, \citet{arf2003}, \citet{arf2006},\citet{arf2013}.
+
+\subsection{BIOLOGICAL BACKGROUND}
+
+Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is a species of flatfish found along the rim of the Northeast Pacific Ocean. The most distinguishing feature of Arrowtooth Flounder is its large teeth, for which it was named. As juveniles smaller than ~380mm, Arrowtooth Flounder are monomorphic. After maturing, they are sexually dimorphic with adult females being larger than males (Appendix~\ref{chap:biological}, Figure~\ref{fig:vonb}).
+
+\subsection{RANGE AND DISTRIBUTION}
+
+
+\subsection{OVERVIEW OF FISHERY}
+
+
+\section{ASSESSMENT BOUNDARIES AND BACKGROUND}
+
+For this assessment, we use PMFC major areas 3CD and 5ABCDE, covering almost all of the west coast of Vancouver Island (Figure~\ref{fig:areas}).
+
+Advice for managers was requested to be guided by the DFO Sustainable Fisheries Framework, particularly the Fishery Decision-making Framework Incorporating the Precautionary Approach. Consequently, advice to managers is presented as a set of decision tables that provide probabilities of exceeding reference points for various years of projections across a range of constant catch scenarios.
+
+A DFO Technical Working Group provided valuable guidance with respect to many of the decisions that were made in the course of this work.
+
+\section{CATCH DATA}
+*Table with history of quota and catch from 1996-present
+
+\section{FISHERIES MANAGEMENT}
+
+\clearpage
+
+\section{SURVEY DESCRIPTIONS}
+
+Six sets of fishery independent survey indices of abundance were used:
+
+\begin{enumerate}[noitemsep,nolistsep]
+  \item the West Coast Vancouver Island Synoptic Survey series, from 2004-2014 (even years only), referred to here as the `WCVISS series'.
+  \item the Hecate Strait Synoptic Survey series, from 2005-2013 (odd years only), referred to here as the `HSSS series'.
+  \item the Hecate Strait Multispecies Assemblage Survey, for 1996, 1998, 2000, 2002, and 2003, referred to here as `HSMAS'.
+  \item the Queen Charlotte Sound Synoptic Survey, from 2003-2013 (odd years only), referred to here as `QCSSS'.
+  \item the West Coast Vancouver Island Shrimp Trawl Survey, from 1996-2014 (all years), referred to here as `WCVISTS'.
+  \item the Queen Charlotte Sound Shrimp Trawl Survey, from 1999-2013 (all years), referred to here as `QCSSTS'.
+\end{enumerate}
+
+The suitability of each survey was examined (Table~\ref{tab:surveySuitability}). The WCVISS, HSSS, HSMSAS, and QCSSS were all designed to produce indices for the demersal fish species of the Northeast Pacific, and the two shrimp trawl surveys WCVISTS and QCSSTS were designed to generate shrimp indices. The depth ranges differ by a large amount, with the 4 groundfish surveys having ranges from 18 m to 660 m. The shrimp trawl surveys have a maximum depth of 251 m and 305 m for the WCVISTS and QCSSTS respectively (Table~\ref{tab:surveySuitability}). The depth range for \fishname\ is 50 m to 900 m (\citet{arf2001}); the shrimp trawl surveys cover much less of the habitable depth range than the groundfish surveys do, 
+
+suggesting that they might not be suitable as an index of stock for
+
+The relative biomass survey indices are used as data in the model along with the associated relative error for each index value.
+
+Pre-1996 commercial catch and effort data were also investigated with the intent of creating CPUE-based abundance indices for use in the stock assessment model. This approach was abandoned because it was felt that there were problems with the reliability of the data as well as questions as to the representative nature of the resulting indices, given the schooling behaviour of the species and the capacity of fishers to target these schools. Given the concern that the resulting indices would be hyperstable, they were not used in this assessment.
+
+\clearpage
+
+\section{BIOLOGICAL INFORMATION}
+
+\subsection{BIOLOGICAL SAMPLES}
+
+\subsection{GROWTH PARAMETERS}
+
+\subsection{MATURITY}
+
+\subsection{NATURAL MORTALITY}
+
+PAST ASSESSMENTS have assumed M.... etc.. cite Fargo Starr and Alaska center assessments. Very sensitive to assumptions in the model iscam.
+
+Male and female natural mortalities were estimated as parameters of the model (see Appendix~F), using an informed prior based on the marginal posterior distributions from the QCS POP assessment , specifically a normal prior with mean 0.07 and standard deviation 0.007 for both sexes (see Appendix~F). The QCS assessment used a prior based on a POP assessment for the Gulf of Alaska , with mean 0.06 and standard deviation 0.006.
+
+In recent assessments , model runs that fixed natural mortality were also used to provide the final advice to managers. However, because we were able to develop a prior based on Canadian POP data, and since the resulting Bayesian estimates of natural mortality and steepness (defined below) are uncorrelated (Appendix~G), only runs that estimate natural mortality are used in this assessment (as agreed upon by the Technical Working Group). Prior distributions for all estimated parameters are given in Table F.4.
+
+\section{AGE-STRUCTURED MODEL}
+
+We attempted a two-sex, age-structured stochastic model to reconstruct the population trajectory of Arrowtooth Flounder
+*Reference Appendix for model outputs and sensitivities...
+
+REASONS model was rejected.
+
+\section{RESULTS}
+
+MOVE TO APPENDIX FOR MODEL RESULTS
+THIS IS ALL POP!!!!!!!!!!!!!!!!!!!!!!!!!!
+The base case model run had credible fits to the data, as demonstrated by visual examination of the MPD fits and the patterns of residuals (results in Appendix G). The MCMC results showed satisfactory convergence of the MCMC search process (Appendix G). Priors and marginal posteriors of the estimated parameters are also given in Appendix G, along with the values of the estimated parameters (Table \ref{tab:MCMCpar}). For example, natural mortality is estimated as having median (and 5-95\% credible interval) of 0.069~(0.060-0.079) for females and 0.072~(0.063-0.082) for males. Steepness is estimated to be 0.70~(0.48-0.91). The remaining MCMC results, of more general interest, are given here.
+
+Figure \ref{fig:VBcatch} shows the MCMC results for the estimated vulnerable biomass, together with the reconstructed historical catches, and Figure \ref{fig:BVBnorm} shows the estimated medians of vulnerable and spawning (mature females only) biomass relative to their unfished values. (The full MCMC results for spawning biomass are included later in Figure \ref{fig:Bproj} regarding projections). These demonstrate a slight decline in biomass from 1940 to 1960 with the onset of fishing, followed by a very sharp decline in the 1960s due to heavy fishing (primarily by foreign fleets). After the cessation of foreign fishing, the biomass increased through the remainder of the 1970s. The biomass then declined through the 1980s until the mid-1990s, and has since increased, with median values of relative biomass now above the 1980 values.
+
+Estimates of various quantities of interest are given in Table \ref{tab:MCMCderived}. In particular, the median (and 5-95\% credible interval) for $B_{2013}/B_0$, the ratio of current spawning biomass ($B_{2013}$) to the unfished equilibrium level ($B_0$), is 0.41~(0.19-0.68); thus 0.41 is the value for the final circle in Figure \ref{fig:BVBnorm}.
+% (This ratio is sometimes known as depletion).
+
+The estimated recruitments (age-1 fish, Figure \ref{fig:recruitsMCMC}) in part further explain the aforementioned stock trajectory. There was lower-than-average recruitment in the early 1970s, which may, together with increased catches, explain why the vulnerable biomass declined through the 1980s (note the approximate ten-year lag from recruitment to fish becoming fully selected by the commercial fishery). There are a number of year classes with approximately double the long-term average recruitment. This is unlike the patterns observed for the QCS area 5ABC stock (Figure 5 of  and the companion assessment for area 5DE , which both exhibited a dominant 1976 year class (age-1 recruits in 1977) that was approximately five times larger than the long-term average recruitment.
+
+Figure \ref{fig:exploitMCMC} shows the estimated exploitation rates (ratio of total catch to the vulnerable biomass in the middle of the year), which peaked in the mid-1960s due to the large foreign catches, and then peaked again (although not as high) in the early 1990s due to increased domestic exploitation. Exploitation rates have remained low since the mid-1990s, with $u_{2012}$, the exploitation rate for 2012, estimated to be 0.035~(0.018-0.077).
+
+Estimates of further quantities of interest, such as absolute values of biomass (rather than relative values), are also given in Table \ref{tab:MCMCderived}, as well as quantities based on MSY, discussed below.
+
+\section{RECCOMENDATIONS AND YIELD OPTIONS}
+
+\subsection{CURRENT STOCK LEVEL}
+
+\subsection{REFERENCE POINTS}
+
+\subsection{PROJECTION RESULTS AND DECISION TABLES}
+
+\section{GENERAL COMMENTS}
+
+\section{FUTURE RESEARCH AND DATA REQUIREMENTS}
+
+\section{ACKNOWLEDGEMENTS}
+
+We thank the members of the Arrowtooth Flounder Technical Working Group (Rowan Haigh, Kendra Holt, Rob Kronlund, Barry Ackerman, Greg Workman) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rowan Haigh for chairing. We especially thank James Thorsen (NOAA) and Joanne Morgan (DFO) for their written reviews of the working paper. We also thank Steve Wischniowski and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of over 6,000 Arrowtooth Flounder otoliths in 2014.
+
+\addcontentsline{toc}{section}{BIBLIOGRAPHY}
+\bibliographystyle{resDoc}
+\bibliography{../../all}
+
+\clearpage
+
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=6in,keepaspectratio=true]{cpueFigures/ARF-1996-2014-CPUE.eps}
+\end{center}
+\vspace{0mm}
+% To get the grid size in km^2 for the caption:
+% While in the gui for the map, type mean(xtcall(PBSmap)$pdata$area) for the map you currently have loaded.
+\caption{Mean catch-per-unit-effort (CPUE, kg/h) of Arrowtooth Flounder in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where Arrowtooth Flounder was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
+\label{fig:cpue}
+\end{figure}
+
+\begin{table}[b]
+\tiny
+\centering
+\caption{\label{tab:surveySuitability} Attributes of fishery-independent surveys and evaluation of suitability for stock indexing. RS=Random stratified design, BT=Bottom trawl gear.}
+\begin{tabular}{lcccccc}
+\hline
+Attribute                &        WCVISS &          HSSS &         HSMSAS &         QCSSS &        WCVISTS &         QCSSTS \\
+\hline
+Design                   &            RS &            RS &             RS &            RS &             RS &             RS \\
+Gear                     &            BT &            BT &             BT &            BT &             BT &             BT \\
+Year Range (years)       & 2004-2014 (6) & 2005-2013 (5) & 1984-2003 (11) & 2003-2013 (7) & 1977-2014 (38) & 1998-2013 (16) \\
+Set Range (avg)          & 106-179 (153) & 156-236 (189) &   88-161 (105) & 260-281 (269) &   67-204 (131) &   92-204 (175) \\
+PFMA Areas               &         3C,3D &         5C,5D &          5C,5D &         5A,5B &          3C,3D &          5A,5B \\
+Depth Range (m)          &        41-660 &        19-420 &         18-232 &        41-626 &         15-251 &         15-305 \\
+Ageing done (yrs)        &       Yes (5) &       Yes (5) &        Yes (1) &            No &             No &             No \\
+Comment                  &               &               &                &               & \specialcell{Targets\\shrimp} & \specialcell{Targets\\shrimp} \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\clearpage
+
+%\input{maindoc/maindoc}
 
 \clearpage
 
@@ -197,28 +426,243 @@
 % Not including Appendix figures and tables in contents, and just
 %  including the Appendix (chapter) names (not sections or
 %  subsections):
-% Wait for Jaclyn to say how.
-% Also to have Appendix title as   Appendix A   not just A. Tried
-%  the above but no luck. May have to use the appendix package, and
-%  understand better the options. Think it may be getting overridden
-%  by the \renewcommand{\chapter}{\@startsection    in resDocSty.sty
 
 \lfoot{Arrowtooth Flounder - Coastwide}
 
-\rfoot{Appendix A -- Request for Science Advice}
-\input{app-requestforscienceadvice/app-requestforscienceadvice}
+%% \rfoot{Appendix A -- Request for Science Advice}
+%% <<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
+%% @
 
-\rfoot{Appendix B -- Biological Data}
-\input{app-biology/app-biology}
+%% \rfoot{Appendix B -- Biological Data}
+%% <<biological-data, child='app-biology/app-biology.Rnw'>>=
+%% @
 
-\rfoot{Appendix C -- Age Composition weighting}
-\input{app-agecompweighting/app-agecompweighting}
+%% \rfoot{Appendix C -- Age Composition weighting}
+%% <<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+%% @
 
-\rfoot{Appendix D -- Model Equations}
-\input{app-equations/app-equations}
+%% \rfoot{Appendix D -- Model Equations}
+%% <<model-equations, child='app-equations/app-equations.Rnw'>>=
+%% @
 
 \rfoot{Appendix E -- Proportion Female Analysis}
-\input{app-propfemale/app-propfemale}
+
+% appendix-propfemale.tex
+
+\clearpage
+\chapter{PROPORTION FEMALE ANALYSIS}
+\label{chap:propfemale}
+
+\section{INTRODUCTION}
+This analysis was done to determine whether or not this stock has a sex proportion close to 50\% so that a sex-specific assessment model with an assumed sex proportion of 50\% could be used. If the proportion of females is large enough, a single-sex model could be employed. The weighting algorithm and proportion generation algorithm is similar to algorithm 2 in \citet{rocksole2013}. The analysis presented here assumes a coastwide stock.
+
+\section{DATA SELECTION}
+\textbf{Trawl Fishery}: \\
+TRIP\_SUB\_TYPE\_DESC equal to 1 or 4 (observed domestic or non-observed domestic) \\
+MORPHOMETRICS\_ATTRIBUTE\_CODE equal to 1 or 2 or 4 or 10 (Fork length, Standard length, Total length, Whole round weight) \\
+\mbox{ }\\
+
+\textbf{Surveys}: \\
+TRIP\_SUB\_TYPE\_DESC equal to 2 or 3 (research or charter) \\
+MORPHOMETRICS\_ATTRIBUTE\_CODE  equal to 1 or 2 or 4 or 10 (Fork length, Standard length, Total length, Whole round weight) \\
+\mbox{ }\\
+
+\textbf{Years}: \\
+Greater than or equal to 1996 \\
+\mbox{ }\\
+
+\textbf{Quarters of the year}: \\
+1 = Jan-Mar \\
+2 = Apr-Jun \\
+3 = Jul-Sep \\
+4 = Oct-Dec \\
+\mbox{ }\\
+
+\textbf{Areas}: \\
+3CD and 5ABCDE
+\mbox{ }\\
+
+\textbf{Sex}: \\
+Male or female only, no unknowns or null fields \\
+\mbox{ }\\
+
+\section{ALGORITHM}
+
+\subsection{Trawl Fishery}
+Observations within a sample are likely to be correlated due to the small area which is trawled in a single fishing event. Also, trip samples
+are likely to be correlated due to the fact that it is the same vessel and captain. This algorithm calculates a sex-specific mean weight by
+trip, then combines the trips to get a mean weight within the quater of the year based on the total catch weight for the trip. It then combines
+these across quarters by weighting the commercial catch in each quarter. The routine was run for an assumed coastwide stock, and as two areas:
+the WCVI, and QCS+HS.
+
+\subsection{Surveys}
+For surveys, the same algorithm is followed except that the quarter of the year is not included in the calculation. This is because the surveys are
+single events which occur linearly through a reletively short period of 1-2 months.
+
+\subsection{Equations}
+
+\begin{align} \label{eq:lw}
+\hat{w}_{ijs}=\alpha_sl_{ijs}^{\beta_s}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $\alpha_s$ and $\beta_s$ are parameters for sex $s$ and $w_{ijs}$ and $l_{ijs}$ are paired length-weight observations for specimen $i$ in sample $j$.
+\end{addmargin}
+
+\begin{align} \label{eq:samplewt}
+W_{js}=\sum_{i=1}^{N_{js}}\hat{w}_{ijs}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $W_{js}$ is the total weight for sample $j$, sex $s$, and $N_{js}$ is the number of specimens in sample $j$ for sex $s$
+\end{addmargin}
+
+\begin{align} \label{eq:totaltripwt}
+W_{st}=\frac{\sum\limits_{j=1}^{K_t}W_{jst}S_{jt}}{\sum\limits_{j=1}^{K_t}S_{jt}}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $W_{st}$ is the total weight for sex $s$ and trip $t$, $K_t$ is the number of samples in trip $t$, and $S_{jt}$ is the sample weight for sample $j$ from trip $t$.
+\end{addmargin}
+
+\begin{align} \label{eq:totaltripcatchwt}
+C_t=\sum\limits_{j=1}^{K_t}C_{jt}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $C_t$ is the total catch weight for sampled hauls for trip $t$, $K_j$ is the number of samples in trip $t$, and $C_{jt}$ is the catch weight associted with sample $j$ and trip $t$.
+\end{addmargin}
+
+\begin{align} \label{eq:totalquarterwt}
+W_{qs}=\frac{\sum\limits_{t=1}^{T_q}W_{qst}R_{qt}}{\sum\limits_{n=1}^{T_q}R_{qt}}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $W_{qs}$ is the total weight for sex $s$ and quarter of year $q$, $R_{qt}$ is the trip weight for all sampled trips in quarter $q$,
+and $T_q$ is the number of sampled trips in quarter $q$.
+\end{addmargin}
+
+\begin{align} \label{eq:totalquartercatchwt}
+C_q=\sum\limits_{t=1}^{K_q}C_{t}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $C_q$ is the total catch weight for sampled hauls for quarter $q$, $K_q$ is the number of trips in quarter $q$, and $C_t$ is the catch weight associted with trip $t$.
+\end{addmargin}
+
+\begin{align} \label{eq:totalyearwt}
+W_y=\frac{\sum\limits_{q=1}^{4}W_{qy}C_{qy}}{\sum\limits_{q=1}^{4}C_{qy}}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $W_y$ is the total weight for year $y$, $W_{qy}$ is the weight in quarter $q$ of year $y$, and $C_{qy}$ is the catch in quarter $q$ of year $y$.
+\end{addmargin}
+
+\begin{align} \label{eq:totalyearcatchwt}
+C_y=\sum\limits_{q=1}^{4}C_{qy}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $C_y$ is the total catch weight for sampled hauls for year $y$, and $C_{qy}$ is the catch weight associted with quarter $q$ in year $y$.
+\end{addmargin}
+
+\begin{align} \label{eq:propfemale}
+P_y=\frac{W_{s=Female,y}}{W_{s=Female,y}+W_{s=Male,y}}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $P_y$ is the proportion female by weight for year $y$.
+\end{addmargin}
+
+\subsection{Pseudocode}
+\clearpage
+\begin{algorithm}[h]
+\caption{Algortihm for calculating the proportion female}
+\begin{algorithmic}[1]
+  \Function{propfemale}{$()$}
+    \Let{$i$}{Specimen}
+    \Let{$s$}{Sex}
+    \Let{$j$}{Sample number}
+    \Let{$t$}{Trip number}
+    \Let{$q$}{Quarter of year}
+    \Let{$y$}{Year}
+    \Let{$l_{ijs}$}{Specimen length measurement}
+    \Let{$w_{ijs}$}{Specimen weight measurement}
+    \Let{$\hat{w}_{ijs}$}{Specimen weight estimate}
+    \For{each specimen $i$ where $w_{ijs}=NULL$ and $l_{ijs}<>NULL$}
+      \LongState{apply the sex-specific length-weight relationship (Eq. \ref{eq:lw}) to fill in the missing specimen weights $w_{ijs}$ with estimates $\hat{w}_{ijs}$}
+    \EndFor
+    \For{each year $y$}
+      \For{each quarter $q$ in year $y$}
+        \For{each trip $t$ in quarter $q$}
+          \For{each sample ID $j$ in trip $t$}
+            \LongState{Calculate the sex-specific sample weight $W_{js}$ for sample $j$ (Eq. \ref{eq:samplewt})}
+            \LongState{Extract the catch weight $C_j$ associated with sample $j$}
+          \EndFor
+          \LongState{Calculate the sex-specific total sample weight $W_{st}$ for trip $t$ (Eq. \ref{eq:totaltripwt})}
+          \LongState{Calculate the sex-specific total catch weight $C_t$ for trip $t$ (Eq. \ref{eq:totaltripcatchwt})}
+        \EndFor
+        \LongState{Calculate the sex-specific total sample weight $W_{qs}$ for quarter $q$ (Eq. \ref{eq:totalquarterwt})}
+        \LongState{Calculate the sex-specific total catch weight $C_q$ for quarter $q$ (Eq. \ref{eq:totalquartercatchwt})}
+      \EndFor
+      \LongState{Calculate the sex-specific total sample weight $W_{sy}$ for year $y$ weighted by catch $C_y$ (Eq. \ref{eq:totalyearwt})}
+      \LongState{Calculate the proportion female for year $y$ (Eq. \ref{eq:propfemale})}
+    \EndFor
+  \EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Results}
+The proportion of females resulting from this analysis are high, ranging from 0.714 for the 1998 HSMAS to 0.909 for the 2008 trawl fishery (Table \ref{tab:propfemale}).
+\clearpage
+\begin{table}[h]
+\centering
+\caption{\label{tab:propfemale} Proportion of females for the trawl fishery and 4 surveys Coastwide.}
+\begin{tabular}{lccccccc}
+\hline \\
+Year & \specialcell{Fishery\\Coastwide} & \specialcell{Fishery\\WCVI} & \specialcell{Fishery\\QCS+HS} & \specialcell{Survey\\QCSSS} & \specialcell{Survey\\HSMSAS} & \specialcell{Survey\\HSSS} & \specialcell{Survey\\WCVISS} \\
+\hline \\
+1996 & 0.854 & 0.860 &       &       &       &       & \\
+1997 & 0.901 & 0.787 & 0.905 &       &       &       & \\
+1998 & 0.778 & 0.635 & 0.789 &       & 0.714 &       & \\
+1999 & 0.835 & 0.814 & 0.794 &       &       &       & \\
+2000 & 0.834 & 0.787 & 0.950 &       & 0.908 &       & \\
+2001 & 0.879 & 0.707 & 0.940 &       &       &       & \\
+2002 & 0.857 & 0.869 & 0.855 &       & 0.830 &       & \\
+2003 & 0.754 & 0.786 & 0.803 & 0.825 &       & 0.838 & \\
+2004 & 0.868 & 0.850 & 0.866 & 0.812 &       &       & 0.838 \\
+2005 & 0.867 & 0.915 & 0.847 & 0.844 &       & 0.771 & \\
+2006 & 0.849 & 0.853 & 0.865 &       &       &       & 0.897 \\
+2007 & 0.839 & 0.785 & 0.835 & 0.764 &       & 0.781 & \\
+2008 & 0.909 & 0.920 & 0.924 &       &       &       & 0.822 \\
+2009 & 0.701 & 0.778 & 0.698 & 0.794 &       & 0.763 & \\
+2010 & 0.724 & 0.606 & 0.730 &       &       &       & 0.813 \\
+2011 & 0.739 & 0.812 & 0.709 & 0.748 &       & 0.798 & \\
+2012 & 0.827 & 0.828 & 0.851 &       &       &       & 0.786 \\
+2013 & 0.792 & 0.844 & 0.834 & 0.716 &       & 0.753 & \\
+2014 & 0.786 & 0.623 & 0.821 &       &       &       & 0.777 \\
+\hline \\
+\end{tabular}
+\end{table}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}[]
+
+\includegraphics[width=\maxwidth]{C:/github/csas-latex/doc/figure/figBaseSpawnBioMCMC} \caption[Spawning biomass for the base model MCMC run]{Spawning biomass for the base model MCMC run.\label{fig:figBaseSpawnBioMCMC}}
+\end{figure}
+
+\begin{kframe}\begin{verbatim}
+## [1] TRUE
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+
+
+%plotTS(scenario=1,plotNum=1,savefig=FALSE,plotMCMC=FALSE,ci=ci,burnthin=list(1000,0),burnthin,ps=ps,leg='topright')
+%<<figSpawnBioMCMC, fig.pos='t', fig.height=4, fig.width=4, fig.cap='Spawning Biomass MCMC'>>=
+%mydata  <-  data.frame(aa = 1:10, bb  <-  10:1)
+%plot(mydata$aa, mydata$bb)
+%@
+
+%plotTS(scenario=1,plotNum=1,savefig=FALSE,plotMCMC=FALSE,ci=ci,burnthin=burnthin,ps=ps,leg='topright')
+
+%<<fig1, out.width='.5\\linewidth', fig.align='center', fig.cap="Spawning biomass of base scenario.", fig.pos='h!'>>=
+%plot(1:10,1:10)
+%@
+
+\newpage
+
 
 
 %\rfoot{Appendix B -- Catch Data}

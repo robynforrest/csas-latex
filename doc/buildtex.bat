@@ -1,1 +1,2 @@
-@latex -synctex=1 "%1.tex" && bibtex "%1" && latex "%1.tex" && latex "%1.tex" && dvips "%1.dvi" && ps2pdf "%1.ps"
+Rscript -e "library(knitr); opts_chunk$set(dev='cairo_ps', echo=FALSE, results=FALSE, cache=TRUE, fig.path=\"C:/github/csas-latex/doc/figure/\"); knit('./resDoc.Rnw')" 1> knitrOutput.log 2>&1
+@latex -synctex=1 "resDoc.tex" && bibtex "resDoc" && latex "resDoc.tex" && latex "resDoc.tex" && dvips "resDoc.dvi" && ps2pdf "resDoc.ps" 1> latexOutput.log 2>&1

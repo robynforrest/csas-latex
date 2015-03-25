@@ -7,5 +7,6 @@ del *.log
 del *.pdf
 del *.ps
 del *.toc
+del *.txt
 del *.out
 del *.synctex.gz
