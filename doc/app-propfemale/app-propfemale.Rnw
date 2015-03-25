@@ -188,7 +188,7 @@ Year & \specialcell{Fishery\\Coastwide} & \specialcell{Fishery\\WCVI} & \special
 \end{table}
 
 <<figBaseSpawnBioMCMC, fig.cap='Spawning biomass for the base model MCMC run.'>>=
-plotTS(scenario=2,plotNum=1,index=2,savefig=FALSE,plotMCMC=TRUE,ci=ci,burnthin=burnthin,ps=ps,leg=NULL)
+plotTS(scenario=2,plotNum=1,index=2,savefig=FALSE,plotMCMC=TRUE,ci=ci,burnthin=burnthin,ps=ps,leg=NULL,showtitle=FALSE)
 @
 
 %plotTS(scenario=1,plotNum=1,savefig=FALSE,plotMCMC=FALSE,ci=ci,burnthin=list(1000,0),burnthin,ps=ps,leg='topright')

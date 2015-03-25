@@ -10,3 +10,4 @@ del *.toc
 del *.txt
 del *.out
 del *.synctex.gz
+del resDoc.tex
