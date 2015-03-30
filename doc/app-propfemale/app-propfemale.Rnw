@@ -187,20 +187,8 @@ Year & \specialcell{Fishery\\Coastwide} & \specialcell{Fishery\\WCVI} & \special
 \end{tabular}
 \end{table}
 
-<<figBaseSpawnBioMCMC, fig.cap='Spawning biomass for the base model MCMC run.'>>=
-plotTS(scenario=2,plotNum=1,index=2,savefig=FALSE,plotMCMC=TRUE,ci=ci,burnthin=burnthin,ps=ps,leg=NULL,showtitle=FALSE)
-@
-
-%plotTS(scenario=1,plotNum=1,savefig=FALSE,plotMCMC=FALSE,ci=ci,burnthin=list(1000,0),burnthin,ps=ps,leg='topright')
-%<<figSpawnBioMCMC, fig.pos='t', fig.height=4, fig.width=4, fig.cap='Spawning Biomass MCMC'>>=
-%mydata  <-  data.frame(aa = 1:10, bb  <-  10:1)
-%plot(mydata$aa, mydata$bb)
-%@
-
-%plotTS(scenario=1,plotNum=1,savefig=FALSE,plotMCMC=FALSE,ci=ci,burnthin=burnthin,ps=ps,leg='topright')
-
-%<<fig1, out.width='.5\\linewidth', fig.align='center', fig.cap="Spawning biomass of base scenario.", fig.pos='h!'>>=
-%plot(1:10,1:10)
+%<<figBaseSpawnBioMCMC, fig.cap='Spawning biomass for the base model MCMC run.'>>=
+%plotTS(scenario=2,plotNum=1,index=2,savefig=FALSE,plotMCMC=TRUE,ci=ci,burnthin=burnthin,ps=ps,leg=NULL,showtitle=FALSE)
 %@
 
 \newpage

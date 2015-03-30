@@ -131,22 +131,13 @@ Estimates of further quantities of interest, such as absolute values of biomass 
 
 We thank the members of the Arrowtooth Flounder Technical Working Group (Rowan Haigh, Kendra Holt, Rob Kronlund, Barry Ackerman, Greg Workman) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rowan Haigh for chairing. We especially thank James Thorsen (NOAA) and Joanne Morgan (DFO) for their written reviews of the working paper. We also thank Steve Wischniowski and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of over 6,000 Arrowtooth Flounder otoliths in 2014.
 
+trying to ref table \ref{tab:ParamEst}
+
 \addcontentsline{toc}{section}{BIBLIOGRAPHY}
 \bibliographystyle{resDoc}
 \bibliography{../../all}
 
 \clearpage
-
-\begin{figure}[htp]
-\begin{center}
-\includegraphics[width=6in,keepaspectratio=true]{cpueFigures/ARF-1996-2014-CPUE.eps}
-\end{center}
-\vspace{0mm}
-% To get the grid size in km^2 for the caption:
-% While in the gui for the map, type mean(xtcall(PBSmap)$pdata$area) for the map you currently have loaded.
-\caption{Mean catch-per-unit-effort (CPUE, kg/h) of Arrowtooth Flounder in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where Arrowtooth Flounder was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
-\label{fig:cpue}
-\end{figure}
 
 \begin{table}[b]
 \tiny
@@ -168,5 +159,42 @@ Comment                  &               &               &                &     
 \end{tabular}
 \end{table}
 
+<<results='asis', echo=FALSE>>=
+makeTable(1, 1, ci=ci, digits=3, retxtable=TRUE, xcaption="Leading parameter estimates", xlabel="tab:ParamEst")
+@
+<<results='asis', echo=FALSE>>=
+makeTable(1, 2, ci=ci, digits=3, retxtable=TRUE, xcaption="Reference points", xlabel="tab:RefPoints")
+@
+<<results='asis', echo=FALSE>>=
+makeTable(1, 3, ci=ci, digits=3, retxtable=TRUE, xcaption="Spawning Biomass", xlabel="tab:SpawnBio")
+@
+<<results='asis', echo=FALSE>>=
+makeTable(1, 4, ci=ci, digits=3, retxtable=TRUE, xcaption="Recruitment", xlabel="tab:Recr")
+@
+<<results='asis', echo=FALSE>>=
+makeTable(1, 5, ci=ci, digits=3, retxtable=TRUE, xcaption="Fishing mortality (F)", xlabel="tab:F")
+@
+<<results='asis', echo=FALSE>>=
+makeTable(1, 6, ci=ci, digits=3, retxtable=TRUE, xcaption="Fishing mortality (U)", xlabel="tab:U")
+@
+<<results='asis', echo=FALSE>>=
+makeTable(1, 7, ci=ci, digits=3, retxtable=TRUE, xcaption="Decisions", xlabel="tab:Decisions")
+@
+<<results='asis', echo=FALSE>>=
+makeTable(1, 8, ci=ci, digits=3, retxtable=TRUE, xcaption="Input indices", xlabel="tab:Indices")
+@
+
+\clearpage
+
+\begin{figure}[!htp]
+\begin{center}
+\includegraphics[width=6in,keepaspectratio=true]{cpueFigures/ARF-1996-2014-CPUE.eps}
+\end{center}
+\vspace{0mm}
+% To get the grid size in km^2 for the caption:
+% While in the gui for the map, type mean(xtcall(PBSmap)$pdata$area) for the map you currently have loaded.
+\caption{Mean catch-per-unit-effort (CPUE, kg/h) of Arrowtooth Flounder in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where Arrowtooth Flounder was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
+\label{fig:cpue}
+\end{figure}
 
 \clearpage

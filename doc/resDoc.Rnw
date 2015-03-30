@@ -213,26 +213,25 @@ burnthin <- list(0,1)
 
 \lfoot{Arrowtooth Flounder - Coastwide}
 
-%% \rfoot{Appendix A -- Request for Science Advice}
-%% <<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
-%% @
-
-%% \rfoot{Appendix B -- Biological Data}
-%% <<biological-data, child='app-biology/app-biology.Rnw'>>=
-%% @
-
-%% \rfoot{Appendix C -- Age Composition weighting}
-%% <<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
-%% @
-
-%% \rfoot{Appendix D -- Model Equations}
-%% <<model-equations, child='app-equations/app-equations.Rnw'>>=
-%% @
-
-\rfoot{Appendix E -- Proportion Female Analysis}
-<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+\rfoot{Appendix A -- Request for Science Advice}
+<<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
 @
 
+\rfoot{Appendix B -- Biological Data}
+<<biological-data, child='app-biology/app-biology.Rnw'>>=
+@
+
+%\rfoot{Appendix C -- Age Composition weighting}
+%<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+%@
+
+%\rfoot{Appendix D -- Model Equations}
+%<<model-equations, child='app-equations/app-equations.Rnw'>>=
+%@
+
+%\rfoot{Appendix E -- Proportion Female Analysis}
+%<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+%@
 
 %\rfoot{Appendix B -- Catch Data}
 %\input{app-catch/app-catch}
