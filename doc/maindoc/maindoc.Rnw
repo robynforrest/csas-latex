@@ -18,120 +18,143 @@
 \setcounter{page}{1}
 
 \section{INTRODUCTION}
-
-This stock assessment is for \fishname\ in combined Pacific Marine Fisheries Commission (PMFC) major areas 3CD and 5ABCDE off the west coast of British Columbia. \fishname\ make up a large component of the trawl fishery, but most are and have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, which makes the flesh very mushy and unpalatable. There is a market in Korea for the frills, and a market for the fillets if they are frozen at sea, very shortly after capture.
+\fishname\ (\emph{\sciencename}, Family \familyname), also commonly called \commonname, is a species of flatfish that occurs in offshore waters off the coast of \bc. \fishname\ are primarily taken by the groundfish bottom trawl fishery, although they are also encountered by hook and line fisheries, particularly those targeting Pacific Halibut (Hippoglossus stenolepis). Prior to the introduction of freezer trawlers in the Britich Columbia groundfish fleet in the mid 2000s, most of the historical catch of \fishname\ is understood to have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, making the flesh mushy and unpalatable. In the past five years, Asian markets have been established for fillets that have been frozen at sea, as soon as possible after capture to reduce Proteolysis. There is also an Asian market for the frills. The stock was last assessed in by \citet{arf2001}, who presented empirical summaries of catch, commercial and survey catch-per-unit-effort (CPUE) and biological data. This stock assessment covers the combined Pacific Marine Fisheries Commission (PMFC) major areas 3CD and 5ABCDE off the west coast of \bc.
 
 \subsection{PURPOSE OF DOCUMENT}
+\fishname\ is managed as a coastwide stock in \bc, with the majority of the catch coming from Pacific Marine Fisheries Commission (PMFC) major areas 3CD (West Coast Vancouver Island), 5AB (Queen Charlotte Sound) and 5CD (Hecate Strait) (Figures \ref{fig:cpue}  and XXX-Catch-landings; Table XXX-Catch-Discards). The 2013 Total Allowable Catch (TAC) was 15,000 metric tonnes, the second largest groundfish TAC in \bc, after Pacific Hake (\emph{Merluccius productus}).
 
-This document provides stock assessment advice to fisheries managers for Arrowtooth Flounder. This advice was requested by the Groundfish Management Unit (GMU) of the DFO Pacific Region (Appendix A), which specified that the advice be framed in terms of the DFO Sustainable Fisheries Framework (SFF) (see \citet{dfo09}). This advice is presented as a set of decision tables that provide probabilities of exceeding reference points over a range of projection years and across a range of constant catch scenarios (without feedback controls). Reference points are defined below.
-
-CITETEST: \citet{arf1995}, \citet{arf1999a}, \citet{arf1999b}, \citet{arf2000}, \citet{arf2001}, \citet{arf2003}, \citet{arf2006},\citet{arf2013}.
+The purpose of this stock assessment is to update management advice for \fishname\ stocks in \bc, as requested by the Groundfish Management Unit (GMU; Appendix \ref{chap:rsia}). This assessment identifies reference points for \fishname\ that are consistent with the DFO Decision-making Framework Incorporating the Precautionary Approach (\citet{dfo09}) and characterizes stock status relative to these reference points, using a Bayesian, age-structured stock assessment model. Management advice is provided in the form of decision tables which forecast the impacts of varying harvest levels on \fishname\ stock status relative to these reference points.
 
 \subsection{BIOLOGICAL BACKGROUND}
+\fishname\ are distinguished by their large mouth and arrow-shaped teeth, for which the species is named (\citet{hart1973}). Their distribution ranges from Baja California to the eastern Bering Sea (\citet{hart1973}). In \bc, the species inhabits depths from 50¡V900 m (\citet{arf2001}).
 
-Arrowtooth Flounder (\emph{Atheresthes stomias}, Turbot) is a species of flatfish found along the rim of the Northeast Pacific Ocean. The most distinguishing feature of Arrowtooth Flounder is its large teeth, for which it was named. As juveniles smaller than ~380mm, Arrowtooth Flounder are monomorphic. After maturing, they are sexually dimorphic with adult females being larger than males (Appendix~\ref{chap:biological}, Figure~\ref{fig:vonb}).
+\fishname\ are sexually dimorphic. After sexual maturity, females grow faster than males and reach a larger maximum size (Appendix \ref{chap:biological}, Figure XXX-B.6). Theoretical maximum length, $L_\infty$, is estimated to be approximately 61-62 cm for females and 47-52 cm for males in British Columbia, although larger individuals have been observed for both sexes (Appendix \ref{chap:biological}, Table XXX-B.5). Age at 50\% maturity for females is thought to occur around age 5 y for females (Appendix \ref{chap:biological}, Table XXX-B.8). Maximum age is around 25 y, although most individuals encountered by the fishery appear to be less than 20 years old (Figure XXX-agecompbubbles).
 
-\subsection{RANGE AND DISTRIBUTION}
+\fishname\ are batch spawners with peak spawning occurring at depths deeper than 350 m in the fall and winter months, although the timing of spawning may vary interannually (\citet{arf1995}). The species produces pelagic eggs, followed by a pelagic larval stage that may last several months (\citet{arf1995}). Fecundity of this species is poorly understood (XXX-NOREF!!!DiCosimo 1998). One and two year old fish occupy shallower depths than adults, but by the age of three or four years old, they are generally found in deeper water with adults (\citet{arf2001}). \fishname\ appear to occupy separate spawning (winter) and feeding (summer) areas, and undergo seasonal bathymetric movement from shallower to deeper water in the fall and winter (\citet{arf2001}).
 
+Juvenile \fishname\ feed primarily on mobile prey such as cumaceans, carideans and amphipods. Adults are piscivourous and cannibalistic, feeding on Pacific Herring (\emph{Clupea pallasii}), juvenile Pollock (\emph{Theragra chalcogramma}) and Pacific Sandlance (\emph{Ammodytes hexapterus}) (XXX-NOREF!!!Fargo et al. 1981).
 
-\subsection{OVERVIEW OF FISHERY}
+\subsection{FISHERY AND MANAGEMENT HISTORY}
+Chris to write this...
 
+\subsection{ASSESSMENT HISTORY}
+The coastwide \fishname\ stock was last assessed by \citet{arf2001}, who presented summaries of catch, commercial and survey CPUE and biological data. They reported commercial and survey CPUE indices that showed cycles but no trends. They also reported lack of trends in size and age composition data, and no evidence that natural mortality had changed over time. Based on this evidence, \citet{arf2001} concluded that harvest rates of \fishname\ off the west coast of Canada were at or below sustainable levels. Prior to 2001, the stock was assessed by XXX-NOREF!!Fargo (1998). A formal, model-based assessment has never previously been presented in \bc for this species.
 
-\section{ASSESSMENT BOUNDARIES AND BACKGROUND}
+\section{STOCK ASSESSMENT MODELLING}
+We applied a female-only statistical catch-at-age model in a Bayesian estimation framework to assess the coastwide stock of \fishname\. Analysis of the sex composition of the catch data indicated that commercial catches have been 80-90\% female (see next section).
 
-For this assessment, we use PMFC major areas 3CD and 5ABCDE, covering almost all of the west coast of Vancouver Island (Figure~\ref{fig:areas}).
+The model was fit to catch data, four indices of abundance with associated coefficients of variation, and to age composition data from the commercial trawl fishery and three of the four research surveys. Biological parameters used in the model, including growth, weight-at-age and maturity schedules, were estimated independently and input to the assessment model as fixed parameters that remained constant over time.
 
-Advice for managers was requested to be guided by the DFO Sustainable Fisheries Framework, particularly the Fishery Decision-making Framework Incorporating the Precautionary Approach. Consequently, advice to managers is presented as a set of decision tables that provide probabilities of exceeding reference points for various years of projections across a range of constant catch scenarios.
+Reference points based on Maximum Sustainable Yield ($MSY$), including the female spawning biomass ($B_{MSY}$) and the annual harvest rate producing $MSY$ ($U_{MSY}$), were estimated, along with reference based on estimated equilibrium unfished spawning biomass ($B_0$). Harvest decision tables were created by projecting the assessment model one year into the future under a range of constant catch levels. For each level of constant harvest, decision tables show the probability that projected stock status in each year will be less than spawning biomass-based reference points, or greater than harvest rate-based reference points.
 
-A DFO Technical Working Group provided valuable guidance with respect to many of the decisions that were made in the course of this work.
-
-\section{CATCH DATA}
-*Table with history of quota and catch from 1996-present
-
-\section{FISHERIES MANAGEMENT}
-
-\clearpage
-
-\section{SURVEY DESCRIPTIONS}
-
-Six sets of fishery independent survey indices of abundance were used:
-
+\subsection{DATA INPUTS}
+\subsubsection{Data Sources}
+Data were extracted from three different databases:
 \begin{enumerate}[noitemsep,nolistsep]
-  \item the West Coast Vancouver Island Synoptic Survey series, from 2004-2014 (even years only), referred to here as the `WCVISS series'.
-  \item the Hecate Strait Synoptic Survey series, from 2005-2013 (odd years only), referred to here as the `HSSS series'.
-  \item the Hecate Strait Multispecies Assemblage Survey, for 1996, 1998, 2000, 2002, and 2003, referred to here as `HSMAS'.
-  \item the Queen Charlotte Sound Synoptic Survey, from 2003-2013 (odd years only), referred to here as `QCSSS'.
-  \item the West Coast Vancouver Island Shrimp Trawl Survey, from 1996-2014 (all years), referred to here as `WCVISTS'.
-  \item the Queen Charlotte Sound Shrimp Trawl Survey, from 1999-2013 (all years), referred to here as `QCSSTS'.
+  \item \textbf{GFBio} - Biological samples and research cruise database. These data archive includes most of the groundfish specimen data collected since the 1950s.  It includes data from a variety of sources (port and at-sea commercial sampling, research survey sampling), collected using a variety of sampling methods.
+  \item \textbf{PacHarvTrawl} - Canadian trawl landings, 1996 to March 31, 2007. SQL Server database, Groundfish Section, Marine Ecosystems and Aquaculture Division, Science Branch, Fisheries and Oceans Canada, Pacific Biological Station.
+  \item \textbf{GFFOS} - Canadian trawl landings, April 1, 2007 to 2013. View of the Fisheries and Oceans Canada (DFO) Fishery Operations (FOS) database. Groundfish Section, Marine Ecosystems and Aquaculture Division, Science Branch, Fisheries and Oceans Canada, Pacific Biological Station.
 \end{enumerate}
 
-The suitability of each survey was examined (Table~\ref{tab:surveySuitability}). The WCVISS, HSSS, HSMSAS, and QCSSS were all designed to produce indices for the demersal fish species of the Northeast Pacific, and the two shrimp trawl surveys WCVISTS and QCSSTS were designed to generate shrimp indices. The depth ranges differ by a large amount, with the 4 groundfish surveys having ranges from 18 m to 660 m. The shrimp trawl surveys have a maximum depth of 251 m and 305 m for the WCVISTS and QCSSTS respectively (Table~\ref{tab:surveySuitability}). The depth range for \fishname\ is 50 m to 900 m (\citet{arf2001}); the shrimp trawl surveys cover much less of the habitable depth range than the groundfish surveys do, 
-
-suggesting that they might not be suitable as an index of stock for
-
-The relative biomass survey indices are used as data in the model along with the associated relative error for each index value.
-
-Pre-1996 commercial catch and effort data were also investigated with the intent of creating CPUE-based abundance indices for use in the stock assessment model. This approach was abandoned because it was felt that there were problems with the reliability of the data as well as questions as to the representative nature of the resulting indices, given the schooling behaviour of the species and the capacity of fishers to target these schools. Given the concern that the resulting indices would be hyperstable, they were not used in this assessment.
+\subsubsection{Catch Data}
+Chris to write this...
 
 \clearpage
 
-\section{BIOLOGICAL INFORMATION}
+\subsubsection{Abundance Indices}
+Four sets of fishery independent survey indices of abundance were used in this assessment:
+\begin{enumerate}[noitemsep,nolistsep]
+  \item The Hecate Strait Multispecies Assemblage Survey (HSMAS)
+  \item The Hecate Strait Synoptic Survey (HSSS)
+  \item The Queen Charlotte Sound Synoptic Survey (QCSSS)
+  \item The West Coast Vancouver Island Synoptic Survey (WCVISS)
+\end{enumerate}
 
-\subsection{BIOLOGICAL SAMPLES}
+\textbf{Hecate Strait Multispecies Assemblage Survey} \\
+A series of multi-species groundfish bottom trawl surveys were conducted in Hecate Strait in May-June of 1984, 1987, 1989, 1991, 1993, 1995, 1996, 1998, 2000, 2002, and 2003 (XXX-NOREFS!!Westrheim et al. 1984, Fargo et al. 1984, Fargo et al. 1988, Wilson et al. 1991, Hand et al. 1994, Workman et al. 1996, Workman et al. 1997, Choromanski et al. 2002, Choromanski et al. 2002). The present assessment only utilizes observations from 1996 until the survey ended in 2003.
 
-\subsection{GROWTH PARAMETERS}
+The original design of this survey assigned fishing locations by 10 fm depth intervals within a 10 nm grid of Hecate Strait. The survey was post-stratified for the purpose of calculating an abundance index for Pacific Cod (XXX-NOREF!!Sinclair 1999). The post stratification used 10 fm depth intervals for the entire survey area, thereby treating each depth interval as a single stratum. The Hecate Strait Assemblage survey was designed as a systematic fixed-station survey. Despite attempts to apply post-sampling stratification, this approach had high survey variance (XXX-NOREF!!Sinclair et al. 2007). In 2004 the Hecate Strait Assemblage survey was discontinued in favour of the Hecate Strait Synoptic survey (described below).
 
-\subsection{MATURITY}
+\textbf{Hecate Strait Synoptic Survey} \\
+The Hecate Strait synoptic groundfish bottom trawl survey is part of a coordinated set of long-term surveys that together cover the continental shelf and upper slope of most of the \bc coast. The Queen Charlotte Sound and West Coast Vancouver Island synoptic surveys described below are part of the same set of surveys. All the synoptic surveys follow a random depth stratified design. The relative allocation of blocks amongst depth strata was determined by modelling the expected catches of groundfish and determining the target number of tows per stratum that would provide the most precise catch rate data for as many species as possible.
 
-\subsection{NATURAL MORTALITY}
+The Hecate Strait synoptic survey has been conducted during May--June, in odd years starting in 2005. The survey area is divided into 2 km by 2 km blocks and each block is assigned one of four depth strata based on the average bottom depth in the block. The four depth strata for the Hecate Strait survey are 10--70 m, 70--130 m, 130--220 m, and 220--500 m. Each year blocks are randomly selected within each depth strata.
 
-PAST ASSESSMENTS have assumed M.... etc.. cite Fargo Starr and Alaska center assessments. Very sensitive to assumptions in the model iscam.
+\textbf{Queen Charlotte Sound Synoptic Survey} \\
+The Queen Charlotte Sound survey has been conducted in July--August in 2003, 2004 and in odd years starting in 2005. The survey area is divided into 2 km by 2 km blocks and each block is assigned one of four depth strata based on the average bottom depth in the block. The four depth strata for the QCS survey are 50--125 m, 125--200 m, 200--330 m, and 330--500 m. Each year blocks are randomly selected within each depth strata. In addition, for the purposes of allocating blocks, the QCS survey is divided into northern and southern spatial strata.
 
-Male and female natural mortalities were estimated as parameters of the model (see Appendix~F), using an informed prior based on the marginal posterior distributions from the QCS POP assessment , specifically a normal prior with mean 0.07 and standard deviation 0.007 for both sexes (see Appendix~F). The QCS assessment used a prior based on a POP assessment for the Gulf of Alaska , with mean 0.06 and standard deviation 0.006.
+\textbf{West Coast Vancouver Island Synoptic Survey} \\
+The West Coast Vancouver Island Synoptic Survey has been conducted in May--June in even years starting in 2004. The survey area is divided into 2 km by 2 km blocks and each block is assigned one of four depth strata based on the average bottom depth in the block. The four depth strata for the WCVI survey are 50--125 m, 125--200 m, 200--330 m, and 330--500 m. Each year blocks are randomly selected within each depth strata. In addition, for the purposes of allocating blocks, the WCVI survey is divided into northern and southern spatial strata.
 
-In recent assessments , model runs that fixed natural mortality were also used to provide the final advice to managers. However, because we were able to develop a prior based on Canadian POP data, and since the resulting Bayesian estimates of natural mortality and steepness (defined below) are uncorrelated (Appendix~G), only runs that estimate natural mortality are used in this assessment (as agreed upon by the Technical Working Group). Prior distributions for all estimated parameters are given in Table F.4.
+\textbf{Swept area analysis for Indices of abundance} \\
+For all surveys, a swept area estimate of biomass in any year $y$ was obtained by summing the product of the CPUE and the area surveyed across the surveyed strata $i$:
 
-\section{AGE-STRUCTURED MODEL}
+\begin{align} \label{eq:sweptareaindex}
+B_y = \sum_{i=1}^kC_{y_i}A_i=\sum_{i=1}^kB_{y_i}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $C_{y_i}$ is the mean CPUE density ($kg/km^2$) for species $s$ in stratum $i$, $A_i$ is the area of stratum $i$, $B_{y_i}$ is the biomass of \fishname\ in stratum $i$ for year $y$, and $k$ is the number of strata.
+\end{addmargin}
 
-We attempted a two-sex, age-structured stochastic model to reconstruct the population trajectory of Arrowtooth Flounder
-*Reference Appendix for model outputs and sensitivities...
+CPUE ($C_{y_i}$) for \fishname\ is stratum $i$ for year $y$ was calculated as a density in $kg/km^2$ by:
 
-REASONS model was rejected.
+\begin{align} \label{eq:cpuecalc}
+C_{y_i}=\frac{\sum\limits_{j=1}^{n_{y_i}} \left[\frac{W_{y_i,j}}{D_{y_i,j}w_{y_i,j}}\right]}{n_{y_i}}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $W_{y_i,j}$ is the catch weight in $kg$ for \fishname\ in stratum $i$, year $y$, and tow $j$, $D_{y_i,j}$ is the distance travelled in $km$ for tow $j$ in stratum $i$ and year $y$, $w_{y_i,j}$ is the net opening in $km$ by tow $j$, stratum $i$, and year $y$, and $n_{y_i}$ is the number of tows in stratum $i$.
+\end{addmargin}
 
-\section{RESULTS}
+The variance of the survey biomass estimate $V_y$ for \fishname\ is year $y$ is calculated in $kg^2$ as follows:
+\begin{align} \label{eq:indexvariance}
+V_y=\sum_{i=1}^k\left[\frac{\sigma_{y_i}^2A_i^2}{n_{y_i}}\right]=\sum_{i=1}^kV_{y_i}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $sigma_{y_i}^2$ is the variance of the CPUE in $kg^2/km^4$ for species $s$ in stratum $i$, $V_{y_i}$ is the variance of \fishname\ in stratum $i$ for year $y$.
+\end{addmargin}
 
-MOVE TO APPENDIX FOR MODEL RESULTS
-THIS IS ALL POP!!!!!!!!!!!!!!!!!!!!!!!!!!
-The base case model run had credible fits to the data, as demonstrated by visual examination of the MPD fits and the patterns of residuals (results in Appendix G). The MCMC results showed satisfactory convergence of the MCMC search process (Appendix G). Priors and marginal posteriors of the estimated parameters are also given in Appendix G, along with the values of the estimated parameters (Table \ref{tab:MCMCpar}). For example, natural mortality is estimated as having median (and 5-95\% credible interval) of 0.069~(0.060-0.079) for females and 0.072~(0.063-0.082) for males. Steepness is estimated to be 0.70~(0.48-0.91). The remaining MCMC results, of more general interest, are given here.
+The CV for \fishname\ for each year $y$ was calculated as follows:
+\begin{align} \label{eq:indexcv}
+CV_y=\frac{\sqrt{V_y}}{B_y}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $CV_y$ is the CV for year $y$.
+\end{addmargin}
 
-Figure \ref{fig:VBcatch} shows the MCMC results for the estimated vulnerable biomass, together with the reconstructed historical catches, and Figure \ref{fig:BVBnorm} shows the estimated medians of vulnerable and spawning (mature females only) biomass relative to their unfished values. (The full MCMC results for spawning biomass are included later in Figure \ref{fig:Bproj} regarding projections). These demonstrate a slight decline in biomass from 1940 to 1960 with the onset of fishing, followed by a very sharp decline in the 1960s due to heavy fishing (primarily by foreign fleets). After the cessation of foreign fishing, the biomass increased through the remainder of the 1970s. The biomass then declined through the 1980s until the mid-1990s, and has since increased, with median values of relative biomass now above the 1980 values.
+One thousand bootstrap replicates with replacement were constructed from the survey data to estimate bias corrected 95\% confidence regions for each survey year (\citet{efro82}).
 
-Estimates of various quantities of interest are given in Table \ref{tab:MCMCderived}. In particular, the median (and 5-95\% credible interval) for $B_{2013}/B_0$, the ratio of current spawning biomass ($B_{2013}$) to the unfished equilibrium level ($B_0$), is 0.41~(0.19-0.68); thus 0.41 is the value for the final circle in Figure \ref{fig:BVBnorm}.
-% (This ratio is sometimes known as depletion).
+\subsubsection{Age Data}
+Chris to write this....
 
-The estimated recruitments (age-1 fish, Figure \ref{fig:recruitsMCMC}) in part further explain the aforementioned stock trajectory. There was lower-than-average recruitment in the early 1970s, which may, together with increased catches, explain why the vulnerable biomass declined through the 1980s (note the approximate ten-year lag from recruitment to fish becoming fully selected by the commercial fishery). There are a number of year classes with approximately double the long-term average recruitment. This is unlike the patterns observed for the QCS area 5ABC stock (Figure 5 of  and the companion assessment for area 5DE , which both exhibited a dominant 1976 year class (age-1 recruits in 1977) that was approximately five times larger than the long-term average recruitment.
+\subsection{STATISTICAL CATCH-AT-AGE MODEL}
+The statistical catch-at-age model used in this assessment is based on the Integrated Statistical Catch Age Model (iSCAM) framework, developed by Steven J.D. Martell (XXX-NOREF!!Martell et al. 2011 ). The model is fully described in Appendix \ref{chap:equations}.
 
-Figure \ref{fig:exploitMCMC} shows the estimated exploitation rates (ratio of total catch to the vulnerable biomass in the middle of the year), which peaked in the mid-1960s due to the large foreign catches, and then peaked again (although not as high) in the early 1990s due to increased domestic exploitation. Exploitation rates have remained low since the mid-1990s, with $u_{2012}$, the exploitation rate for 2012, estimated to be 0.035~(0.018-0.077).
+All model code is available on request from the authors.
 
-Estimates of further quantities of interest, such as absolute values of biomass (rather than relative values), are also given in Table \ref{tab:MCMCderived}, as well as quantities based on MSY, discussed below.
+\subsubsection{Model Description}
 
-\section{RECCOMENDATIONS AND YIELD OPTIONS}
+\subsubsection{Prior Probability Distributions}
 
-\subsection{CURRENT STOCK LEVEL}
+\subsection{RESULTS}
+
+\subsection{SENSITIVITY ANALYSES}
+
+\section{RECOMMENDATIONS AND YIELD OPTIONS}
 
 \subsection{REFERENCE POINTS}
+The DFO Fishery Decision-making Framework Incorporating the Precautionary Approach (PA) policy (\citet{dfo09}) requires stock status to be characterized using three reference points: (i) a Reference Removal Rate, (ii) an Upper Stock Reference point (USR), and (iii) a Limit Reference Point (LRP). Provisional values of USR = 0.8 $B_{MSY}$ and LRP = 0.4 $B_{MSY}$ are suggested in the absence of stock-specific reference points. The framework specifies a limit reference removal (LRR) rate of $F_{MSY}$.
 
-\subsection{PROJECTION RESULTS AND DECISION TABLES}
+RF to add: UMSY and B0 based reference points
 
-\section{GENERAL COMMENTS}
+A harvest control rule based on these reference points that is coincident with the choice of LRP, USR and LRR would apply a linear reduction in fishing mortality as the stock falls below the USR, and would cease fishing when the stock reaches the LRP (but see XXX-NOREF!!Cox et al. 2013). This is illustrated for a hypothetical stock in Figure XXXX, where the USR and LRP are shown as vertical lines and the removal rate is shown as a blue line. We make the observation that the rate at which the fishing mortality should be reduced is unspecified in the PA policy, but is depicted as a linear ramp between the USR and LRP (Figure XXXX).
+
+\subsection{DECISION TABLES}
 
 \section{FUTURE RESEARCH AND DATA REQUIREMENTS}
 
 \section{ACKNOWLEDGEMENTS}
 
-We thank the members of the Arrowtooth Flounder Technical Working Group (Rowan Haigh, Kendra Holt, Rob Kronlund, Barry Ackerman, Greg Workman) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rowan Haigh for chairing. We especially thank James Thorsen (NOAA) and Joanne Morgan (DFO) for their written reviews of the working paper. We also thank Steve Wischniowski and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of over 6,000 Arrowtooth Flounder otoliths in 2014.
-
-trying to ref table \ref{tab:ParamEst}
+We thank the members of the \fishname\ Technical Working Group (Rowan Haigh, Kendra Holt, Rob Kronlund, Barry Ackerman, Greg Workman) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rowan Haigh for chairing. We especially thank \textbf{REVIEWER-NAMES-HERE} for their written reviews of the working paper. We also thank Steve Wischniowski and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of over 6,000 \fishname\ otoliths in 2014.
 
 \addcontentsline{toc}{section}{BIBLIOGRAPHY}
 \bibliographystyle{resDoc}
@@ -193,8 +216,128 @@ makeTable(1, 8, ci=ci, digits=3, retxtable=TRUE, xcaption="Input indices", xlabe
 \vspace{0mm}
 % To get the grid size in km^2 for the caption:
 % While in the gui for the map, type mean(xtcall(PBSmap)$pdata$area) for the map you currently have loaded.
-\caption{Mean catch-per-unit-effort (CPUE, kg/h) of Arrowtooth Flounder in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where Arrowtooth Flounder was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
+\caption{Mean catch-per-unit-effort (CPUE, kg/h) of \fishname\ in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where \fishname\ was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
 \label{fig:cpue}
 \end{figure}
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5, fig.width=8>>=
+plotCatch(1, 1)
+@
+\end{center}
+\vspace{0mm}
+\caption{Total catch of \fishname\ for areas 3CD and 5ABCDE, including both landings and discards.}
+\label{fig:totalcatch}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<>>=
+plotTS(1, 1, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass for \fishname, from an MCMC run with chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. The shaded area is the \mcmcci\ confidence interval. The point and bars represent the median estimate of $B_0$ and with a confidence interval of \mcmcci.}
+\label{fig:spawnbio}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<>>=
+plotTS(1, 5, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated recruitment for \fishname, from an MCMC run with chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. The bars represent the \mcmcci\ confidence interval. The red line is the long-term mean; the green line is the long-term median.}
+\label{fig:recruitment}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=6,fig.width=8>>=
+plotBiology(plotNum=11, compFitSex=0, index=1, showtitle=FALSE, scenario=1)
+@
+\end{center}
+\vspace{0mm}
+\caption{Age compositions for trawl fishery.}
+\label{fig:agecompstrawl}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<>>=
+plotConvergence(1, 5, burnthin=burnthin, showtitle=FALSE, priorsonly=TRUE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Prior probability distributions used in the Reference model. Priors beginning with \emph{log} are natural logarithms. Here, $ro=R_0$; $rbar=R_{AVG}$; $rinit=R_{AVG\_init}$; $q1$ represents the QCSSS; $q2$ the HSMSAS; $q3$ the HSSS; $q4$ the WCVIS. The dotted red lines are the MPD estimates from the Reference model.}
+\label{fig:priors}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<>>=
+plotConvergence(1, 5, burnthin=burnthin, showtitle=FALSE, priorsonly=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Prior probability distributions used in the Reference with comparative posterior histograms. See Figure \ref{fig:priors} for a description of the parameters. The dotted red lines are the MPD estimates from the Reference model (where visible).}
+\label{fig:priorsvsposts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=8, fig.width=8>>=
+plotConvergence(1, 1, burnthin=burnthin, showtitle=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Trace plots for MCMC output of estimated parameters in the Reference model. The MCMC run had chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. Here, $m1$ is the natural mortality, $sel1$ represents the selectivity for the trawl fishery; $sel2$ for the QCSSS; $sel4$ for the HSSS; $sel5$ for the WCVISS; $sel3$ is missing because the HSMAS survey did not have age comps estimated in the Reference model. Other parameter names are explained in Figure \ref{fig:priors}}
+\label{fig:traces}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<>>=
+# Plot harvest control rule illustation. This uses no data so it is embedded her
+plot(c(0,30), c(0,0.4), type="n", axes=FALSE, xaxs="i", yaxs="i", ylab="Stock Status", xlab="Removal Rate")
+# Plot the vertical bars (LRP and USR)
+segments(4, 0, 4, 0.4, col="black", lty=3, lwd=1)
+segments(9, 0, 9, 0.4, col="black", lty=3, lwd=1)
+# Plot removal rate lines
+segments(0, 0, 4, 0,   col="blue", lty=1, lwd=4)
+segments(4, 0, 9, 0.3, col="blue", lty=1, lwd=4)
+segments(9, 0.3, 30, 0.3, col="blue", lty=1, lwd=4)
+# Add axes and labels
+axis(side=1)
+axis(side=2)
+box()
+text(4, 0.35, "LRP", col="red")
+text(9, 0.35, "USR", col="red")
+text(20,0.31, "LRR", col="red")
+@
+\end{center}
+\vspace{0mm}
+\caption{Illustration of a harvest control rule consistent with the Precautionary Approach for a hypothetical stock. The biomass-based reference points are shown as vertical dotted lines. The limit removal rate is shown as a horizontal blue line. In this illustration, biomass (unspecified units) is shown on the bottom axis. LRP = Limit Reference Point; USR = Upper Stock Reference; LRR = Limit Removal Rate. See \citet{dfo09} for more detail.}
+\label{fig:hcrillustration}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage

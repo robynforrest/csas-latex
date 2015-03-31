@@ -126,6 +126,10 @@
 \newcommand{\fishname}{Arrowtooth Flounder}
 % sciencename - Science name for the species being assessed
 \newcommand{\sciencename}{Atheresthes stomias}
+\newcommand{\familyname}{Pleuronectidae}
+\newcommand{\commonname}{Turbot}
+
+\newcommand{\bc}{British Columbia}
 
 % Headers and footers
 % For Res Doc, best to have a left and a right footer
@@ -155,6 +159,14 @@
 \newcommand{\EstM}{`Estimate \emph{M}'}
 \newcommand{\FixM}{`Fix \emph{M}'}
 
+% MCMC globals to use in all MCMC related text and discussions
+\newcommand{\mcmclength}{10,000,000} % MCMC Chain length
+\newcommand{\mcmcsampfreq}{5,000}    % Sampling frequency
+\newcommand{\mcmcnsamp}{2,000}       % Number of samples saved
+\newcommand{\mcmcburnin}{1,000}      % Number of samples removed from the beginning of the chain
+\newcommand{\mcmcndata}{1,000}       % nsamp - burnin, this is the actual number of samples used
+\newcommand{\mcmcci}{95\%}           % The confidence interval used in MCMC. Must be the same as what's in the knitr code block
+
 \begin{document}
 
 \def \KnitrHomePath {C:/github/csas-latex/doc}
@@ -166,14 +178,14 @@ source('iscam-gui.r')
 iscam(showgui=FALSE)
 ci <- 95
 ps <- list(res=300,w=400,h=300)
-burnthin <- list(0,1)
+burnthin <- list(1000,1)
 @
 
 \input{preamble}              % Table of contents, etc.
 % \setcounter{chapter}{0}
 % \setcounter{table}{0}
 % \setcounter{figure}{0}
-\setcounter{secnumdepth}{3}    % To number subsubheadings-ish
+\setcounter{secnumdepth}{5}    % To number subsubheadings-ish
 
 % To number sections, tables etc. as 1, 2, 3, not 1.1 etc. (where
 %  the first 1 would be chapter number).
@@ -221,17 +233,17 @@ burnthin <- list(0,1)
 <<biological-data, child='app-biology/app-biology.Rnw'>>=
 @
 
-%\rfoot{Appendix C -- Age Composition weighting}
-%<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
-%@
+\rfoot{Appendix C -- Age Composition weighting}
+<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+@
 
-%\rfoot{Appendix D -- Model Equations}
-%<<model-equations, child='app-equations/app-equations.Rnw'>>=
-%@
+\rfoot{Appendix D -- Proportion Female Analysis}
+<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+@
 
-%\rfoot{Appendix E -- Proportion Female Analysis}
-%<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
-%@
+\rfoot{Appendix E -- Model Equations}
+<<model-equations, child='app-equations/app-equations.Rnw'>>=
+@
 
 %\rfoot{Appendix B -- Catch Data}
 %\input{app-catch/app-catch}
