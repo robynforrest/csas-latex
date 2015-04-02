@@ -98,7 +98,8 @@
 \lfoot{Appendix \thechapter ~-- Model Results} 
 \rfoot{Silvergray Rockfish (CST)} 
 
-\chapter*{Appendix~\thechapter. Model Results}
+\chapter{Appendix~\thechapter. Model Results}
+\label{chap:model}
 %\chapter{MCMC Working Results for Silvergray Rockfish}
 
 \newcommand{\numMCMC}{1,000}
