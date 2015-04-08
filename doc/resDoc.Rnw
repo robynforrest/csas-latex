@@ -128,8 +128,14 @@
 \newcommand{\sciencename}{Atheresthes stomias}
 \newcommand{\familyname}{Pleuronectidae}
 \newcommand{\commonname}{Turbot}
+\newcommand{\Avuln}{Age-at-50\%-vulnerability}
+\newcommand{\Amat}{Age-at-50\%-maturity}
+\newcommand{\amat}{age-at-50\%-maturity}
 
 \newcommand{\bc}{British Columbia}
+
+% For subscripts in text mode
+\newcommand{\subscr}[1]{$_{\text{#1}}$}
 
 % Headers and footers
 % For Res Doc, best to have a left and a right footer
@@ -160,7 +166,7 @@
 \newcommand{\FixM}{`Fix \emph{M}'}
 
 % MCMC globals to use in all MCMC related text and discussions
-\newcommand{\mcmclength}{10,000,000} % MCMC Chain length
+\newcommand{\mcmclength}{10 million} % MCMC Chain length
 \newcommand{\mcmcsampfreq}{5,000}    % Sampling frequency
 \newcommand{\mcmcnsamp}{2,000}       % Number of samples saved
 \newcommand{\mcmcburnin}{1,000}      % Number of samples removed from the beginning of the chain
@@ -286,25 +292,25 @@ modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl
 
 \lfoot{Arrowtooth Flounder - Coastwide}
 
-%\rfoot{Appendix A -- Request for Science Advice}
-%<<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
-%@
+\rfoot{Appendix A -- Request for Science Advice}
+<<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
+@
 
-%\rfoot{Appendix B -- Biological Data}
-%<<biological-data, child='app-biology/app-biology.Rnw'>>=
-%@
+\rfoot{Appendix B -- Biological Data}
+<<biological-data, child='app-biology/app-biology.Rnw'>>=
+@
 
-%\rfoot{Appendix C -- Age Composition weighting}
-%<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
-%@
+\rfoot{Appendix C -- Age Composition weighting}
+<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+@
 
-%\rfoot{Appendix D -- Proportion Female Analysis}
-%<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
-%@
+\rfoot{Appendix D -- Proportion Female Analysis}
+<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+@
 
-%\rfoot{Appendix E -- Model Equations}
-%<<model-equations, child='app-equations/app-equations.Rnw'>>=
-%@
+\rfoot{Appendix E -- Model Equations}
+<<model-equations, child='app-equations/app-equations.Rnw'>>=
+@
 
 %\rfoot{Appendix B -- Catch Data}
 %\input{app-catch/app-catch}

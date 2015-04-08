@@ -1,8 +1,7 @@
 % mainDoc.tex - Main part of the document
 
 \nonumsection*{ABSTRACT}\addcontentsline{toc}{section}{ABSTRACT}
-
-\fishname (\emph{\sciencename}, Turbot) is an important component of the trawl fishery in British Columbia, and are caught ubiquitously along the west coast of British Columbia (Figure~\ref{fig:cpue}).
+\fishname\ (\emph{\sciencename}, \commonname) is an important component of the bottom trawl fishery in \bc\. \fishname\ is managed as a coastwide stock, with a TAC of 15,000 t in 2014 and an estimated 2014 catch of 10,679 t. Prior to the introduction of freezer trawlers in the mid-2000s, most of the historical catch of \fishname\ is understood to have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, making the flesh unpalatable. In the past five years, markets have been established for fillets that have been frozen at sea, and the freezer trawl fleet has taken an increasing proportion of the coastwide catch . The \fishname\ stock was last assessed in 2001. The current assessment fits a female only Bayesian age-structured model to catch, survey and age-composition data from the years 1996-2014. Catch data prior to the introduction of at-sea observers were considered too unreliable for inclusion in the assessment due to unknown quantities of discarding at sea. The Reference Case model presented here estimates the female spawning biomass to have been on a flat to increasing trajectory since 1996, consistent with the catch and survey data. A set of sensitivity analyses were done to test the effects of fixed parameters and assumed prior probability distributions on model outcomes. In all scenarios, there was strong confounding among parameters representing productivity and scale of the population, indicating that there was limited information in the short time series of available data to resolve the population scale. The Reference Case model estimates age-at-50\%-harvest in the trawl fishery to be 9.45 y, consistent with the observations of few young fish in the age composition data. Female \amat\ for this species is estimated to be around 5 y, implying that individuals may have the opportunity to spawn several times before becoming vulnerable to the fishery. This resulted in estimates of optimal harvest rate U\subscr{MSY} approaching 1. Commercial trawl selectivity is considered a primary axis of uncertainty in this assessment because ages from the freezer trawl fleet were under-represented in the age composition data. Fishery reference points based on estimated unfished spawning biomass (B\subscr{0}) are therefore presented alongside the DFO default B\subscr{MSY}-based reference points, because B\subscr{0}-based reference points may be less reliant on estimated selectivity. Management advice is provided in the form of decision tables which forecast the impacts of varying 2015 catch levels on \fishname\ stock status relative to these reference points. The Reference Case decision table suggests that a 2015 catch equal to any of the catch levels presented, ranging from 0 t to 30,000 t (twice the 2014 TAC) would be sustainable, according to the set of candidate reference points tested. Given the uncertainty in fishery selectivity, an alternative "what-if" decision table was presented where the fishery selectivity-at-age ogive was fixed to be the same as the maturity-at-age ogive. The advice from this decision table was very similar to that from the Reference Case model due to rescaling of both the estimated population size and the reference points. A number of uncertainties and research needs are identified. The magnitude of catch and discards prior to 1996 is a major source of uncertainty in this assessment that could provide critical information about the scale and productivity of this stock. Ageing of archived otoliths from the freezer trawl fleet is a high priority recommendation. Development of a two fleet model with the freezer trawlers represented as a separate fleet may help to resolve uncertainties in fishery selectivity. Analysis of stock structure in \bc\ is also recommended.
 
 \newpage	%French abstract must appear on new page
 
@@ -18,34 +17,34 @@
 \setcounter{page}{1}
 
 \section{INTRODUCTION}
-\fishname\ (\emph{\sciencename}, Family \familyname), also commonly called \commonname, is a species of flatfish that occurs in offshore waters off the coast of \bc. \fishname\ are primarily taken by the groundfish bottom trawl fishery, although they are also encountered by hook and line fisheries, particularly those targeting Pacific Halibut (Hippoglossus stenolepis). Prior to the introduction of freezer trawlers in the Britich Columbia groundfish fleet in the mid 2000s, most of the historical catch of \fishname\ is understood to have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, making the flesh mushy and unpalatable. In the past five years, Asian markets have been established for fillets that have been frozen at sea, as soon as possible after capture to reduce Proteolysis. There is also an Asian market for the frills. The stock was last assessed in by \citet{arf2001}, who presented empirical summaries of catch, commercial and survey catch-per-unit-effort (CPUE) and biological data. This stock assessment covers the combined Pacific Marine Fisheries Commission (PMFC) major areas 3CD and 5ABCDE off the west coast of \bc.
+\fishname\ (\emph{\sciencename}, Family \familyname), also commonly called \commonname, is a species of flatfish that occurs in offshore waters of \bc. \fishname\ are primarily taken by the groundfish bottom trawl fishery, although they are also encountered by hook and line fisheries, particularly those targeting Pacific Halibut (\emph{Hippoglossus stenolepis}). Prior to the introduction of freezer trawlers in the Britich Columbia groundfish fleet in the mid 2000s, most of the historical catch of \fishname\ is understood to have been discarded at sea. Proteolysis occurs in the muscle tissue of this species a short time after it is caught, making the flesh mushy and unpalatable. In the past five years, Asian markets have been established for fillets that have been frozen at sea, as soon as possible after capture to reduce proteolysis. There is also an Asian market for the frills. The stock was last assessed in by \citet{arf2001}, who presented empirical summaries of catch, commercial and survey catch-per-unit-effort (CPUE) and biological data. This stock assessment covers the combined Pacific Marine Fisheries Commission (PMFC) major areas 3CD and 5ABCDE off the west coast of \bc.
 
 \subsection{PURPOSE OF DOCUMENT}
-\fishname\ is managed as a coastwide stock in \bc, with the majority of the catch coming from Pacific Marine Fisheries Commission (PMFC) major areas 3CD (West Coast Vancouver Island), 5AB (Queen Charlotte Sound) and 5CD (Hecate Strait) (Figures \ref{fig:cpue}  and XXX-Catch-landings; Table XXX-Catch-Discards). The 2013 Total Allowable Catch (TAC) was 15,000 metric tonnes, the second largest groundfish TAC in \bc, after Pacific Hake (\emph{Merluccius productus}).
+\fishname\ is managed as a coastwide stock in \bc, with the majority of the catch coming from Pacific Marine Fisheries Commission (PMFC) major areas 3CD (West Coast Vancouver Island), 5AB (Queen Charlotte Sound) and 5CD (Hecate Strait) (Figures \ref{fig:cpue}  and XXX-Catch-landings; Table XXX-Catch-Discards). The 2014 Total Allowable Catch (TAC) was 15,000 metric tonnes, the second largest groundfish TAC in \bc, after Pacific Hake (\emph{Merluccius productus}).
 
-The purpose of this stock assessment is to update management advice for \fishname\ stocks in \bc, as requested by the Groundfish Management Unit (GMU; Appendix \ref{chap:rsia}). This assessment identifies reference points for \fishname\ that are consistent with the DFO Decision-making Framework Incorporating the Precautionary Approach (\citet{dfo09}) and characterizes stock status relative to these reference points, using a Bayesian, age-structured stock assessment model. Management advice is provided in the form of decision tables which forecast the impacts of varying harvest levels on \fishname\ stock status relative to these reference points.
+The purpose of this stock assessment is to update management advice for \fishname\ stocks in \bc, as requested by the Pacific Groundfish Management Unit (GMU; Appendix \ref{chap:rsia}). This assessment identifies reference points for \fishname\ that are consistent with the DFO Decision-making Framework Incorporating the Precautionary Approach (\citet{dfo09}) and characterizes stock status relative to these reference points, using a Bayesian, age-structured stock assessment model. Management advice is provided in the form of decision tables which forecast the impacts of varying harvest levels on \fishname\ stock status relative to these reference points.
 
 \subsection{BIOLOGICAL BACKGROUND}
 \fishname\ are distinguished by their large mouth and arrow-shaped teeth, for which the species is named (\citet{hart1973}). Their distribution ranges from Baja California to the eastern Bering Sea (\citet{hart1973}). In \bc, the species inhabits depths from 50--900 m (\citet{arf2001}).
 
-\fishname\ are sexually dimorphic. After sexual maturity, females grow faster than males and reach a larger maximum size (Appendix \ref{chap:biological}, Figure XXX-B.6). Theoretical maximum length, $L_\infty$, is estimated to be approximately 61-62 cm for females and 47-52 cm for males in British Columbia, although larger individuals have been observed for both sexes (Appendix \ref{chap:biological}, Table XXX-B.5). Age at 50\% maturity for females is thought to occur around age 5 y for females (Appendix \ref{chap:biological}, Table XXX-B.8). Maximum age is around 25 y, although most individuals encountered by the fishery appear to be less than 20 years old (Figure XXX-agecompbubbles).
+\fishname\ are sexually dimorphic. After sexual maturity, females grow faster than males and reach a larger maximum size (Appendix \ref{chap:biological}, Figure XXX-B.6). Theoretical maximum length, $L_\infty$, is estimated to be approximately \textbf{61--62 cm for females and 47-52 cm for males} in British Columbia, although larger individuals have been observed for both sexes (Appendix \ref{chap:biological}, Table XXX-B.5). \Amat\ for females is thought to occur around age 5 y for females (Appendix \ref{chap:biological}, Table XXX-B.8). Maximum age is around 25 y, although most individuals encountered by the fishery appear to be less than 20 years old (Figure XXX-agecompbubbles).
 
-\fishname\ are batch spawners with peak spawning occurring at depths deeper than 350 m in the fall and winter months, although the timing of spawning may vary interannually (\citet{arf1995}). The species produces pelagic eggs, followed by a pelagic larval stage that may last several months (\citet{arf1995}). Fecundity of this species is poorly understood (XXX-NOREF!!!DiCosimo 1998). One and two year old fish occupy shallower depths than adults, but by the age of three or four years old, they are generally found in deeper water with adults (\citet{arf2001}). \fishname\ appear to occupy separate spawning (winter) and feeding (summer) areas, and undergo seasonal bathymetric movement from shallower to deeper water in the fall and winter (\citet{arf2001}).
+\fishname\ are batch spawners with peak spawning occurring at depths deeper than 350 m in the fall and winter months, although the timing of spawning may vary interannually (\citet{arf1995}). The species produces pelagic eggs, followed by a pelagic larval stage that may last several months (\citet{arf1995}). Fecundity of this species is poorly understood (\citet{dicosmio1998}). One and two year old fish occupy shallower depths than adults, but by the age of three or four years old, they are generally found in deeper water with adults (\citet{arf2001}). \fishname\ appear to occupy separate spawning (winter) and feeding (summer) areas, and undergo seasonal bathymetric movement from shallower to deeper water in the fall and winter (\citet{arf2001}).
 
-Juvenile \fishname\ feed primarily on mobile prey such as cumaceans, carideans and amphipods. Adults are piscivourous and cannibalistic, feeding on Pacific Herring (\emph{Clupea pallasii}), juvenile Pollock (\emph{Theragra chalcogramma}) and Pacific Sandlance (\emph{Ammodytes hexapterus}) (XXX-NOREF!!!Fargo et al. 1981).
+Juvenile \fishname\ feed primarily on mobile prey such as cumaceans, carideans and amphipods. Adults are piscivourous and cannibalistic, feeding on Pacific Herring (\emph{Clupea pallasii}), juvenile Walleye Pollock (\emph{Theragra chalcogramma}) and Pacific Sandlance (\emph{Ammodytes hexapterus}) (\citet{fargo1981}).
 
 \subsection{FISHERY AND MANAGEMENT HISTORY}
 Chris to write this...
 
 \subsection{ASSESSMENT HISTORY}
-The coastwide \fishname\ stock was last assessed by \citet{arf2001}, who presented summaries of catch, commercial and survey CPUE and biological data. They reported commercial and survey CPUE indices that showed cycles but no trends. They also reported lack of trends in size and age composition data, and no evidence that natural mortality had changed over time. Based on this evidence, \citet{arf2001} concluded that harvest rates of \fishname\ off the west coast of Canada were at or below sustainable levels. Prior to 2001, the stock was assessed by XXX-NOREF!!Fargo (1998). A formal, model-based assessment has never previously been presented in \bc\ for this species.
+The coastwide \fishname\ stock was last assessed by \citet{arf2001}, who presented summaries of catch, commercial and survey catch-pre-unit-of-effort (CPUE) analyses, and biological data. They reported commercial and survey CPUE indices that showed cycles but no trends. They also reported lack of trend in size and age composition data, and no evidence that natural mortality had changed over time. Based on this evidence, \citet{arf2001} concluded that harvest rates of \fishname\ off the west coast of Canada were at or below sustainable levels. Prior to 2001, the stock was assessed by \citet{fargo1998}. A formal, model-based assessment has never previously been done in \bc\ for this species.
 
 \section{STOCK ASSESSMENT MODELLING}
-We applied a female-only statistical catch-at-age model in a Bayesian estimation framework to assess the coastwide stock of \fishname\. Analysis of the sex composition of the catch data indicated that commercial catches have been 80-90\% female (see next section).
+We applied a female-only statistical catch-at-age model in a Bayesian estimation framework to assess the coastwide stock of \fishname. Analysis of the sex composition of the catch data indicated that commercial catches have been 80-90\% female; see \ref{chap:propfemale}.
 
-The model was fit to catch data, four indices of abundance with associated coefficients of variation, and to age composition data from the commercial trawl fishery and three of the four research surveys. Biological parameters used in the model, including growth, weight-at-age and maturity schedules, were estimated independently and input to the assessment model as fixed parameters that remained constant over time.
+The model was fit to catch data, four indices of abundance with associated coefficients of variation, and to age composition data from the commercial trawl fishery and three of the four research surveys. Biological parameters used in the model, including growth, weight-at-age and maturity schedules, were estimated independently (Appendix \ref{chap:biological}) and input to the assessment model as fixed parameters that remained constant over time.
 
-Reference points based on Maximum Sustainable Yield ($MSY$), including the female spawning biomass ($B_{MSY}$) and the annual harvest rate producing $MSY$ ($U_{MSY}$), were estimated, along with reference based on estimated equilibrium unfished spawning biomass ($B_0$). Harvest decision tables were created by projecting the assessment model one year into the future under a range of constant catch levels. For each level of constant harvest, decision tables show the probability that projected stock status in each year will be less than spawning biomass-based reference points, or greater than harvest rate-based reference points.
+Reference points based on Maximum Sustainable Yield (MSY), including the female spawning biomass (B\subscr{MSY}) and the annual harvest rate producing MSY ($U_{MSY}$), were estimated, along with reference based on estimated equilibrium unfished spawning biomass (B\subscr{0})(Section \ref{sec:FisheryRefPoints}). Harvest decision tables were created by projecting the assessment model one year into the future under a range of constant catch levels. For each level of constant harvest, decision tables show the probability that projected stock status in each year will be less than spawning biomass-based reference points, or greater than harvest rate-based reference points (Section \ref{sec:DecisionTables}).
 
 \subsection{DATA INPUTS}
 \subsubsection{Data Sources}
@@ -56,7 +55,7 @@ Data were extracted from three different databases:
   \item \textbf{GFFOS} - Canadian trawl landings, April 1, 2007 to 2013. View of the Fisheries and Oceans Canada (DFO) Fishery Operations (FOS) database. Groundfish Section, Marine Ecosystems and Aquaculture Division, Science Branch, Fisheries and Oceans Canada, Pacific Biological Station.
 \end{enumerate}
 
-\subsubsection{Catch Data}
+\subsubsection{Catch Data} \label{sec:catchdata}
 Chris to write this...
 
 \clearpage
@@ -71,9 +70,9 @@ Four sets of fishery independent survey indices of abundance were used in this a
 \end{enumerate}
 
 \textbf{Hecate Strait Multispecies Assemblage Survey} \\
-A series of multi-species groundfish bottom trawl surveys were conducted in Hecate Strait in May-June of 1984, 1987, 1989, 1991, 1993, 1995, 1996, 1998, 2000, 2002, and 2003 (XXX-NOREFS!!Westrheim et al. 1984, Fargo et al. 1984, Fargo et al. 1988, Wilson et al. 1991, Hand et al. 1994, Workman et al. 1996, Workman et al. 1997, Choromanski et al. 2002, Choromanski et al. 2002). The present assessment only utilizes observations from 1996 until the survey ended in 2003.
+A series of multi-species groundfish bottom trawl surveys were conducted in Hecate Strait in May-June of 1984, 1987, 1989, 1991, 1993, 1995, 1996, 1998, 2000, 2002, and 2003 (\citet{westerheim1984}, \citet{fargo1984}, \citet{fargo1988}, \citet{wilson1991}, \citet{hand1994}, \citet{workman1996}, \citet{workman1997}, \citet{choromanski2002}, \citet{choromanski2005}). The present assessment only utilizes observations from 1996 until the survey ended in 2003.
 
-The original design of this survey assigned fishing locations by 10 fm depth intervals within a 10 nm grid of Hecate Strait. The survey was post-stratified for the purpose of calculating an abundance index for Pacific Cod (XXX-NOREF!!Sinclair 1999). The post stratification used 10 fm depth intervals for the entire survey area, thereby treating each depth interval as a single stratum. The Hecate Strait Assemblage survey was designed as a systematic fixed-station survey. Despite attempts to apply post-sampling stratification, this approach had high survey variance (XXX-NOREF!!Sinclair et al. 2007). In 2004 the Hecate Strait Assemblage survey was discontinued in favour of the Hecate Strait Synoptic survey (described below).
+The original design of this survey assigned fishing locations by 10 fathom depth intervals within a 10 nautical mile grid of Hecate Strait. The survey was post-stratified using 10 fathom depth intervals for the entire survey area, thereby treating each depth interval as a single stratum. The Hecate Strait Assemblage survey was designed as a systematic fixed-station survey. Despite attempts to apply post-sampling stratification, this approach had high survey variance (\citet{sinclair2007}). In 2004 the Hecate Strait Assemblage survey was discontinued in favour of the Hecate Strait Synoptic survey (described below).
 
 \textbf{Hecate Strait Synoptic Survey} \\
 The Hecate Strait synoptic groundfish bottom trawl survey is part of a coordinated set of long-term surveys that together cover the continental shelf and upper slope of most of the \bc\ coast. The Queen Charlotte Sound and West Coast Vancouver Island synoptic surveys described below are part of the same set of surveys. All the synoptic surveys follow a random depth stratified design. The relative allocation of blocks amongst depth strata was determined by modelling the expected catches of groundfish and determining the target number of tows per stratum that would provide the most precise catch rate data for as many species as possible.
@@ -121,77 +120,104 @@ CV_y=\frac{\sqrt{V_y}}{B_y}
 where $CV_y$ is the CV for year $y$.
 \end{addmargin}
 
-One thousand bootstrap replicates with replacement were constructed from the survey data to estimate bias corrected 95\% confidence regions for each survey year (\citet{efro82}).
+One thousand bootstrap replicates with replacement were constructed from the survey data to estimate bias corrected 95\% confidence regions for each survey year (\citet{efro82}). Mean survey biomass estimates obtained from Eq. \ref{eq:sweptareaindex} with CV's (Eq. \ref{eq:indexcv}) are presented for the four fishery-independent surveys in Table \ref{tab:Indices}.
 
-\subsubsection{Age Data}
+\subsubsection{Age Data} \label{sec:agedata}
 Chris to write this....
 
-\subsection{STATISTICAL CATCH-AT-AGE MODEL}
-The statistical catch-at-age model used in this assessment is based on the Integrated Statistical Catch Age Model (iSCAM) framework, developed by Martell (\citet{martell2011}). The model is fully described in Appendix \ref{chap:equations}.
+\subsubsection{Commercial length data}
+Length data from the freezer trawl fleet and the shoreside fleet are presented in Appendix XX. We present quarterly length frequencies to test whether there may be evidence for differences in the age composition of the catch in the freezer trawl fleet compared to the rest of the fleet. Since 2005, the freezer trawler fleet has taken an increasingly large proportion of the catch. However, as discussed in the previous section, it was discovered after the commercial otoliths had been processed that age data from this fleet were under-represented in the age composition data.
 
-All model code is available on request from the authors.
+Length-frequency plots in Appendix XX indicate that there is/is not some evidence for larger/smaller fish being caught in the freezer trawl fleet compared to the rest of the fleet...............................
+
+
+\subsection{STATISTICAL CATCH-AT-AGE MODEL}
+%The statistical catch-at-age model used in this assessment is based on the Integrated Statistical Catch Age Model (iSCAM) framework, developed by Martell (\citet{martell2011}). The model is fully described in Appendix \ref{chap:equations}.
 
 \subsubsection{Model Description}
-A female-only, Bayesian statistical catch-at-age model was applied to assess the coastwide stock status of \fishname. The model is based on the Integrated Statistical Catch Age Model (iSCAM) framework, Martell (\citet{martell2011}). Full model details are provided in Appendix \ref{chap:equations}. We define a Reference Case model with fixed and estimated parameters described in Table \ref{tab:ParamPriors}. A total of 78 model parameters were conditionally estimated by the Reference Case model (Table \ref{tab:ParamPriors}). The model estimated time series of log recruitment anomalies and log fishing mortality rates; and time-invariant values of unfished recruitment, steepness of the Beverton-Holt stock-recruit relationship, natural mortality, average recruitment and logistic selectivity parameters for the commercial fishery and the four surveys. Prior probability distributions for the Reference Case model are shown in Table \ref{tab:ParamPriors} and described in the next section. Model sensitivity to fixed parameters and to assumed prior probability distributions are presented in a later section.\\
+A female-only, Bayesian statistical catch-at-age model was applied to assess the coastwide stock status of \fishname. The model is based on the Integrated Statistical Catch Age Model (iSCAM) framework, Martell (\citet{martell2011}). Full model details are provided in Appendix \ref{chap:equations}. We define a Reference Case model with fixed and estimated parameters described in Table \ref{tab:ParamPriors}. A total of \textbf{78} model parameters were conditionally estimated by the Reference Case model (Table \ref{tab:ParamPriors}). The model estimated time series of log recruitment anomalies and log fishing mortality rates; and time-invariant values of unfished recruitment, steepness of the Beverton-Holt stock-recruit relationship, natural mortality, average recruitment and logistic selectivity parameters for the commercial fishery and the four surveys. Prior probability distributions for the Reference Case model are shown in Table \ref{tab:ParamPriors} and described in the next section. Model sensitivity to fixed parameters and to assumed prior probability distributions are presented in a later section.\\
 \vspace{10mm}
 In brief, the model was conditioned on observed catch data (1996-2014), which were assumed to be known without error. The model was fit to the four survey indices of abundance described above, and to age composition data from the commercial fishery and three of the fishery-independent surveys (HSSS, QCSSS, WCVISS). Biological parameters determining weight-at-age and maturity-at-age schedules, were estimated independently (Appendix \ref{chap:biological}) and input to the assessment model as fixed parameters that remained constant over time.\\
 \vspace{10mm}
-Survey biomass indices were treated as relative abundance indices that are directly proportional to the survey vulnerable biomass at the beginning of each year. Observation errors in the relative abundance indices were assumed to be log-normally distributed. The survey catchability parameter qi was estimated for each survey $k$, with the maximum likelihood estimate of $q_k$ used in the calculation of the objective function (\citet{walters1994}). Prior probability distributions for $q_k$ are described in the next section.\\
+Survey biomass indices were treated as relative abundance indices that are directly proportional to the survey vulnerable biomass at the beginning of each year. Observation errors in the relative abundance indices were assumed to be log-normally distributed. The survey catchability parameter $q_k$ was estimated for each survey $k$, with the maximum likelihood estimate of $q_k$ used in the calculation of the objective function (\citet{walters1994}). Prior probability distributions for $q_k$ are described in the next section.\\
 \vspace{10mm}
 Age-composition observations were assumed to come from a multivariate logistic distribution, where predicted proportions-at-age are a function of the predicted population age-structure and the age specific vulnerability to the fishing gear (\citet{rs98}). The likelihood for the age-composition data was evaluated at the conditional maximum likelihood estimate of the variance (i.e., no subjective weighting scheme was used to scale likelihood for the age-composition information). No ageing errors were assumed.\\
 \vspace{10mm}
-Selectivity-at-age for the trawl fishery and four surveys was modelled using a two-parameter logistic function with asymptote at 1. Age-at-50\% vulnerability ($\hat{a}_k$) and the standard deviation of the logistic curve ($\hat{\gamma}_k$) for each gear $k$ were estimated for the trawl fishery and the three synoptic surveys. No age composition data were available for the HSMAS and selectivity was fixed with $\hat{a}_k$ = 9 and $\hat{\gamma}_k$ = 1, similar to estimated values for the other gears. Trial runs indicated that there was little model sensitivity to this assumption.
+Selectivity-at-age for the trawl fishery and four surveys was modelled using a two-parameter logistic function with asymptote at 1. \Avuln\ ($\hat{a}_k$) and the standard deviation of the logistic curve ($\hat{\gamma}_k$) for each gear $k$ were estimated for the trawl fishery and the three synoptic surveys. No age composition data were available for the HSMAS and selectivity was fixed with $\hat{a}_k$ = 9 and $\hat{\gamma}_k$ = 1, similar to estimated values for the other gears. Trial runs indicated that there was little model sensitivity to this assumption.
 \vspace{10mm}
-Variance components of the model were partitioned using an errors in variables approach. The key variance parameter is the inverse of the total variance $\theta^2$ (i.e., total precision). The total variance is partitioned into observation and process error components by the model parameter $\rho$, which represents the proportion of the total variance that is due to observation error (XXX-NOREF!!Punt and Butterworth 1993, XXX-NOREF!!Deriso et al. 2007). The total variance is partitioned into observation errors ($\sigma^2$) and process errors ($\tau^2$) using Eq. \ref{eq:df16}. The parameters $\theta$ and $\rho$ were fixed in the current assessment (Table \ref{tab:ParamPriors}) at values that gave $\sigma$ = 0.2 and $\tau$ = 0.8. See Appendix \ref{chap:equations} for details on the treatment of variance in this assessment.
+Variance components of the model were partitioned using an errors in variables approach. The key variance parameter is the inverse of the total variance $\theta^2$ (i.e., total precision). The total variance is partitioned into observation and process error components by the model parameter $\rho$, which represents the proportion of the total variance that is due to observation error (\citet{punt1999}, \citet{deriso2007}). The total variance is partitioned into observation errors ($\sigma^2$) and process errors ($\tau^2$) using Eq. \ref{eq:df16}. The parameters $\theta$ and $\rho$ were fixed in the current assessment (Table \ref{tab:ParamPriors}) at values that gave $\sigma$ = 0.2 and $\tau$ = 0.8. See Appendix \ref{chap:equations} for details on the treatment of variance in this assessment.
 
 \subsubsection{Prior Probability Distributions}
 Prior probability distributions for the Reference Case model are shown in Figure \ref{fig:priors} and Table \ref{tab:ParamPriors}. Model sensitivities to priors are presented in a later section.\\
 
-Uniform prior probability distributions were used for ln($R_0$), ln($\overline{R}$), ln($\overline{R}_{init}$) and selectivity parameters (Table \ref{tab:ParamPriors}).
+Uniform prior probability distributions were used for ln($R_0$), ln($\overline{R}$), ln($\overline{R}_{init}$) and selectivity parameters (Table \ref{tab:ParamPriors}). A Beta distribution was assumed for the steepness ($h$) of the stock-recruit relationship, with shape parameters that resulted in a distribution with mean = 0.85 and CV = 0.1 (Beta($\alpha$=13.4,$\beta$=2.40)). This prior was based on a literature review on steepness parameters for Pacific flatfish species done by \citet{rocksole2014}. A review of steepness estimates for flatfish species by \citet{maunder2012} suggested that flatfish steepness using a Beverton-Holt stock-recruit relationship may be around 0.94 (where h approaching 1.0 implies recruitment is independent of spawning biomass).
 
-A Beta distribution was assumed for the steepness ($h$) of the stock-recruit relationship, with shape parameters that resulted in a distribution with mean = 0.85 and CV = 0.1 (Beta($\alpha$=13.4,$\beta$=2.40)). This prior was based on a literature review on steepness parameters for Pacific flatfish species done by \citet{rocksole2014}. A review of steepness estimates for flatfish species by \citet{maunder2012} suggested that flatfish steepness using a Beverton-Holt stock-recruit relationship may be around 0.94 (where h approaching 1.0 implies recruitment is independent of spawning biomass).
+A normal distribution was assumed for ln($M$) with mean = ln(2.0) and SD = 0.2 in log space. \citet{rocksole2014} reviewed the literature and stock assessments and assumed a prior probability distribution with mean = 0.2 in their assessment of \bc\ Rock Sole (\emph{Lepidopsetta spp.}). \citet{arf2013} assumed a value of $M$ = 0.2 for females in the assessment of Gulf of Alaska \fishname\, as did  \citet{arf2013} for the Bering Sea Aleutian Islands stock.
 
-A normal distribution was assumed for ln($M$) with mean = ln(2.0) and SD = 0.2 in log space. \citet{rocksole2014} reviewed the literature and stock assessments and assumed a prior probability distribution with mean = 0.2 in their assessment of \bc\ Rock Sole (\emph{Lepidopsetta spp.}). \citet{arf2013} assumed a value of M = 0.2 for females in the assessment of Gulf of Alaska \fishname\, as did  XXX-NOREF!!Spies et al (2013b) for the Bering Sea Aleutian Islands stock.
+Normal prior probability distributions were assumed for the survey catchability parameters $q_k$ for each gear $k$. Normal distributions with mean = ln($0.5$) and SD = 1.0 in log space were selected because the survey estimates of biomass were derived from swept area analysis (Eqs. \ref{eq:sweptareaindex}, \ref{eq:cpuecalc}, and \ref{eq:indexvariance}) and could therefore reasonably be expected to be within 1-2 orders of magnitude of unity. A large standard deviation was used to reflect ignorance of the scale of the swept area analysis compared with the true biomass.
 
-Normal distributions were assumed for the survey catchability parameters $q_k$. Normal distributions with mean = ln(0.5) and SD = 1.0 in log space were selected because the survey estimates of biomass were derived from swept area analysis (Eqs. \ref{eq:sweptareaindex}, \ref{eq:cpuecalc}, and \ref{eq:indexvariance}) and could therefore reasonably be expected to be within 1-2 orders of magnitude of unity. A large standard deviation was used to reflect ignorance of the scale of the swept area analysis compared with the true biomass.
+\subsubsection{Fishery reference points} \label{sec:FisheryRefPoints}
+The DFO Fishery Decision-making Framework Incorporating the Precautionary Approach (PA) policy (\citet{dfo09}) requires stock status to be characterized using three reference points: (i) a Reference Removal Rate; (ii) an Upper Stock Reference point (USR); and (iii) a Limit Reference Point (LRP); Provisional values of USR = 0.8B\subscr{MSY} and LRP = 0.4B\subscr{MSY} are suggested in the absence of stock-specific reference points. The framework specifies a limit reference removal rate of F\subscr{MSY}. Therefore, we refer to the reference removal rate as the limit removal rate (LRR) throughout this document.
 
-\subsubsection{Fishery reference points}
+A harvest control rule based on these reference points that is coincident with the choice of LRP, USR and LRR would apply a linear reduction in fishing mortality as the stock falls below the USR, and would cease fishing when the stock reaches the LRP (but see \citet{cox2013}) is illustrated for a hypothetical stock in Figure \ref{fig:hcrillustration}, where the USR and LRP are shown as vertical lines and the removal rate is shown as a blue line. We make the observation that the rate at which the fishing mortality should be reduced is unspecified in the PA policy, but is depicted as a linear ramp between the USR and LRP (Figure \ref{fig:hcrillustration}).
 
-\subsection{RESULTS}
+There is uncertainty in F\subscr{MSY} (and annual harvest rate U\subscr{MSY}), driven by uncertainty in the trawl fishery selectivity resulting from possible under-representation of freezer trawl ages discussed above. We therefore also present alternative candidate reference points for \fishname\ that are less reliant on estimated selectivity. We suggest an USR = 0.4B\subscr{0} and a LRP = 0.2B\subscr{0}. These thresholds are consistent with biomass targets and limits in place in other jusrisdictions including Australia (\citet{smith2007}) and the USA (\citet{restrepo1998}). Given the large uncertainty in estimated B\subscr{0} in this assessment (see Results, scetion \ref{sec:results}), we also suggest B\subscr{1996}, the estimated spawning biomass at the beginning of the time series, as a candidate benchmark to measure relative fishing impacts for this stock.
+
+\subsection{RESULTS} \label{sec:results}
 \subsubsection{Model diagnostics}
-The joint posterior distribution was numerically approximated using the Markov Chain Monte Carlo (MCMC) routines built into AD Model Builder (XXX-NOREF!!Fournier et al. 2012). For the Reference Case model and all sensitivity cases, posterior samples were drawn systematically every \mcmcsampfreq\ iterations from a chain of length \mcmclength, resulting in \mcmcnsamp\ posterior samples (the first \mcmcburnin\ samples were dropped to allow for sufficient burn-in). Convergence was diagnosed using visual inspection of the trace plots (\ref{fig:traces}) and visual examination of autocorrelation in posterior chains (Figure \ref{fig:autocor}). Autocorrelation was minor for all parameters and there was no strong evidence for lack of convergence.
+The joint posterior distribution was numerically approximated using the Markov Chain Monte Carlo (MCMC) routines built into AD Model Builder (\citet{fournier2012}). For the Reference Case model and all sensitivity cases, posterior samples were drawn systematically every \mcmcsampfreq\ iterations from a chain of length \mcmclength, resulting in \mcmcnsamp\ posterior samples (the first \mcmcburnin\ samples were dropped to allow for sufficient burn-in). Convergence was diagnosed using visual inspection of the trace plots (\ref{fig:traces}) and visual examination of autocorrelation in posterior chains (Figure \ref{fig:autocor}). Autocorrelation was minor for all parameters and there was no strong evidence for lack of convergence.
 \subsubsection{Fits to data}
-Maximum posterior density (MPD) model fits to the four indices of abundance are shown in Figure \ref{fig:indexfits}. Fits to the indices of abundance were reasonable. The model followed the increasing trend for all three synoptic surveys, although it underestimated or overestimated some observations. The closest fit was obtained for the Hecate Strait Synoptic Survey, although the smallest observation in 2007 was not fit. The West Coast Vancouver Island Synoptic Survey observed the highest mean biomasses in 2010 and 2014, and the lowest in 2012 (Figure \ref{fig:indexfits}). The model could not reproduce these large shifts in abundance and estimated biomass to be approximately the average of the 2010-2014 survey observations for this period. The other two surveys covering this period (HSSS and QCSSS) were done in odd-numbered years so there was no 2012 observation. However, neither survey observed a drop in biomass during this period. For the Hecate Strait Multispecies Assemblage Survey, the model overestimated the three observations in the earliest part of the time series. The median posterior estimate of catchability for this survey (0.11) was close to the median estimates of catchability for the three synoptic surveys (0.13, 0.10, 0.09 for the QCSSS, HSSS and WCVISS respectively) (Table \ref{tab:ParamEst}), indicating that the model estimated all four surveys to be similarly scaled to the population biomass. The model therefore treated the HSMAS and the synoptic surveys to essentially be continuous time series. This would be expected in the absence of age composition data from the HSMAS or other information to inform the respective scales of the surveys. However, we acknowledge that catchability in the HSMAS may have been different from the other surveys due to differences in survey design, and that the fit obtained for the HSMAS is partly a function of fits to the other surveys and to the assumed fixed selectivity for this survey.
+Maximum posterior density (MPD) model fits to the four indices of abundance are shown in Figure \ref{fig:indexfits}. Fits to the indices of abundance were reasonable. The model followed the increasing trend for all three synoptic surveys, although it underestimated or overestimated some observations. The closest fit was obtained for the Hecate Strait Synoptic Survey, although the smallest observation in 2007 was not fit. The West Coast Vancouver Island Synoptic Survey observed its highest mean biomasses in 2010 and 2014, and its lowest in 2012 (Figure \ref{fig:indexfits}). The model could not reproduce these large shifts in abundance and estimated biomass to be approximately the average of the 2010-2014 survey observations for this period. The other two surveys covering this period (HSSS and QCSSS) were done in odd-numbered years so there was no 2012 observation. However, neither survey observed a drop in biomass during this period, suggesting that the low observation in the WCVISS may have been a sampling artifact, or due to some other anomaly. For the Hecate Strait Multispecies Assemblage Survey, the model overestimated the three observations in the earliest part of the time series. The median posterior estimate of catchability for this survey (0.11) was close to the median estimates of catchability for the three synoptic surveys (0.13, 0.10, 0.09 for the QCSSS, HSSS and WCVISS respectively) (Table \ref{tab:ParamEst}), indicating that the model estimated all four surveys to be similarly scaled to the population biomass. The model therefore treated the HSMAS and the synoptic surveys to essentially be continuous time series. This is not surprising given the absence of age composition data from the HSMAS to inform the respective scales of the surveys. However, we acknowledge that catchability in the HSMAS may have been different from the other surveys due to differences in survey design, and that the fit obtained for the HSMAS is partly a function of fits to the other surveys and to the assumed fixed selectivity for this survey.
 \vspace{10mm}
-MPD fits to the fishery age composition data are shown in Figure \ref{fig:agecomps-trawl}. Fits were reasonable and there were no strong patterns in the residuals. Fits to the age composition data from the QCSSS were generally poor (Figure \ref{fig:agecomps-qcsss}). Age composition data from this survey were variable, likely reflecting the small sample sizes indicated in Figure XXX and Table XXX. Fits to age composition data for the HSSS and WCVISS were reasonable, with no strong patterns in the residuals (Figures \ref{fig:agecomps-hsss} and \ref{fig:agecomps-wcviss}). There were no reliable age composition data available for the HSMSAS.
+MPD fits to the fishery age composition data are shown in Figure \ref{fig:agecomps-trawl}. Fits were reasonable and there were no strong patterns in the residuals. Fits to the age composition data from the QCSSS were generally poor (Figure \ref{fig:agecomps-qcsss}). Age composition data from this survey were variable, likely reflecting the small sample sizes indicated in Figure \ref{fig:agecomps-qcsss}. Fits to age composition data for the HSSS and WCVISS were reasonable, with no strong patterns in the residuals (Figures \ref{fig:agecomps-hsss} and \ref{fig:agecomps-wcviss}). There were no reliable age composition data available for the HSMSAS.
 
 \subsubsection{Parameter estimates}
-Prior and posterior probability distributions of estimated parameters are shown in Figure \ref{fig:priorsvsposts}. The median, 2.5th percentile and 97.5th percentile posterior parameter estimates, and maximum posterior density (MPD) estimates, are given in Table \ref{tab:ParamEst}. With the exception of steepness, the posterior estimates did not appear to be strongly influenced by the prior probability distributions. The posterior probability distribution for steepness was very similar to the prior distribution, implying that there was little information about this parameter in the available data. Sensitivity to the prior for steepness is tested in a later section.
+Prior and posterior probability distributions of estimated parameters are shown in Figure \ref{fig:priorsvsposts}. The median, 2.5th percentile and 97.5th percentile posterior parameter estimates, and maximum posterior density (MPD) estimates, are given in Table \ref{tab:ParamEst}. With the exception of steepness, the posterior estimates did not appear to be strongly influenced by the prior probability distributions. The posterior probability distribution for steepness, $h$, was very similar to the prior distribution, implying that there was little information about this parameter in the available data. Sensitivity to the prior for steepness is tested in section \ref{sec:sensitivities}.
 
-Posterior probability estimates of ln($M$) tended to be higher than the prior values (Figure \ref{fig:priorsvsposts}).
+Posterior probability estimates of ln($M$) tended to be higher than the prior values, with all of the posterior density located in the right-hand tail of the peior distribution (Figure \ref{fig:priorsvsposts}). Normal prior probability distributions were used for the log catchability parameters ln($q_k$) for the Hecate Strait Assemblage Survey and the three Synoptic Surveys (Figure \ref{fig:priors}). Posterior estimates tended to overlap with the left-hand tail of the prior distributions for each survey (Figure \ref{fig:priors}). Sensitivity analyses (discussed in Section \ref{sec:sensitivities}) indicated that posterior estimates of catchability were sensitive to the mean and standard deviation of this prior.
 
-Normal prior probability distributions were used for the log catchability parameters ln($q$) for the Hecate Strait Assemblage Survey and the three Synoptic Surveys (Figure \ref{fig:priors}). Posterior estimates tended to overlap with the left-hand tail of the prior distributions for each survey (Figure \ref{fig:priors}). Sensitivity analyses (discussed in a later section) indicated that posterior estimates of catchability were sensitive to the mean and standard deviation of this prior, although resulting posterior estimates of catchability did not appear to be plausible with the alternative prior distributions. Pairs plots of posterior samples (Figure \ref{fig:pairs}) indicated that posterior estimates of $R_0$ and $\overline{R}$ were strongly negatively correlated with survey catchability parameters $q_1$ - $q_4$ . This and the influence of the prior distributions on posterior estimates of catchability indicated that there was limited information in the available data to estimate these important scaling parameters. Posterior estimates of $R_0$ and $\overline{R}$ were also positively correlated with ln($M$), again indicating that there was insufficient information in the data to unconfound the productivity and scale of the population.
+Pairs plots of posterior samples (Figure \ref{fig:pairs}) indicated that posterior estimates of $R_0$, $\overline{R}$, and $M$ were strongly negatively correlated with survey catchability parameters $q_1$ -- $q_4$ . This and the influence of the prior distributions on posterior estimates of catchability indicated that there was limited information in the available data to estimate these important scaling parameters. Posterior estimates of $R_0$ and $\overline{R}$ were also positively correlated with ln($M$), again indicating that there was insufficient information in the data to unconfound the productivity and scale of the population.
 
-\subsubsection{Selectivity}
-Gear selectivity-at-age was estimated for the trawl fishery and the three synoptic surveys (Figure \ref{fig:selex}). Posterior estimates of age-at-50\%-harvest ($sel\_a_1$) and the standard deviation in the logistic selectivity ogive ($sel\_sd_1$) are provided in Table \ref{tab:ParamEst}. The median posterior estimate of age-at-50\%-harvest in the trawl fishery was 9.45 y. This estimate was comparatively far to the right compared with many other fisheries, but was consistent with the available age composition data (Fig \ref{fig:agecomps-trawl}), which indicate very few observations younger fish, especially in the latter part of the time series. Numerous tests of alternative model configurations did not result in a lower estimate of age-at-50\%-harvest in the trawl fishery. Female \fishname\ are thought to mature at around 5 years of age (Table or Fig XXXX ). Therefore, it appears that individuals have several opportunities to spawn before they become vulnerable to the fishery. This in turn resulted in estimates of maximum sustainable harvest rate $U_{MSY}$ approaching 1 (discussed in a later section), implying that under theoretical equilibrium conditions, all of the vulnerable (i.e., fully-selected) biomass could be harvested because the population could be sustained by younger spawners that are invulnerable to the fishery. We emphasise that this is a theoretical condition and suggest that the age-at-50\%-harvest in the trawl fishery is a primary axis of uncertainty in this stock assessment. As discussed above, catches since 2008 have increasingly been represented by the freezer trawler fleet and age composition data from this fleet may have been under-represented. Model sensitivity to selectivity in the trawl fishery, in terms of spawning biomass and stock status, is presented in a later section. We recommend as a high priority that future aging requests should include a representative proportion of ages from the freezer trawl fleet for all years since 2005.
+\subsubsection{Selectivity} \label{sec:selectivity}
+Gear selectivity-at-age was estimated for the trawl fishery and the three synoptic surveys (Figure \ref{fig:selex}). Posterior estimates of age-at-50\%-harvest ($sel\_a_1$) and the standard deviation in the logistic selectivity ogive ($sel\_sd_1$) are provided in Table \ref{tab:ParamEst}. The median posterior estimate of age-at-50\%-harvest in the trawl fishery was 9.45 y. This estimate was further to the right than expected, but was consistent with the available age composition data (Fig \ref{fig:agecomps-trawl}), which indicate very few observations of younger fish, especially in the latter part of the time series. Numerous tests of alternative model configurations did not result in a lower estimate of age-at-50\%-harvest in the trawl fishery. Female \fishname\ are thought to mature at around 5 years of age (Table or Fig XXXX ). Therefore, it appears that individuals have several opportunities to spawn before they become vulnerable to the fishery. This in turn resulted in estimates of maximum sustainable harvest rate U\subscr{MSY} approaching 1 (discussed in section \ref{sec:resultsFishRefPoints}), implying that under theoretical equilibrium conditions, all of the vulnerable (i.e., fully-selected) biomass could be harvested because the population could be sustained by younger spawners that are invulnerable to the fishery. We emphasise that this is a theoretical condition subject to the assumptions in the stock assessment model and the data limitations therein. We strongly advise against this as a harvest strategy and suggest that the age-at-50\%-harvest in the trawl fishery is a primary axis of uncertainty in this stock assessment. As discussed above, catches since 2008 have increasingly been represented by the freezer trawler fleet and age composition data from this fleet were under-represented. Model sensitivity to selectivity in the trawl fishery, in terms of spawning biomass and stock status, is presented in a later section. We recommend as a high priority that future aging requests should include a representative proportion of ages from the freezer trawl fleet for all years since 2005.
 \vspace{10mm}
-Selectivities in the three synoptic surveys were also estimated to be quite far to the right (Figure \ref{fig:selex}) with median posterior estimates of age-at-50\%-harvest of 11.4 y, 9.03 y and 9.29 y for the QCSSS, HSSS and WCVISS respectively (Table \ref{tab:ParamEst}). Standard deviations in the selectivity curves were quite large (Table \ref{tab:ParamEst}), indicating that selectivity in the surveys was far from knife-edged (Figure \ref{fig:selex}). This was especially true for the QCSSS, where ages from this survey showed a less clearly defined pattern than the other gears, with larger proportions of younger fish (Figure \ref{fig:agecomps-qcss}). This was likely due to the relatively small sample sizes for this dataset (Table XXX). We recommend that future aging requests should include ageing of archival otoliths from the QCSSS in order to increase the quality of information from this survey.
-\vspace{10mm}
-We suggest that the age-at-50\%-harvest in the trawl fishery is a primary axis of uncertainty in this stock assessment. As discussed above, catches since 2008 have increasingly been represented by the freezer trawler fleet and age composition data from this fleet may have been under-represented. Model sensitivity to selectivity in the trawl fishery, in terms of spawning biomass and stock status, is presented in a later section.
-\vspace{10mm}
-Selectivities in the three synoptic surveys were also estimated to be quite far to the right (Figure \ref{fig:selex}) with the median posterior estimate of ........
+Selectivities in the three synoptic surveys were also estimated to be quite far to the right (Figure \ref{fig:selex}) with median posterior estimates of age-at-50\%-harvest of 11.4 y, 9.03 y and 9.29 y for the QCSSS, HSSS and WCVIS surveys respectively (Table \ref{tab:ParamEst}). Standard deviations in the selectivity curves were quite large (Table \ref{tab:ParamEst}), indicating that selectivity in the surveys was far from knife-edged (Figure \ref{fig:selex}). This was especially true for the QCSSS, where ages showed a less clearly defined pattern than for the other gears, with larger proportions of younger fish (Figure \ref{fig:agecomps-qcss}). This was likely due to the relatively small sample sizes for this dataset (\ref{fig:agecomps-qcss}). We recommend that future aging requests should include ageing of archival otoliths from the QCSSS in order to increase the number of samples and quality of information from this survey.
 
-\subsubsection{Biomass}
-The Reference Case model estimated the spawning biomass to have been on a flat to increasing trajectory since 1996 (Figure \ref{fig:spawnbio-rec}; Table \ref{tab:SpawnBio}). The posterior median (and 95\% credibility interval) projected estimate of spawning biomass in 2015 is 415,872 t (220,672 t – 926,816 t). The median projected 2015 spawning biomass, which incorporates fishing mortality arising from the observed 2014 catch, is considerably higher than both the default USR of 0.8BMSY, which was estimated to be 129,410 t (6,255 t – 296,360 t), and the default LRP of 0.4 BMSY, which was estimated to be 6,471 t (3,128 t – 148,180 t) (Table \ref{tab:RefPoints}).
+\subsubsection{Fishery reference points} \label{sec:resultsFishRefPoints}
 \vspace{10mm}
-\subsubsection{Recruits}
-Posterior median estimates and 95\% credibility interval of age-1 recruits are shown in Figure \ref{fig:spawnbio-rec} and Table XX. The 95\% posterior credibility intervals since 2011 are reasonably broad, with considerable uncertainty around the estimate of 2013 recruitment. This is expected since there is no information in the data about the strength of this year class.
+Posterior estimates of fishery reference points from the Reference Case model are provided in Table \ref{tab:RefPoints} and Figure \ref{fig:spawnbiomass}. The posterior unfished female spawning biomass (B\subscr{0}) was highly uncertain, with median 620,705 t and credibility interval ranging from 313,502 t to 1,306,850 t (Table \ref{tab:spawnbiomass}). Posterior credibility intervals for the candidate LRP 0.2B\subscr{0} and USR 0.4B\subscr{0} are provided in Table \ref{tab:RefPoints}.
+\vspace{10mm}
+Reference points based on maximum sustainable yield (MSY) were strongly impacted by estimates of selectivity in the trawl fishery described in the previous section. Because the selectivity ogive (Figure \ref{fig:selex}) was estimated to be far to the right of the maturity ogive (Figure \ref{fig:maturity}), the median estimate of F\subscr{MSY} was 31.1 $y^{-1}$ (Table \ref{tab:RefPoints}). This instantaneous fishing mortality converts to an annual harvest rate approaching 1, through the equation $U_{MSY}=1-e^{-F_{MSY}}$, implying that all of the vulnerable biomass (i.e., the biomass that is selected by the fishing gear) could be harvested because the population can be sustained by the spawning biomass that is invulnerable to the fishery (i.e., fish that are between 5 and 9 years old). The relationship between age at maturity and age at first harvest and its effect on fishery reference points was discussed by \citet{myers1998}, who described a fishing strategy where overfishing was avoided by allowing all fish to spawn before they were available to be caught. \citet{froese2004} also discusses reduction in risks of overfishing by allowing fish to spawn before they are caught. In the current assessment, we recommend further detailed analysis of the age composition data from the freezer trawl fleet before accepting such an optimal harvest rate. A research priority is to age more fish from the freezer trawler fleet for all years where otoliths are available, to test whether younger fish are caught than appeared in our dataset.
+\vspace{10mm}
+It is important to understand the distinction between vulnerable biomass and spawning biomass. The fishery reference points F\subscr{MSY} and U\subscr{MSY} refer to catch of the vulnerable biomass $VB_t$, which is determined by the selectivity function, i.e.:
+
+\begin{align} \label{eq:vulnBiomassSel}
+VB_t = \sum_{a}N_{a,t}w_{a,t}v_{a,t}
+\end{align}
+\begin{addmargin}[3em]{1em}
+where $a$ is age, $N$ is the population number, $w$ is the average weight-at-age, adn $v$ is the vulnerability-at-age in the trawl fishery (i.e. selectivity)(Figure \ref{fig:selex}).
+\end{addmargin}
+
+When the selectivity ogive is located to the right of the maturity ogive, this means that a larger proportion of the total population is mature than vulnerable to the fishery (when both ogives are asymptotic). A comparison between vulnerable biomass and spawning biomass is provided in Section \ref{sec:biomass}.
+\vspace{10mm}
+The median posterior estimate of B\subscr{MSY} (and 95\% credibility interval), conditional on estimated trawl selectivity and resulting F\subscr{MSY}, was 161,767 t (78,193 -- 370,450 t) (Table \ref{tab:RefPoints}). Posterior credibility intervals for the default LRP 0.4B\subscr{MSY} and USR 0.8B\subscr{MSY} are also provided in Table \ref{tab:RefPoints}. The candidate B\subscr{0}-based LRP and USR were approximately twice as large as the candidate B\subscr{MSY}-based reference points, i.e., B\subscr{0}-based reference points were more precautionary than the B\subscr{MSY}-based reference points (Table \ref{tab:RefPoints}).
+\vspace{10mm}
+Median posterior estimates (and 95\% credibility interval) of other potential benchmarks of interest to managers (B\subscr{1996}, B\subscr{2015} and F\subscr{2014}) are also provided in Table \ref{tab:RefPoints}.
+
+\subsubsection{Biomass} \label{sec:biomass}
+The Reference Case model estimates the female spawning biomass to have been on a flat to increasing trajectory since 1996 (Figure \ref{fig:spawnbiomass}; Table \ref{tab:spawnbiomass}). The posterior median (and 95\% credibility interval) female spawning biomass in 2015 is projected to be 415,872 t (220,672 t – 926,816 t). The median projected 2015 spawning biomass, which incorporates fishing mortality arising from the observed 2014 catch, is considerably higher than median estimates of both the default USR of 0.8B\subscr{MSY} and the default LRP of 0.4 B\subscr{MSY} (Figure \ref{fig:spawnbiomass}, Table \ref{tab:RefPoints}). The 2015 spawning biomass was also projected to be above the candidate USR 0.4B\subscr{0} and LRP 0.2B\subscr{0} (Figure \ref{fig:spawnbiomass}, Table \ref{tab:RefPoints}).
+\vspace{10mm}
+
+\subsubsection{Recruitment} \label{sec:recruitment}
+Median posterior estimates (and 95\% credibility interval) of age-1 recruits are shown in Figure \ref{fig:recruitment} and Table \ref{tab:recruitment}. The 95\% posterior credibility intervals since 2011 are reasonably broad, with extremely large uncertainty around the estimate of 2014 recruitment. This is expected since there is no information in the data about the strength of this year class. While the 2014 recruitment estimates are shown here, they played no role in projections or the decision tables. Projected recruitment anomalies for 2014 and 2015 were drawn randomly from a normal distribution, $N~(0,\tau)$. For most of the time series, recruitment was estimated to fluctuate around the long-term average, with relatively little variation. This is also evident in the posterior estimated recruitment anomalies (Figure \ref{fig:recruitment}). Lack of variation in recruitment is consistent with the data sources. The age composition data (Figure \ref{fig:agecomps-trawl}) did not show any clear recruitment patterns. Until 2005, fishery catches also remained relatively constant (Figure \ref{fig:totalcatch}) and there were no strong trends in the survey data (Figure \ref{fig:indexfits}).
 
 \subsubsection{Fishing mortality}
-Posterior estimates of fishing mortality are shown in Figure \ref{fig:F} and Table \ref{tab:F}. The median posterior estimate of fishing mortality is estimated to have peaked in 2005 at 0.xxx y-1
+Median posterior estimates of fishing mortality (and 95\% credibility interval) are shown in Figure \ref{fig:F} and Table \ref{tab:F}. The median posterior estimate of fishing mortality is estimated to have peaked in 2005 at 0.268 $y^{-1}$ (0.154 $y^{-1}$ - 0.422 $y^{-1}$) as a result of a test fishery described in the introduction. Fishing mortality in 2014 was estimated to be 0.118 $y^{-1}$ (0.061 $y^{-1}$ - 0.212 $y^{-1}$).
 
+\subsubsection{Relative spawning biomass}
+Median posterior estimates (and 95\% credibility interval) of relative female spawning biomass $\frac{B_t}{B_0}$ are shown in Figure \ref{fig:depletion}. The credibility interval is broad, reflecting the uncertainty in posterior estimates of $B_0$ (Figure \ref{fig:spawnbiomass}, Table \ref{tab:RefPoints}). The median posterior projected estimate of 2015 relative biomass is 0.69 (0.42 -- 0.10) (Figure \ref{fig:depletion}, Table \ref{tab:depletion}).
 
-\subsection{SENSITIVITY ANALYSES}
+\subsection{SENSITIVITY ANALYSES} \label{sec:sensitivities}
 We tested sensitivity of the model outputs to the following assumptions:
 \begin{enumerate}[noitemsep,nolistsep]
   \item The assumed fixed value of variance parameters $\theta$ and $\rho$
@@ -201,52 +227,113 @@ We tested sensitivity of the model outputs to the following assumptions:
   \item The estimated fishery selectivity parameters
 \end{enumerate}
 
-Results are presented below. Reference Case parameter settings are provided in Table \ref{tab:ParamPriors}. In all sensitivity runs, posterior samples were drawn systematically every \mcmcsampfreq\ iterations from a chain of length \mcmclength, resulting in \mcmcnsamp\ posterior samples; the first \mcmcburnin\ samples were dropped to allow for sufficient burn-in.
+Results are presented below. The full list of sensitivity scenarios is provided in Table \ref{tab:sensitivities}. Reference Case parameter settings are provided in Table \ref{tab:ParamPriors}. In all sensitivity runs, posterior samples were drawn systematically every \mcmcsampfreq\ iterations from a chain of length \mcmclength, resulting in \mcmcnsamp\ posterior samples. The first \mcmcburnin\ samples were dropped to allow for sufficient burn-in.
 
-\subsection{Alternative values of variance parameters $\theta$ and $\rho$}
-Needs text.....
-
-\subsection{Prior probablility distribution for steepness ($h$)}
-Sensitivity to the assumed prior probability distribution for steepness was tested by running the model with a Beta prior for this parameter with shape parameters resulting in mean = 0.72 and CV=0.15 (Beta($\alpha$=12.7, $\beta$=5.0)). This was a similar sensitivity test to that done by \citet{rocksole2014} in for \bc\ Rock Sole. This sensitivity test resulted in lower posterior estimates of steepness (Figure \ref{fig:sens-h-ts}), with median = XX, compared to the Reference Case with median = XX. Spawning biomass estimates are shown in Figure \ref{fig:sens-h-ts}, where it can be seen that there was relatively little effect of the prior on steepness on posterior estimates of biomass. The median posterior estimate of $B_0$ was ....
-
-\subsection{Prior probabliity distribution for ln($M$)}
-Three sensitivity analyses are shown to illustrate the effect of the parameters of the normal prior distribution assumed for ln($M$):
+\subsubsection{Alternative values of variance parameters $\theta$ and $\rho$}
+The Reference Case model used fixed values variance parameters $\vartheta$ and $\rho$ (Table \ref{tab:ParamEst}), which resulted in an observation error term ($\sigma$) = 0.2 and a process error term ($\tau$) = 0.8 (see Appendix \ref{chap:equations} text and Eq.\ref{eq:df17}). We tested model sensitivity to these fixed parameters by varying $\vartheta$ to give:
 \begin{enumerate}[noitemsep,nolistsep]
-  \item the mean was held at the Reference Case value of 0.2 y-1, while the standard deviation was decreased to 0.05
-  \item the mean was held at the Reference Case value of 0.2 y-1, while the standard deviation was increased to 0.25
-  \item the mean was increased to 0.3 y-1 and the standard deviation was held at 0.2
+  \item $\sigma=0.1$ and $\tau=0.8$ (Scenario 2)
+  \item Estimate total variance (Scenario 3)
+  \item $\sigma=0.2$ and $\tau=1.0$ (Scenario 4)
+  \item $\sigma=0.2$ and $\tau=0.6$ (Scenario 5)
 \end{enumerate}
 
-Median posterior estimates of $M$ were: (i) XX y-1; (ii) XX y-1; and (iii) XX y-1, compared to the median posterior Reference Case median estimate of M = XX y-1.
-Posterior spawning biomass estimates that resulted from each sensitivity case are shown in Figure XX. -- ONE FIGURE FOR EACH SENSITIVITY CASE
+These scenarios were designed to test model sensitivity to: (1) assumed lower observation error in the surveys; (2) the effect of freely-estimating total variance; (3) assumed higher recruitment variability; and (4) assumed lower recruitment variability.
+\vspace{10mm}
+The effect of reducing observation error in Scenario 2 was to slightly improve the fits to the survey indices (Figure \ref{fig:sens-sig-indices}), most notably the Hecate Strait Multispecies Assemblage Survey. The predicted final-year index points were estimated to be slightly higher in this scenario (Figure \ref{fig:sens-sig-indices}), resulting in slightly larger median posterior estimates of spawning biomass (Figure \ref{fig:sens-sig-ts}). Estimating total variance in Scenario 3 gave MPD estimates of $\sigma$ = 0.27 and $\tau$ = 1.09 , both larger than the assumed fixed values in the Reference Case model. Fits to the indices of abundance were, however, almost the same as for the Reference Case model (Figure \ref{fig:sens-sig-indices}).
+\vspace{10mm}
+Increasing the process error variance in Scenario 4 mainly affected the 2014 estimates of recruitment and log recruitment deviations (Figures \ref{fig:sens-tau-ts} and \ref{fig:sens-tau-recdev}). The estimated final year biomass also increased very slightly (Figure \ref{fig:sens-tau-ts}). As expected, reducing the process error variance in Scenario 4 had the opposite effect, with slightly decreased estimates of final year recruitment, log recruitment deviations and spawning biomass (Figure\ref{fig:sens-tau-ts}).
 
-\subsection{Prior probablity distribution for survey catchability ($q_k$)}
+Overall, model results were not greatly sensitive to the choice of fixed variance parameters used in the Reference Case model.
 
-\subsection{Effect of fixing fishery selectivity parameters}
+\subsubsection{Prior probablility distribution for steepness ($h$)}
+Sensitivity to the assumed prior probability distribution for steepness was tested in Scenario 6 by decreasing the mean of the prior and increasing the CV. This was achieved by changing the parameters of the Beta prior to give mean = 0.72 and CV = 0.15 (Table \ref{tab:sensitivities}). This was a similar sensitivity test to that done by \citet{rocksole2014} for \bc\ Rock Sole. This sensitivity test resulted in lower posterior estimates of steepness (Figure \ref{fig:sens-h-ts}), with median = 0.762 (0.565 -- 0.914), compared to the Reference Case median posterior = 0.884 (0.702 -- 0.974). Spawning biomass and recruitment estimates are shown in Figure \ref{fig:sens-h-ts}, where it can be seen that there was relatively little effect of the prior distribution on posterior estimates of biomass and recruitment. The median posterior estimate of $B_0$ was, however, much more uncertain than for the Reference Case, with the credibility interval ranging from 320,313 t to 2,030,590 t, compared to the Reference Case posterior credibility interval of 313,502 t to 1,306,850 t (Table \ref{tab:RefPoints}). This was due in large part to the increased CV in the prior distribution for steepness. Median posterior estimates of other parameters were very similar to the Reference Case model.
 
+\subsubsection{Prior probabliity distribution for ln($M$)}
+The Reference Case model assumed a normal prior probability distribution for ln($M$), with mean = ln($0.2$) and standard deviation = 0.2 in log space. Three scenarios were run to test sensitivity of model outcomes to the mean and standard deviation assumed for this prior distribution:
+\begin{enumerate}[noitemsep,nolistsep]
+  \item mean = ln($0.2$), standard deviation = 0.05 (Scenario 7)
+  \item mean = ln($0.2$), standard deviation = 0.25 (Scenario 8)
+  \item mean = ln($0.3$), standard deviation = 0.20 (Scenario 9)
+\end{enumerate}
+
+Biomass and recruitment estimates for Scenarios 7 and 8 are shown in Figure \ref{fig:sens-h-ts}. Decreasing the standard deviation in Scenario 7 resulted in a lower median posterior estimates of $M$ = 0.274 $y^{-1}$ (0.255 $y^{-1}$ - 0.292 $y^{-1}$) compared to the Reference Case median posterior estimate of $M$ = 0.331 $y^{-1}$  (0.30 $y^{-1}$ - 0.381 $y^{-1}$). Female spawning biomass was estimated to be on a slightly more increasing trajectory compared with the reference case model, with much less uncertainty in the first years of the time series (Figure \ref{fig:sens-h-ts}). The median posterior estimates of recent biomass were larger than in the reference case model, and the credibility interval was broader. Posterior estimates of $B_0$ were much more uncertain than for the Reference Case, with the credibility interval ranging from 391,085 t to 2,221,190 t, compared to the Reference Case posterior credibility interval of 313,502 t to 1,306,850 t (Table \ref{tab:RefPoints}). Convergence diagnostics for Scenario 7 were poorer than for the Reference Case model, with stronger autocorrelation in the MCMC chains, notably for estimates of $\overline{R}_{init}$.
+\vspace{10mm}
+Increasing the standard deviation in Scenario 8 resulted in very similar estimates of $M$, spawning biomass and recruitment as the Reference Case model (Figure \ref{fig:sens-h-ts}). The median posterior estimate of $M$ was 0.338 $y^{-1}$ (0.303 $y^{-1}$ -- 0.396 $y^{-1}$) compared to estimates from the Reference Case model (see above and Table \ref{tab:ParamEst}). Increasing the mean in Scenario 9 resulted in a re-scaling of the estimated population size, with slightly larger estimates of biomass and recruitment (Figure \ref{fig:sens-m-ts}). The median posterior estimate of M was 0.348 $y^{-1}$ (0.308 $y^{-1}$ -- 0.406 $y^{-1}$), compared to estimates from the Reference Case model.
+
+Model outcomes were therefore influenced by the assumed prior probability distribution for ln($M$). Alternative assumptions for the mean and standard deviation of the prior tended to increase the median and credibility interval of posterior estimates of $B_0$ and recent spawning biomass.
+
+\subsubsection{Prior probablity distribution for survey catchability ($q_k$)} \label{sec:priorsurveyq}
+The Reference Case model assumed a normal prior probability distribution for ln($q_k$), with mean = ln($0.5$) and standard deviation = 1.0 in log space, for all surveys $k$. Two scenarios were run to test sensitivity of model outcomes to the mean and standard deviation assumed for this prior distribution:
+\begin{enumerate}[noitemsep,nolistsep]
+  \item mean = ln($1.0$), standard deviation = 1.0 (Scenario 10)
+  \item mean = ln($0.5$), standard deviation = 0.15 (Scenario 11)
+\end{enumerate}
+
+Increasing the mean of the prior distribution in Scenario 10 resulted in higher posterior estimates of $q_k$ for all surveys (Table XX) compared to the reference case model (Table\ref{tab:SensitivitiesToQ}). Correspondingly, posterior estimates of spawning biomass and recruitment were lower than in the Reference Case model (Figure \ref{fig:sens-q-ts}). Conversely, increasing the standard deviation of the prior distribution in Scenario 11 resulted in lower posterior estimates of $q_k$ for all surveys. Correspondingly, estimates of spawning biomass and recruitment were higher than in the Reference Case model, with a much broader confidence interval.
+
+While Scenario 10 illustrates that the assumed prior probability distribution did affect posterior estimates of $q_k$ for all surveys, we do not consider a prior centred on 1 to be reasonable, given that the swept area methodology described in Eqs. \ref{eq:sweptareaindex} -- \ref{eq:indexcv} did not attempt to inflate estimated biomass for the whole coast. The lower posterior estimates of $q_k$ obtained for all surveys in Scenario 11, may be plausible, given the lack of information in the data for informing population scale in this assessment.
+
+\subsubsection{Effect of fixing fishery selectivity parameters}
+In an earlier section, we noted that the estimated selectivity ogive for the trawl fishery (Figure \ref{fig:selex}) was quite far to the right of the maturity ogive (Figure \ref{fig:maturity}), resulting in estimates of U\subscr{MSY} approaching 1. We concluded that the estimated age-at-50\%-harvest in the trawl fishery (median = 9.45 y) was consistent with the fishery age composition data (Figure \ref{fig:agecomps-trawl}) but that these data may not be representative of ages in the freezer trawl fleet due to lack of age samples from this fleet. While we recommend ageing of archival otoliths from the freezer trawl fleet as a future research priority, we ran two simple scenarios in the current assessment to evaluate the effect of alternative fishery selectivity ogives on model outcomes. Trial runs suggested that fixing age-at-50\%-harvest at lower values resulted in poor fits to the age composition data and poor model convergence. Therefore, for the two sensitvity runs presented here, the fishery age composition data were removed from the assessment and two alternative fixed ages-at-50\%-harvest were assumed:
+
+\begin{enumerate}[noitemsep,nolistsep]
+  \item selectivity ogive = maturity ogive (Scenario 12)
+  \item age-at-50\%-harvest = 6 yrs (Scenario 13)
+\end{enumerate}
+
+Trawl selectivity ogives estimated in the Reference Case model (MPD) and fixed in Scenarios 12 and 13 are shown in Figure \ref{fig:sens-sel-ts}. Estimated selectivity ogives from the three synoptic surveys are shown in Figures \ref{fig:sens-sel1} and \ref{fig:sens-sel2}. As expected, the effect of reducing the age-at-50\%-harvest in the trawl fishery was a large reduction in estimated female spawning biomass (Figure \ref{fig:sens-sel-ts}), a reduction in estimated U\subscr{MSY} (Fig XXX) and a corresponding increase in B\subscr{MSY} (Fig XXX). Assuming a lower age-at-50\%-harvest in the trawl fishery would therefore result in more precautionary advice.
+
+Scenarios 12 and 13 are speculative as there is currently no evidence to support an assumption of a lower age-at-50\%-harvest in the trawl fishery. These two scenarios are presented as "what-if" scenarios to illustrate the potential impacts of over-estimating selectivity in the trawl fishery.
 
 \section{RECOMMENDATIONS AND YIELD OPTIONS}
 
-\subsection{REFERENCE POINTS}
-The DFO Fishery Decision-making Framework Incorporating the Precautionary Approach (PA) policy (\citet{dfo09}) requires stock status to be characterized using three reference points: (i) a Reference Removal Rate, (ii) an Upper Stock Reference point (USR), and (iii) a Limit Reference Point (LRP). Provisional values of USR = 0.8 $B_{MSY}$ and LRP = 0.4 $B_{MSY}$ are suggested in the absence of stock-specific reference points. The framework specifies a limit reference removal (LRR) rate of $F_{MSY}$.
+\subsection{DECISION TABLES} \label{sec:DecisionTables}
 
-RF to add: $U_{MSY}$ and $B_0$ based reference points
+\subsubsection{Reference Case model}
+Performance measures were calculated over a sequence of alternative 2015 projected catch levels and are based on one-year projections to 2016. Projected, bias-corrected log recruitment anomalies in 2014 and 2015 were drawn randomly from a normal distribution, $N~(0,\tau)$.
 
-A harvest control rule based on these reference points that is coincident with the choice of LRP, USR and LRR would apply a linear reduction in fishing mortality as the stock falls below the USR, and would cease fishing when the stock reaches the LRP (but see XXX-NOREF!!Cox et al. 2013). This is illustrated for a hypothetical stock in Figure \ref{fig:hcrillustration}, where the USR and LRP are shown as vertical lines and the removal rate is shown as a blue line. We make the observation that the rate at which the fishing mortality should be reduced is unspecified in the PA policy, but is depicted as a linear ramp between the USR and LRP (Figure \ref{fig:hcrillustration}).
+Median (and 95\% credibitlity interval) posterior estimates of reference points (MSY and $B_0$-based reference points) and benchmarks ($B_{1996}$, $B_{2015}$, $F_{2014}$) were provided in Table \ref{tab:RefPoints}. Decision tables are presented showing predicted probabilities of undesirable states under alternative 2015 projected catch levels. An undesirable biomass-based performance measure occurs when the 2016 projected female spawning biomass is below the candidate reference point or benchmark, i.e., the ratio $\frac{B_{2016}}{B_{ReferencePoint}} < 1$. An undesirable fishing mortality-based performance measure occurs when projected 2015 fishing mortality is above the reference point, i.e., $\frac{F_{2015}}{F_{ReferencePoint}} > 1$.
 
-\subsection{DECISION TABLES}
+Probabilities in the decision tables are measured as the proportion of burned-in posterior samples that meet criteria above (i.e., proportion of posterior samples < 1 for biomass-based performance measures; and proportion of posterior samples > 1 for fishing mortality-based performance measures).
+
+The Reference Case decision table is presented in Table \ref{tab:Decisions}. Alternative 2015 catch levels are presented from 0 t to 30,000 t. Catches are shown in 2,000 t increments from zero to 10,000 t; then 1,000 t increments between 10,000 t and 20,000 t; and then in 2,000 t increments from 22,000 t to 30,000 t. The rows most closely representing the 2014 catch of 10,678 t and the 2014 TAC of 15,000 t are highlighted in bold.
+
+Table \ref{tab:Decisions} suggests that a 2015 catch equal to any of the catch levels presented would be sustainable, according to the set of candidate reference points tested.
+
+The model-predicted probability of the 2016 female spawning biomass being below the 2015 female spawning biomass ranged from 0\% under no 2015 catch to 7\% under 30,000 t, which is double the current TAC. The probability of being below the candidate USR of 0.4B\subscr{0} ranged between 0\% and 1\% over the range of catch levels considered. The probability of being below the candidate USR of 0.8B\subscr{MSY} was 0\% over the range of catch levels considered. The probability of being below the both candidate LRPs of 0.2B\subscr{0} or 0.4B\subscr{MSY} was 0\% over the range of catch levels considered. The probability that the 2016 spawning biomass would be less than the 1996 spawning biomass ranged from 1\% to 4\% over the range of catch levels considered.
+
+The model-predicted probability of the 2015 harvest rate being greater than the 2014 harvest rate was 0\% under a 2015 catch between 0 and 8,000 t, building up to a probability of 100\% at 13,000 t. However, the probability that the 2015 harvest rate would exceed U\subscr{MSY} was 0\% under all catch levels considered (Table \ref{tab:Decisions}). As discussed, the reason for posterior U\subscr{MSY} estimates approaching 1 (Figure XXX) was due to the location of the estimated trawl selectivity-at-age ogive, far to the right of the maturity-at-age ogive. Sensitivity of catch advice to the estimated trawl selectivity is presented in the next section.
+
+\subsubsection{Alternative decision table}
+For comparison, we also present a decision table using the Scenario 12 model (Table \ref{tab:DecisionsSelMat}), where selectivity-at-age in the trawl fishery was fixed to be the same as maturity-at-age (Table \ref{tab:sensitivities}). Scenario 12 had the lowest estimates of biomass of all the sensitivity scenarios and represents a worse-case "what-if" scenario, given the possibility that age composition in the freezer trawl fleet may differ from the age composition in the rest of the fleet (see Sections \ref{sec:agedata}, \ref{sec:selectivity}, and \ref{sec:resultsFishRefPoints}).
+
+The decision table generated using the Scenario 12 model had lower probabilities of the 2016 spawning biomass being below any of the biomass-based reference points and benchmarks presented (Table \ref{tab:DecisionsSelMat}). This was because fixing the trawl selectivity with a younger age-at-50\%-harvest had the effect of reducing the scale of the whole model, including estimates of $B_0$ (Fig \ref{fig:sens-sel-ts}) and B\subscr{MSY} (Fig XXX). Therefore, although projected spawning biomass was smaller than in the Reference Case model, the $B_0$ and B\subscr{MSY}-based reference points were also lower, resulting in similar probabilities as in the Reference Case model.
+
+Similarly, despite posterior U\subscr{MSY} estimates being lower in Scenario 12 (Fig \ref{fig:sens-sel-ts}), the probabilities of the 2015 harvest rate exceeding the 2014 harvest rate were lower than for the Reference Case model. This is because the posterior estimated vulnerable biomass was actually larger than in the Reference Case model because a much larger proportion of the total biomass was vulnerable to the fishing gear due to the assumed shift in selectivity to include younger fish. As for the Reference Case model, the probability that the 2015 harvest rate would exceed UMSY was 0\% under all catch levels considered.
+
+As with all fishery stock assessments, the uncertainty presented in this assessment is under-representative of the true uncertainty regarding the status of the \fishname\ population. We therefore urge a certain degree of caution with the advice presented in Tables \ref{tab:Decisions} and \ref{tab:DecisionsSelMat}. The magnitude of catch and discards prior to 1996 is a major source of uncertainty in this assessment. The short time series of catch and surveys that were available in this assessment were relatively uninformative about the scale of the population, evidence for which can be seen in the high parameter correlations (Figure \ref{fig:pairs}) and the influence of the prior probability distributions for the survey catchability parameters (Section \ref{sec:priorsurveyq}). If reliable pre-1996 catch data had been available, the stock assessment and harvest advice may have been very different to those presented here.
 
 \section{FUTURE RESEARCH AND DATA REQUIREMENTS}
+As with all fishery stock assessments, there are two major types of uncertainty in the advice presented in this document: 1. Uncertainty in the estimates of model parameters within the assessment; and 2. Structural uncertainty arising from processes and data that were not included in the assessment. The first type, uncertainty within the assessment, is presented in terms of posterior credibility intervals for parameters and state variables such as biomass,recruitment and fishing mortality. This uncertainty is captured in the decision tables and was explored using sensitivity analyses.
+
+The second type of uncertainty, structural uncertainty, is not captured in this assessment and is not captured in the decision tables. The magnitude of catch and discards prior to 1996 is a major source of uncertainty in this assessment. As discussed in Section \ref{sec:catchdata}, all catch data prior to 1996 were omitted from this assessment on the recommendation of our industry advisors and technical working group. \fishname\ is known to have been discarded at sea in very large quantities due to proteolysis of the flesh if catches were not landed and frozen very quickly after capture. Applications of ratio estimators or generlized linear models to estimate historic discard rates were rejected as analytical tools in this assessment due to: (i) lack of data with which to calibrate models; (ii) the fact that often whole tows would have been discarded, making ratio estimators or other predictive factors useless; and (iii) discarding behaviour was not expected to have remained consistent through time, and would have varied according to fine-scale spatial, seasonal and market considerations. While the flat to increasing estimated spawning biomass trajectory in the Reference Case model and sensitivity scenarios was consistent with available catch, survey and age composition data, a longer catch time series would have provided more information about the productivity of the population and its scale relative to historic levels. We suggest that it may be possible to work with members of the fishing industry with many years of experience of this fishery to reconstruct an agreed upon historical catch series with appropriate uncertainty. Examples of catch reconstructions for data-limited fisheries can be found in \citet{pitcher2002} and \citet{ainsworth2005}, although there are likely many other appropriate approaches. Key input to this kind of analysis would be detailed spatial and temporal knowledge of the fishery, regulations and markets for several decades.
+
+We strongly recommend increasing the number of age samples from the commercial trawl fishery. Archived otoliths are available that have not yet been aged. With large enough sample sizes, it will be possible to model the freezer trawlers and the shoreside fishery as separate fleets. In its current configuration, the stock assessment model treats both components of the fleet as being part of the same fleet with the same selectivity. In the absence of information to the contrary, the model interpreted the increased catches in the latter part of the time series as evidence of a stable or increasing biomass. While this was supported by similar trajectories in the survey data, treating the fleets separately may allow for a more subtle interpretation of increased catches in recent years, which may also have been driven by changes in markets, technology or, importantly, different selectivity.
+
+Stock structure of \fishname\ is poorly understood in \bc. A number of approaches are available to improve understanding of stock structure including genetic analysis, analysis of otolith microchemistry and analysis of life history traits such as growth and maturity. \fishname\ is managed as a coast-wide stock. If there are distinct stocks within \bc\ waters, there may be risks associated with taking a large proportion of the TAC from one area.
 
 \section{ACKNOWLEDGEMENTS}
 
-We thank the members of the \fishname\ Technical Working Group (Rowan Haigh, Kendra Holt, Rob Kronlund, Barry Ackerman, Greg Workman) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rowan Haigh for chairing. We especially thank \textbf{REVIEWER-NAMES-HERE} for their written reviews of the working paper. We also thank Steve Wischniowski and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of over 6,000 \fishname\ otoliths in 2014.
+We thank the members of the \fishname\ Technical Working Group (Rowan Haigh, Kendra Holt, Rob Kronlund, Barry Ackerman, Greg Workman, Bruce Turris, and Brian Mose) for their valuable advice as this project progressed. We thank participants of the Regional Peer Review meeting for their comments at the meeting, and Rowan Haigh for chairing. We especially thank \textbf{REVIEWER-NAMES-HERE} for their written reviews of the working paper. We also thank Steve Wischniowski and the members of the Sclerochronology Laboratory at the Pacific Biological Station for their processing of over 6,000 \fishname\ otoliths in 2014.
 
 \addcontentsline{toc}{section}{BIBLIOGRAPHY}
 \bibliographystyle{resDoc}
 \bibliography{../../all}
 
 \clearpage
+
+\section{TABLES}
 
 \begin{table}[b]
 \tiny
@@ -298,7 +385,7 @@ Initial log recruitment deviations         & XX & [-5,5]  & Normal(0,$\tau$) \\
 \begin{table}[b]
 \tiny
 \centering
-\caption{\label{tab:Sensitivities}Sensitivity cases and their parameters.}
+\caption{\label{tab:sensitivities}Sensitivity cases and their parameters.}
 \begin{tabular}{lcc}
 \hline
 Sensitivity & Description                                   & Parameters \\
@@ -345,13 +432,13 @@ makeTable(1, 1, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Le
 makeTable(1, 2, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Reference points", xlabel="tab:RefPoints")
 @
 <<results='asis', echo=FALSE>>=
-makeTable(1, 3, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Spawning Biomass", xlabel="tab:SpawnBio")
+makeTable(1, 3, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Spawning Biomass", xlabel="tab:spawnbiomass")
 @
 <<results='asis', echo=FALSE>>=
-makeTable(1, 9, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Relative Spawning Biomass", xlabel="tab:Depletion")
+makeTable(1, 9, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Relative Spawning Biomass", xlabel="tab:depletion")
 @
 <<results='asis', echo=FALSE>>=
-makeTable(1, 4, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Recruitment", xlabel="tab:Recr")
+makeTable(1, 4, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Recruitment", xlabel="tab:recruitment")
 @
 <<results='asis', echo=FALSE>>=
 makeTable(1, 5, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Fishing mortality (F)", xlabel="tab:F")
@@ -360,12 +447,14 @@ makeTable(1, 5, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Fi
 makeTable(1, 6, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Fishing mortality (U)", xlabel="tab:U")
 @
 <<results='asis', echo=FALSE>>=
+# Note that the first column will not be set to have any decimal digits because it is the TAC/Catch projection
 cap <- "Decision Table for the Reference Case model showing posterior probabilities that 2016 projected biomass $B_t$ is below a set of candidate reference points and benchmarks (Table \\ref{tab:RefPoints}), and probabilities that the 2015 projected harvest rate $U_t$ is above $U_{2014}$ or $U_{MSY}$."
 makeTable(1, 7, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:Decisions")
 @
 <<results='asis', echo=FALSE>>=
-cap <- "Decision Table for a sensitivity model (Selectivity = Maturity, \ref{tab:Sensitivities}) showing posterior probabilities that 2016 projected biomass $B_t$ is below a set of candidate reference points and benchmarks (Table \\ref{tab:RefPoints}), and probabilities that the 2015 projected harvest rate $U_t$ is above $U_{2014}$ or $U_{MSY}$."
-makeTable(12, 7, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:Decisions")
+# Note that the first column will not be set to have any decimal digits because it is the TAC/Catch projection
+cap <- "Decision Table for a sensitivity model (Selectivity = Maturity, Table \\ref{tab:Sensitivities}) showing posterior probabilities that 2016 projected biomass $B_t$ is below a set of candidate reference points and benchmarks (Table \\ref{tab:RefPoints}), and probabilities that the 2015 projected harvest rate $U_t$ is above $U_{2014}$ or $U_{MSY}$."
+makeTable(12, 7, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:DecisionsSelMat")
 @
 <<results='asis', echo=FALSE>>=
 makeTable(1, 8, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="Input indices", xlabel="tab:Indices")
@@ -373,424 +462,426 @@ makeTable(1, 8, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption="In
 
 \clearpage
 
-%% \begin{figure}[!htp]
-%% \begin{center}
-%% \includegraphics[width=6in,keepaspectratio=true]{cpueFigures/ARF-1996-2014-CPUE.eps}
-%% \end{center}
-%% \vspace{0mm}
-%% % To get the grid size in km^2 for the caption:
-%% % While in the gui for the map, type mean(xtcall(PBSmap)$pdata$area) for the map you currently have loaded.
-%% \caption{Mean catch-per-unit-effort (CPUE, kg/h) of \fishname\ in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where \fishname\ was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
-%% \label{fig:cpue}
-%% \end{figure}
+\section{FIGURES}
+\begin{figure}[!htp]
+\begin{center}
+\includegraphics[width=6in,keepaspectratio=true]{cpueFigures/ARF-1996-2014-CPUE.eps}
+\end{center}
+\vspace{0mm}
+% To get the grid size in km^2 for the caption:
+% While in the gui for the map, type mean(xtcall(PBSmap)$pdata$area) for the map you currently have loaded.
+\caption{Mean catch-per-unit-effort (CPUE, kg/h) of \fishname\ in grid cells 0.1$^\circ$ longitude by 0.075$^\circ$ latitude (roughly 57.8~km$^2$). The shaded cells give an approximation of the area where \fishname\ was encountered by fishing events from the groundfish trawl fishery from January 1, 1996 to October 7, 2014. Contours are 200 m and 1000 m isobaths. Red lines are PFMA area boundaries.}
+\label{fig:cpue}
+\end{figure}
 
-%% \clearpage
+\clearpage
 
-%% % CATCH PLOT
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5, fig.width=8>>=
-%% plotCatch(1, 1)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Total catch of \fishname\ for areas 3CD and 5ABCDE, including both landings and discards.}
-%% \label{fig:totalcatch}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% CATCH PLOT
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5, fig.width=8>>=
+plotCatch(1, 1)
+@
+\end{center}
+\vspace{0mm}
+\caption{Total catch of \fishname\ for areas 3CD and 5ABCDE, including both landings and discards.}
+\label{fig:totalcatch}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % MCMC DIAGNOSTICS PLOTS
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<>>=
-%% plotConvergence(1, 5, burnthin=burnthin, showtitle=FALSE, priorsonly=TRUE)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Prior probability distributions used in the Reference model. Priors beginning with \emph{log} are natural logarithms. Here, $ro=R_0$; $rbar=R_{AVG}$; $rinit=R_{AVG\_init}$; $q1$ represents the QCSSS; $q2$ the HSMSAS; $q3$ the HSSS; $q4$ the WCVIS. The dotted red lines are the MPD estimates from the Reference model.}
-%% \label{fig:priors}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<>>=
-%% plotConvergence(1, 5, burnthin=burnthin, showtitle=FALSE, priorsonly=FALSE)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Prior probability distributions used in the Reference with comparative posterior histograms. See Figure \ref{fig:priors} for a description of the parameters. The dotted red lines are the MPD estimates from the Reference model (where visible).}
-%% \label{fig:priorsvsposts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=8, fig.width=8>>=
-%% plotConvergence(1, 1, burnthin=burnthin, showtitle=FALSE)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Trace plots for MCMC output of estimated parameters in the Reference model. The MCMC run had chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. Here, $m1$ is the natural mortality, $sel1$ represents the selectivity for the trawl fishery; $sel2$ for the QCSSS; $sel4$ for the HSSS; $sel5$ for the WCVISS; $sel3$ is missing because the HSMAS survey did not have age comps estimated in the Reference model. Other parameter names are explained in Figure \ref{fig:priors}}
-%% \label{fig:traces}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=8, fig.width=8>>=
-%% plotConvergence(1, 4, burnthin=burnthin, showtitle=FALSE)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Pairs plots for MCMC output of estimated parameters in the Reference model. The MCMC run had chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. Here, $m1$ is the natural mortality, $sel1$ represents the selectivity for the trawl fishery; $sel2$ for the QCSSS; $sel4$ for the HSSS; $sel5$ for the WCVISS; $sel3$ is missing because the HSMAS survey did not have age comps estimated in the Reference model. Other parameter names are explained in Figure \ref{fig:priors}}
-%% \label{fig:pairs}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% MCMC DIAGNOSTICS PLOTS
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<>>=
+plotConvergence(1, 5, burnthin=burnthin, showtitle=FALSE, priorsonly=TRUE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Prior probability distributions used in the Reference model. Priors beginning with \emph{log} are natural logarithms. Here, $ro=R_0$; $rbar=R_{AVG}$; $rinit=R_{AVG\_init}$; $q1$ represents the QCSSS; $q2$ the HSMSAS; $q3$ the HSSS; $q4$ the WCVIS. The dotted red lines are the MPD estimates from the Reference model.}
+\label{fig:priors}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<>>=
+plotConvergence(1, 5, burnthin=burnthin, showtitle=FALSE, priorsonly=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Prior probability distributions used in the Reference with comparative posterior histograms. See Figure \ref{fig:priors} for a description of the parameters. The dotted red lines are the MPD estimates from the Reference model (where visible).}
+\label{fig:priorsvsposts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=8, fig.width=8>>=
+plotConvergence(1, 1, burnthin=burnthin, showtitle=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Trace plots for MCMC output of estimated parameters in the Reference model. The MCMC run had chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. Here, $m1$ is the natural mortality, $sel1$ represents the selectivity for the trawl fishery; $sel2$ for the QCSSS; $sel4$ for the HSSS; $sel5$ for the WCVISS; $sel3$ is missing because the HSMAS survey did not have age comps estimated in the Reference model. Other parameter names are explained in Figure \ref{fig:priors}}
+\label{fig:traces}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=8, fig.width=8>>=
+plotConvergence(1, 4, burnthin=burnthin, showtitle=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Pairs plots for MCMC output of estimated parameters in the Reference model. The MCMC run had chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. Here, $m1$ is the natural mortality, $sel1$ represents the selectivity for the trawl fishery; $sel2$ for the QCSSS; $sel4$ for the HSSS; $sel5$ for the WCVISS; $sel3$ is missing because the HSMAS survey did not have age comps estimated in the Reference model. Other parameter names are explained in Figure \ref{fig:priors}}
+\label{fig:pairs}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % RESULTS: BIOMASS, RECRUITMENT, AND DEVIATIONS PLOTS
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% plotTS(1, 1, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE)
-%% plotTS(1, 5, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass and recruitment for \fishname, from an MCMC run with chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. The shaded area is the \mcmcci\ confidence interval. The point and bars represent the median estimate of $B_0$ and with a confidence interval of \mcmcci.  The red line is the long-term mean; the green line is the long-term median.}
-%% \label{fig:spawnbio-recr}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8>>=
-%% plotTS(1, 11, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated recruitment deviations for \fishname, from an MCMC run with chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. The bars represent the \mcmcci\ confidence interval.}
-%% \label{fig:recdevs}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% RESULTS: BIOMASS, RECRUITMENT, AND DEVIATIONS PLOTS
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+plotTS(1, 1, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, showB0Ref=TRUE, showBMSYRef=FALSE)
+plotTS(1, 1, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, showB0Ref=FALSE, showBMSYRef=TRUE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass for \fishname, from an MCMC run with chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. The shaded area is the \mcmcci\ confidence interval. The point and bars represent the median estimate of $B_0$ and with a confidence interval of \mcmcci.}
+\label{fig:spawnbiomass}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8>>=
+plotTS(1, 5, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE)
+plotTS(1, 11, ci=ci, burnthin=burnthin, plotMCMC=TRUE, leg=NULL, showtitle=FALSE)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated recruitment and recruitment deviations for \fishname, from an MCMC run with chain length \mcmclength, with a sample taken at every \mcmcnsamp th iteration and the first \mcmcburnin\ samples removed. The bars represent the \mcmcci\ confidence interval. The red line is the long-term mean; the green line is the long-term median.}
+\label{fig:recruitment}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % INDEX FIT PLOTS
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<out.width='8cm', out.height='7cm', fig.show='hold'>>=
-%% plotTS(1, 7, index=2, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=1)
-%% plotTS(1, 7, index=3, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=2)
-%% plotTS(1, 7, index=4, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=3)
-%% plotTS(1, 7, index=5, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=4)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Reference model MPD Index fits for (a) QSSS, (b) HSMAS, (c) HSSS, (d) WCVISS.}
-%% \label{fig:indexfits}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% INDEX FIT PLOTS
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<out.width='8cm', out.height='7cm', fig.show='hold'>>=
+plotTS(1, 7, index=2, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=1)
+plotTS(1, 7, index=3, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=2)
+plotTS(1, 7, index=4, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=3)
+plotTS(1, 7, index=5, showtitle=FALSE, indfixaxis=TRUE, leg=NULL, indletter=4)
+@
+\end{center}
+\vspace{0mm}
+\caption{Reference model MPD Index fits for (a) QSSS, (b) HSMAS, (c) HSSS, (d) WCVISS.}
+\label{fig:indexfits}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % AGE COMP FITS PLOTS
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% plotBiology(plotNum=12, compFitSex=0, index=1, showtitle=FALSE, scenario=1)
-%% plotBiology(plotNum=13, compFitSex=0, index=1, showtitle=FALSE, scenario=1)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Age composition fits and residuals for the trawl fishery.}
-%% \label{fig:agecomps-trawl}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% plotBiology(plotNum=12, compFitSex=0, index=2, showtitle=FALSE, scenario=1)
-%% plotBiology(plotNum=13, compFitSex=0, index=2, showtitle=FALSE, scenario=1)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Age composition fits and residuals for QCSSS.}
-%% \label{fig:agecomps-qcsss}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% plotBiology(plotNum=12, compFitSex=0, index=4, showtitle=FALSE, scenario=1)
-%% plotBiology(plotNum=13, compFitSex=0, index=4, showtitle=FALSE, scenario=1)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Age composition fits and residuals for HSSS.}
-%% \label{fig:agecomps-hsss}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% plotBiology(plotNum=12, compFitSex=0, index=5, showtitle=FALSE, scenario=1)
-%% plotBiology(plotNum=13, compFitSex=0, index=5, showtitle=FALSE, scenario=1)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Age composition fits and residuals for WCVISS.}
-%% \label{fig:agecomps-wcviss}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% AGE COMP FITS PLOTS
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+plotBiology(plotNum=12, compFitSex=0, index=1, showtitle=FALSE, scenario=1)
+plotBiology(plotNum=13, compFitSex=0, index=1, showtitle=FALSE, scenario=1)
+@
+\end{center}
+\vspace{0mm}
+\caption{Age composition fits and residuals for the trawl fishery. Blue points represent zero samples, red are positive residuals, and black are negative residuals. N is the number of specimens included for each year.}
+\label{fig:agecomps-trawl}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+plotBiology(plotNum=12, compFitSex=0, index=2, showtitle=FALSE, scenario=1)
+plotBiology(plotNum=13, compFitSex=0, index=2, showtitle=FALSE, scenario=1)
+@
+\end{center}
+\vspace{0mm}
+\caption{Age composition fits and residuals for QCSSS. Blue points represent zero samples, red are positive residuals, and black are negative residuals. N is the number of specimens included for each year.}
+\label{fig:agecomps-qcsss}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+plotBiology(plotNum=12, compFitSex=0, index=4, showtitle=FALSE, scenario=1)
+plotBiology(plotNum=13, compFitSex=0, index=4, showtitle=FALSE, scenario=1)
+@
+\end{center}
+\vspace{0mm}
+\caption{Age composition fits and residuals for HSSS. Blue points represent zero samples, red are positive residuals, and black are negative residuals. N is the number of specimens included for each year.}
+\label{fig:agecomps-hsss}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+plotBiology(plotNum=12, compFitSex=0, index=5, showtitle=FALSE, scenario=1)
+plotBiology(plotNum=13, compFitSex=0, index=5, showtitle=FALSE, scenario=1)
+@
+\end{center}
+\vspace{0mm}
+\caption{Age composition fits and residuals for WCVISS. Blue points represent zero samples, red are positive residuals, and black are negative residuals. N is the number of specimens included for each year.}
+\label{fig:agecomps-wcviss}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % SENSITIVITY PLOTS
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 1
-%% g <- 1 # group number
-%% plotTS(plotNum=1, sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5, sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the $\sigma$ parameter.}
-%% \label{fig:sens-sig-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<out.width='8cm', out.height='8cm', fig.show='hold'>>=
-%% # Plot indices for sens group 1
-%% g <- 1
-%% plotTS(plotNum=7, index=2, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg="bottomright", colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=7, index=3, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg=NULL,          colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% plotTS(plotNum=7, index=4, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg=NULL,          colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=3)
-%% plotTS(plotNum=7, index=5, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg=NULL,          colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=4)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{MPD Index fits for (a) QSSS, (b) HSMAS, (c) HSSS, (d) WCVISS for models examining sensitivity to the $\sigma$ parameter.}
-%% \label{fig:sens-sig-indices}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% SENSITIVITY PLOTS
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 1
+g <- 1 # group number
+plotTS(plotNum=1, sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5, sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the $\sigma$ parameter.}
+\label{fig:sens-sig-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<out.width='8cm', out.height='8cm', fig.show='hold'>>=
+# Plot indices for sens group 1
+g <- 1
+plotTS(plotNum=7, index=2, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg="bottomright", colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=7, index=3, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg=NULL,          colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+plotTS(plotNum=7, index=4, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg=NULL,          colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=3)
+plotTS(plotNum=7, index=5, sensGroup=1, multiple=TRUE, showtitle=FALSE, leg=NULL,          colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=4)
+@
+\end{center}
+\vspace{0mm}
+\caption{MPD Index fits for (a) QSSS, (b) HSMAS, (c) HSSS, (d) WCVISS for models examining sensitivity to the $\sigma$ parameter.}
+\label{fig:sens-sig-indices}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % Sensitivity group 2
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 2
-%% g <- 2
-%% plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the $\tau$ parameter.}
-%% \label{fig:sens-tau-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8>>=
-%% # Plot recruitment deviations for sens group 2
-%% g <- 2
-%% plotTS(plotNum=11, sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]])
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated recruitment deviations with \mcmcci\ confidence intervals, for models examining sensitivity to the $\tau$ parameter.}
-%% \label{fig:sens-tau-recdev}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% Sensitivity group 2
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 2
+g <- 2
+plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the $\tau$ parameter.}
+\label{fig:sens-tau-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8>>=
+# Plot recruitment deviations for sens group 2
+g <- 2
+plotTS(plotNum=11, sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]])
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated recruitment deviations with \mcmcci\ confidence intervals, for models examining sensitivity to the $\tau$ parameter.}
+\label{fig:sens-tau-recdev}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % Sensitivity group 3
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 3
-%% g <- 3
-%% plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the steepness parameter.}
-%% \label{fig:sens-h-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% Sensitivity group 3
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 3
+g <- 3
+plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the steepness parameter.}
+\label{fig:sens-h-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % Sensitivity group 4
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 4
-%% g <- 4
-%% plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the standard deviation of the natural mortality  parameter.}
-%% \label{fig:sens-msd-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% Sensitivity group 4
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 4
+g <- 4
+plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the standard deviation of the natural mortality  parameter.}
+\label{fig:sens-msd-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % Sensitivity group 5
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 5
-%% g <- 5
-%% plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the natural mortality parameter.}
-%% \label{fig:sens-m-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% Sensitivity group 5
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 5
+g <- 5
+plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the natural mortality parameter.}
+\label{fig:sens-m-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % Sensitivity group 6
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 6
-%% g <- 6
-%% plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the catchability parameter.}
-%% \label{fig:sens-q-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% Sensitivity group 6
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 6
+g <- 6
+plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the catchability parameter.}
+\label{fig:sens-q-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % Sensitivity group 7
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 7
-%% g <- 7
-%% plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the trawl selectivity parameter.}
-%% \label{fig:sens-sel-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot selectivities for sensitivity group 7
-%% g <- 7
-%% plotSelex(plotNum=1,  index=1, sensGroup=g, multiple=TRUE, leg="bottomright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotSelex(plotNum=1,  index=2, sensGroup=g, multiple=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Selectivity estimates for models examining sensitivity to the trawl selectivity parameter. (a) is the trawl fishery selectivity and (b) is the QCSSS selectivity.}
-%% \label{fig:sens-sel1}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot selectivities for sensitivity group 7
-%% g <- 7
-%% plotSelex(plotNum=1,  index=4, sensGroup=g, multiple=TRUE, leg="bottomright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=1)
-%% plotSelex(plotNum=1,  index=5, sensGroup=g, multiple=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Selectivity estimates for models examining sensitivity to the trawl selectivity parameter. (a) is the HSSS selectivity and (b) is the WCVISS selectivity.}
-%% \label{fig:sens-sel2}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% Sensitivity group 7
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 7
+g <- 7
+plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the trawl selectivity parameter.}
+\label{fig:sens-sel-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot selectivities for sensitivity group 7
+g <- 7
+plotSelex(plotNum=1,  index=1, sensGroup=g, multiple=TRUE, leg="bottomright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotSelex(plotNum=1,  index=2, sensGroup=g, multiple=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Selectivity estimates for models examining sensitivity to the trawl selectivity parameter. (a) is the trawl fishery selectivity and (b) is the QCSSS selectivity.}
+\label{fig:sens-sel1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot selectivities for sensitivity group 7
+g <- 7
+plotSelex(plotNum=1,  index=4, sensGroup=g, multiple=TRUE, leg="bottomright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=1)
+plotSelex(plotNum=1,  index=5, sensGroup=g, multiple=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Selectivity estimates for models examining sensitivity to the trawl selectivity parameter. (a) is the HSSS selectivity and (b) is the WCVISS selectivity.}
+\label{fig:sens-sel2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% % Sensitivity group 8
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8, fig.show='hold'>>=
-%% # Plot biomass and recruitment for sens group 8
-%% g <- 8
-%% plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
-%% plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the $q_k$ parameter.}
-%% \label{fig:sens-sel-ts}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \clearpage
+% Sensitivity group 8
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8, fig.show='hold'>>=
+# Plot biomass and recruitment for sens group 8
+g <- 8
+plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], indletter=1)
+plotTS(plotNum=5,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, leg=NULL, showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], indletter=2)
+@
+\end{center}
+\vspace{0mm}
+\caption{Estimated median spawning biomass (a) and recruitment (b) with \mcmcci\ confidence intervals, for models examining sensitivity to the $q_k$ parameter.}
+\label{fig:sens-sel-ts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 
-%% %%%%%%%%%%%%%%%%%%%%%%%
-%% \begin{figure}[htp]
-%% \begin{center}
-%% <<fig.height=5,fig.width=8>>=
-%% # Plot harvest control rule illustation. This uses no data so it is embedded her
-%% plot(c(0,30), c(0,0.4), type="n", axes=FALSE, xaxs="i", yaxs="i", ylab="Stock Status", xlab="Removal Rate")
-%% # Plot the vertical bars (LRP and USR)
-%% segments(4, 0, 4, 0.4, col="black", lty=3, lwd=1)
-%% segments(9, 0, 9, 0.4, col="black", lty=3, lwd=1)
-%% # Plot removal rate lines
-%% segments(0, 0, 4, 0,   col="blue", lty=1, lwd=4)
-%% segments(4, 0, 9, 0.3, col="blue", lty=1, lwd=4)
-%% segments(9, 0.3, 30, 0.3, col="blue", lty=1, lwd=4)
-%% # Add axes and labels
-%% axis(side=1)
-%% axis(side=2)
-%% box()
-%% text(4, 0.35, "LRP", col="red")
-%% text(9, 0.35, "USR", col="red")
-%% text(20,0.31, "LRR", col="red")
-%% @
-%% \end{center}
-%% \vspace{0mm}
-%% \caption{Illustration of a harvest control rule consistent with the Precautionary Approach for a hypothetical stock. The biomass-based reference points are shown as vertical dotted lines. The limit removal rate is shown as a horizontal blue line. In this illustration, biomass (unspecified units) is shown on the bottom axis. LRP = Limit Reference Point; USR = Upper Stock Reference; LRR = Limit Removal Rate. See \citet{dfo09} for more detail.}
-%% \label{fig:hcrillustration}
-%% \end{figure}
-%% %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htp]
+\begin{center}
+<<fig.height=5,fig.width=8>>=
+# Plot harvest control rule illustation. This uses no data so it is embedded her
+plot(c(0,30), c(0,0.4), type="n", axes=FALSE, xaxs="i", yaxs="i", ylab="Stock Status", xlab="Removal Rate")
+# Plot the vertical bars (LRP and USR)
+segments(4, 0, 4, 0.4, col="black", lty=3, lwd=1)
+segments(9, 0, 9, 0.4, col="black", lty=3, lwd=1)
+# Plot removal rate lines
+segments(0, 0, 4, 0,   col="blue", lty=1, lwd=4)
+segments(4, 0, 9, 0.3, col="blue", lty=1, lwd=4)
+segments(9, 0.3, 30, 0.3, col="blue", lty=1, lwd=4)
+# Add axes and labels
+axis(side=1)
+axis(side=2)
+box()
+text(4, 0.35, "LRP", col="red")
+text(9, 0.35, "USR", col="red")
+text(20,0.31, "LRR", col="red")
+@
+\end{center}
+\vspace{0mm}
+\caption{Illustration of a harvest control rule consistent with the Precautionary Approach for a hypothetical stock. The biomass-based reference points are shown as vertical dotted lines. The limit removal rate is shown as a horizontal blue line. In this illustration, biomass (unspecified units) is shown on the bottom axis. LRP = Limit Reference Point; USR = Upper Stock Reference; LRR = Limit Removal Rate. See \citet{dfo09} for more detail.}
+\label{fig:hcrillustration}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
