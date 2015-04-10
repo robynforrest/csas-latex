@@ -333,142 +333,142 @@ We thank the members of the \fishname\ Technical Working Group (Rowan Haigh, Ken
 
 \clearpage
 
-\section{TABLES}
+%% \section{TABLES}
 
-\begin{table}[!htp]
-\centering
-\caption{\label{tab:surveySuitability} Attributes of fishery-independent surveys and evaluation of suitability for stock indexing. RS=Random stratified design, BT=Bottom trawl gear.}
-\begin{tabular}{lcccc}
-\hline
-\textbf{Attribute}              & \textbf{WCVISS} & \textbf{HSSS} & \textbf{HSMSAS} & \textbf{QCSSS} \\
-\hline
-\textbf{Design}                   &            RS &            RS &             RS &            RS \\
-\textbf{Gear}                     &            BT &            BT &             BT &            BT \\
-\textbf{Year Range (years)}       & 2004-2014 (6) & 2005-2013 (5) & 1984-2003 (11) & 2003-2013 (7) \\
-\textbf{Set Range (avg)}          & 106-179 (153) & 156-236 (189) &   88-161 (105) & 260-281 (269) \\
-\textbf{PFMA Areas}               &         3C,3D &         5C,5D &          5C,5D &         5A,5B \\
-\textbf{Depth Range (m)}          &        41-660 &        19-420 &         18-232 &        41-626 \\
-\textbf{Ageing done (yrs)}        &       Yes (5) &       Yes (5) &        Yes (1) &       Yes (4) \\
-\textbf{Comment}                  &               &               &                &               \\
-\hline
-\end{tabular}
-\end{table}
+%% \begin{table}[!htp]
+%% \centering
+%% \caption{\label{tab:surveySuitability} Attributes of fishery-independent surveys and evaluation of suitability for stock indexing. RS=Random stratified design, BT=Bottom trawl gear.}
+%% \begin{tabular}{lcccc}
+%% \hline
+%% \textbf{Attribute}              & \textbf{WCVISS} & \textbf{HSSS} & \textbf{HSMSAS} & \textbf{QCSSS} \\
+%% \hline
+%% \textbf{Design}                   &            RS &            RS &             RS &            RS \\
+%% \textbf{Gear}                     &            BT &            BT &             BT &            BT \\
+%% \textbf{Year Range (years)}       & 2004-2014 (6) & 2005-2013 (5) & 1984-2003 (11) & 2003-2013 (7) \\
+%% \textbf{Set Range (avg)}          & 106-179 (153) & 156-236 (189) &   88-161 (105) & 260-281 (269) \\
+%% \textbf{PFMA Areas}               &         3C,3D &         5C,5D &          5C,5D &         5A,5B \\
+%% \textbf{Depth Range (m)}          &        41-660 &        19-420 &         18-232 &        41-626 \\
+%% \textbf{Ageing done (yrs)}        &       Yes (5) &       Yes (5) &        Yes (1) &       Yes (4) \\
+%% \textbf{Comment}                  &               &               &                &               \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
 
-<<results='asis', echo=FALSE>>=
-cap <- "Annual indices of abundance and CVs for the four indices used in this assessment."
-makeTable(1, 8, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:Indices")
-@
+%% <<results='asis', echo=FALSE>>=
+%% cap <- "Annual indices of abundance and CVs for the four indices used in this assessment."
+%% makeTable(1, 8, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:Indices")
+%% @
 
-\clearpage
+%% \clearpage
 
-\begin{table}[b]
-\centering
-\caption{\label{tab:parampriors}Fixed parameters and prior probablilty distributions used in the Reference model.}
-\begin{tabular}{lcrr}
-\hline
-\textbf{Parameter} & \specialcell{\textbf{Number}\\\textbf{estimated}} & \specialcell{\textbf{Bounds}\\\textbf{[low,high]}} & \specialcell{\textbf{Prior (Mean, SD)}\\\textbf{(single value=fixed)}} \\
-\hline
-\textbf{Log recruitment (ln($\mathbf{R_0}$))}                        &  1 & [-2,6]  & Uniform \\
-\textbf{Steepness ($\mathbf{h}$)}                                    &  1 & [0.2,1] & Beta($\alpha=13.4$,$\beta=2.40$) \\
-\textbf{Log natural mortality (ln($\mathbf{M}$) )}                   &  1 & [-5,0]  & Normal(ln($0.2$),$0.2$) \\
-\textbf{Log mean recruitment (ln($\mathbf{\overline{R}}$))}          &  1 & [-2,6]  & Uniform \\
-\textbf{Log initial recruitment (ln($\mathbf{\overline{R}_{init}}$))} &  1  & [-2,6] & Uniform \\
-\textbf{Variance ratio ($\mathbf{\rho}$)}                            &  0 & Fixed   & $0.059$ \\
-\textbf{Inverse total variance ($\mathbf{\phi^{-1}}$)}                &  0 & Fixed   & $1.471$ \\
-\textbf{Survey age at 50\% vulnerability}                            &  4 & [0,1]   & Uniform \\
-\textbf{Fishery age at 50\% vulnerability}                           &  1 & [0,1]   & Uniform \\
-\textbf{Survey SD of logistic selectivity}                           &  4 & [0,Inf) & None \\
-\textbf{Fishery SD of logistic selectivity}                          &  1 & [0,Inf) & None \\
-\textbf{Survey catchability ($\mathbf{q_k}$)}                        &  4 & None    & Normal($0.5$,$1.0$) \\
-\textbf{Log fishing mortality values}                                & XX & [-30,3] & [-30,3] \\
-\textbf{Log recruitment deviations}                                  & XX & [-5,5]  & Normal($0$,$\tau$) \\
-\textbf{Initial log recruitment deviations}                          & XX & [-5,5]  & Normal($0$,$\tau$) \\
-\hline
-\end{tabular}
-\end{table}
+%% \begin{table}[b]
+%% \centering
+%% \caption{\label{tab:parampriors}Fixed parameters and prior probablilty distributions used in the Reference model.}
+%% \begin{tabular}{lcrr}
+%% \hline
+%% \textbf{Parameter} & \specialcell{\textbf{Number}\\\textbf{estimated}} & \specialcell{\textbf{Bounds}\\\textbf{[low,high]}} & \specialcell{\textbf{Prior (Mean, SD)}\\\textbf{(single value=fixed)}} \\
+%% \hline
+%% \textbf{Log recruitment (ln($\mathbf{R_0}$))}                        &  1 & [-2,6]  & Uniform \\
+%% \textbf{Steepness ($\mathbf{h}$)}                                    &  1 & [0.2,1] & Beta($\alpha=13.4$,$\beta=2.40$) \\
+%% \textbf{Log natural mortality (ln($\mathbf{M}$) )}                   &  1 & [-5,0]  & Normal(ln($0.2$),$0.2$) \\
+%% \textbf{Log mean recruitment (ln($\mathbf{\overline{R}}$))}          &  1 & [-2,6]  & Uniform \\
+%% \textbf{Log initial recruitment (ln($\mathbf{\overline{R}_{init}}$))} &  1  & [-2,6] & Uniform \\
+%% \textbf{Variance ratio ($\mathbf{\rho}$)}                            &  0 & Fixed   & $0.059$ \\
+%% \textbf{Inverse total variance ($\mathbf{\phi^{-1}}$)}                &  0 & Fixed   & $1.471$ \\
+%% \textbf{Survey age at 50\% vulnerability}                            &  4 & [0,1]   & Uniform \\
+%% \textbf{Fishery age at 50\% vulnerability}                           &  1 & [0,1]   & Uniform \\
+%% \textbf{Survey SD of logistic selectivity}                           &  4 & [0,Inf) & None \\
+%% \textbf{Fishery SD of logistic selectivity}                          &  1 & [0,Inf) & None \\
+%% \textbf{Survey catchability ($\mathbf{q_k}$)}                        &  4 & None    & Normal($0.5$,$1.0$) \\
+%% \textbf{Log fishing mortality values}                                & XX & [-30,3] & [-30,3] \\
+%% \textbf{Log recruitment deviations}                                  & XX & [-5,5]  & Normal($0$,$\tau$) \\
+%% \textbf{Initial log recruitment deviations}                          & XX & [-5,5]  & Normal($0$,$\tau$) \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
 
-<<results='asis', echo=FALSE, fig.pos='b'>>=
-cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of key parameters from the Reference Case model. Subscripts on $q$, $sel$, and $selsd$ parameters indicate: 1 = Trawl fishery, 2 = QCSSS, 3 = HSMAS, 4 = HSSS, 5 = WCVISS."
-makeTable(1, 1, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:paramest")
-@
+%% <<results='asis', echo=FALSE, fig.pos='b'>>=
+%% cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of key parameters from the Reference Case model. Subscripts on $q$, $sel$, and $selsd$ parameters indicate: 1 = Trawl fishery, 2 = QCSSS, 3 = HSMAS, 4 = HSSS, 5 = WCVISS."
+%% makeTable(1, 1, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:paramest")
+%% @
 
-\begin{table}[b]
-\centering
-\caption{\label{tab:sensitivities}Sensitivity cases and their parameters.}
-\begin{tabular}{lrr}
-\hline
-\textbf{Sensitivity} & \textbf{Description}                 & \textbf{Parameters} \\
-\hline
-\textbf{1}           & Reference Case                                & See Table \ref{tab:parampriors} \\
-\textbf{2}           & Decrease $\sigma$ to 0.1                      & $\vartheta=1.538$; $\rho=0.015$ \\
-\textbf{3}           & Estimate Total Variance                       & $\vartheta$ estimated; $\rho=0.059$ \\
-\textbf{4}           & Increase $\tau$ to 1.0                        & $\vartheta=0.962$; $\rho=0.038$ \\
-\textbf{5}           & Decrease $\tau$ to 0.6                        & $\vartheta=2.500$; $\rho=0.100$ \\
-\textbf{6}           & Decrease mean of $h$ prior to 0.72            & $h$ = Beta($\alpha=12.7$, $\beta=5.0$) \\
-\textbf{7}           & Decrease SD of ln($M$) prior to 0.05          & ln($M$) = Normal(ln($0.2$), $0.05$) \\
-\textbf{8}           & Increase SD of ln($M$) prior to 0.25          & ln($M$) = Normal(ln($0.2$), $0.25$) \\
-\textbf{9}           & Increase mean of ln($M$) prior to ln($1.0$)   & ln($M$) = Normal(ln($0.3$), $0.20$) \\
-\textbf{10}          & Increase mean of ln($q_k$) prior to ln($1.0$) & ln($q_k$) = Normal(ln($1.0$), $1.0$) \\
-\textbf{11}          & Increase SD of ln($q_k$) prior to 1.5         & ln($q_k$) = Normal(ln($0.5$), $1.5$) \\
-\textbf{12}          & Selectivity Ogive = Maturity Ogive            & $sel$ = $4.99$ yrs; $sel_g$ = $1.27$ yrs \\
-\textbf{13}          & Age-at-50\%-harvest set to 6 yrs              & $sel$ = $6.00$ yrs; $sel_g$ = $1.00$ yrs \\
-\hline
-\end{tabular}
-\end{table}
+%% \begin{table}[b]
+%% \centering
+%% \caption{\label{tab:sensitivities}Sensitivity cases and their parameters.}
+%% \begin{tabular}{lrr}
+%% \hline
+%% \textbf{Sensitivity} & \textbf{Description}                 & \textbf{Parameters} \\
+%% \hline
+%% \textbf{1}           & Reference Case                                & See Table \ref{tab:parampriors} \\
+%% \textbf{2}           & Decrease $\sigma$ to 0.1                      & $\vartheta=1.538$; $\rho=0.015$ \\
+%% \textbf{3}           & Estimate Total Variance                       & $\vartheta$ estimated; $\rho=0.059$ \\
+%% \textbf{4}           & Increase $\tau$ to 1.0                        & $\vartheta=0.962$; $\rho=0.038$ \\
+%% \textbf{5}           & Decrease $\tau$ to 0.6                        & $\vartheta=2.500$; $\rho=0.100$ \\
+%% \textbf{6}           & Decrease mean of $h$ prior to 0.72            & $h$ = Beta($\alpha=12.7$, $\beta=5.0$) \\
+%% \textbf{7}           & Decrease SD of ln($M$) prior to 0.05          & ln($M$) = Normal(ln($0.2$), $0.05$) \\
+%% \textbf{8}           & Increase SD of ln($M$) prior to 0.25          & ln($M$) = Normal(ln($0.2$), $0.25$) \\
+%% \textbf{9}           & Increase mean of ln($M$) prior to ln($1.0$)   & ln($M$) = Normal(ln($0.3$), $0.20$) \\
+%% \textbf{10}          & Increase mean of ln($q_k$) prior to ln($1.0$) & ln($q_k$) = Normal(ln($1.0$), $1.0$) \\
+%% \textbf{11}          & Increase SD of ln($q_k$) prior to 1.5         & ln($q_k$) = Normal(ln($0.5$), $1.5$) \\
+%% \textbf{12}          & Selectivity Ogive = Maturity Ogive            & $sel$ = $4.99$ yrs; $sel_g$ = $1.27$ yrs \\
+%% \textbf{13}          & Age-at-50\%-harvest set to 6 yrs              & $sel$ = $6.00$ yrs; $sel_g$ = $1.00$ yrs \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
 
-\begin{table}[b]
-\centering
-\caption{\label{tab:sensitivities-q}Sensitivity cases for $q_k$; posterior quantiles. For sensitivity case descriptions, see table \ref{tab:sensitivities}.}
-\begin{tabular}{lcccccc}
-\hline
-\textbf{Index}  & \multicolumn{3}{c}{\textbf{Sensitivity 10}} & \multicolumn{3}{c}{\textbf{Sensitivity 11}} \\
-\hline
- $\mathbf{q_k}$ & \textbf{2.5\%} & \textbf{50\%} & \textbf{97.5\%} & \textbf{2.5\%} & \textbf{50\%} & \textbf{97.5\%} \\
-\hline
-\textbf{QCSSS}  & 0.081 & 0.158 & 0.508 & 0.029 & 0.083 & 0.226 \\
-\textbf{HSMAS}  & 0.079 & 0.121 & 0.155 & 0.035 & 0.081 & 0.136 \\
-\textbf{HSSS}   & 0.070 & 0.118 & 0.200 & 0.027 & 0.067 & 0.136 \\
-\textbf{WCVISS} & 0.061 & 0.104 & 0.172 & 0.022 & 0.059 & 0.118 \\
-\hline
-\end{tabular}
-\end{table}
+%% \begin{table}[b]
+%% \centering
+%% \caption{\label{tab:sensitivities-q}Sensitivity cases for $q_k$; posterior quantiles. For sensitivity case descriptions, see table \ref{tab:sensitivities}.}
+%% \begin{tabular}{lcccccc}
+%% \hline
+%% \textbf{Index}  & \multicolumn{3}{c}{\textbf{Sensitivity 10}} & \multicolumn{3}{c}{\textbf{Sensitivity 11}} \\
+%% \hline
+%%  $\mathbf{q_k}$ & \textbf{2.5\%} & \textbf{50\%} & \textbf{97.5\%} & \textbf{2.5\%} & \textbf{50\%} & \textbf{97.5\%} \\
+%% \hline
+%% \textbf{QCSSS}  & 0.081 & 0.158 & 0.508 & 0.029 & 0.083 & 0.226 \\
+%% \textbf{HSMAS}  & 0.079 & 0.121 & 0.155 & 0.035 & 0.081 & 0.136 \\
+%% \textbf{HSSS}   & 0.070 & 0.118 & 0.200 & 0.027 & 0.067 & 0.136 \\
+%% \textbf{WCVISS} & 0.061 & 0.104 & 0.172 & 0.022 & 0.059 & 0.118 \\
+%% \hline
+%% \end{tabular}
+%% \end{table}
 
-<<results='asis', echo=FALSE>>=
-cap="List of proposed reference points. Biomass numbers are in thousands of tonnes."
-makeTable(1, 2, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:refpoints")
-@
-<<results='asis', echo=FALSE>>=
-cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of spawning biomass (1000 t) for the Reference model."
-makeTable(1, 3, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:spawnbiomass")
-@
-<<results='asis', echo=FALSE>>=
-cap <- "Derived posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD values of relative spawning biomass for the Reference model."
-makeTable(1, 9, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:depletion")
-@
-<<results='asis', echo=FALSE>>=
-cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of recruitment (millions) for the Reference model."
-makeTable(1, 4, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:recruitment")
-@
-<<results='asis', echo=FALSE>>=
-cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of fishing mortality, F, for the Reference model."
-makeTable(1, 5, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:F")
-@
-<<results='asis', echo=FALSE>>=
-cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of fishing mortality, U, for the Reference model."
-makeTable(1, 6, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:U")
-@
-<<results='asis', echo=FALSE>>=
-# Note that the first column will not be set to have any decimal digits because it is the TAC/Catch projection
-cap <- "Decision Table for the Reference Case model showing posterior probabilities that 2016 projected biomass B\\subscr{t} is below a set of candidate reference points and benchmarks (Table \\ref{tab:refpoints}), and probabilities that the 2015 projected harvest rate U\\subscr{t} is above U\\subscr{2014} or U\\subscr{MSY}."
-makeTable(1, 7, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:Decisions")
-@
-<<results='asis', echo=FALSE>>=
-# Note that the first column will not be set to have any decimal digits because it is the TAC/Catch projection
-cap <- "Decision Table for a sensitivity model (Selectivity = Maturity, Table \\ref{tab:sensitivities}) showing posterior probabilities that 2016 projected biomass B\\subscr{t} is below a set of candidate reference points and benchmarks (Table \\ref{tab:refpoints}), and probabilities that the 2015 projected harvest rate U\\subscr{t} is above U\\subscr{2014} or U\\subscr{MSY}."
-makeTable(12, 7, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:DecisionsSelMat")
-@
+%% <<results='asis', echo=FALSE>>=
+%% cap="List of proposed reference points. Biomass numbers are in thousands of tonnes."
+%% makeTable(1, 2, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:refpoints")
+%% @
+%% <<results='asis', echo=FALSE>>=
+%% cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of spawning biomass (1000 t) for the Reference model."
+%% makeTable(1, 3, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:spawnbiomass")
+%% @
+%% <<results='asis', echo=FALSE>>=
+%% cap <- "Derived posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD values of relative spawning biomass for the Reference model."
+%% makeTable(1, 9, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:depletion")
+%% @
+%% <<results='asis', echo=FALSE>>=
+%% cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of recruitment (millions) for the Reference model."
+%% makeTable(1, 4, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:recruitment")
+%% @
+%% <<results='asis', echo=FALSE>>=
+%% cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of fishing mortality, F, for the Reference model."
+%% makeTable(1, 5, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:F")
+%% @
+%% <<results='asis', echo=FALSE>>=
+%% cap <- "Posterior (2.5\\textsuperscript{th} percentile, Median, and 97.5\\textsuperscript{th} percentile) and MPD estimates of fishing mortality, U, for the Reference model."
+%% makeTable(1, 6, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:U")
+%% @
+%% <<results='asis', echo=FALSE>>=
+%% # Note that the first column will not be set to have any decimal digits because it is the TAC/Catch projection
+%% cap <- "Decision Table for the Reference Case model showing posterior probabilities that 2016 projected biomass B\\subscr{t} is below a set of candidate reference points and benchmarks (Table \\ref{tab:refpoints}), and probabilities that the 2015 projected harvest rate U\\subscr{t} is above U\\subscr{2014} or U\\subscr{MSY}."
+%% makeTable(1, 7, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:Decisions")
+%% @
+%% <<results='asis', echo=FALSE>>=
+%% # Note that the first column will not be set to have any decimal digits because it is the TAC/Catch projection
+%% cap <- "Decision Table for a sensitivity model (Selectivity = Maturity, Table \\ref{tab:sensitivities}) showing posterior probabilities that 2016 projected biomass B\\subscr{t} is below a set of candidate reference points and benchmarks (Table \\ref{tab:refpoints}), and probabilities that the 2015 projected harvest rate U\\subscr{t} is above U\\subscr{2014} or U\\subscr{MSY}."
+%% makeTable(12, 7, ci=ci, burnthin=burnthin, digits=3, retxtable=TRUE, xcaption=cap, xlabel="tab:DecisionsSelMat")
+%% @
 
-\clearpage
+%% \clearpage
 
 %% \section{FIGURES}
 %% \begin{figure}[!htp]

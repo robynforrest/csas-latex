@@ -308,9 +308,9 @@ modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl
 %<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
 %@
 
-%\rfoot{Appendix E -- Model Equations}
-%<<model-equations, child='app-equations/app-equations.Rnw'>>=
-%@
+\rfoot{Appendix E -- Model Equations}
+<<model-equations, child='app-equations/app-equations.Rnw'>>=
+@
 
 %\rfoot{Appendix B -- Catch Data}
 %\input{app-catch/app-catch}
