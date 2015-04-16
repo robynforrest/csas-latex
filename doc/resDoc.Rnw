@@ -198,6 +198,7 @@ require(xtable) # For tables which can be inserted into latex docs with knitr
 ci <- 95
 ps <- list(res=300,w=400,h=300)
 burnthin <- list(1000,1)
+opacity <- 30 # opaqueness of the envelope plots, i.e. biomass, depletion, and any barplots
 # 'sens' is the object required by the iscam-gui plot routines. It defines groups to be used for
 # sensitivities. It is a list of vectors, with the list's index being the sensGroup number passed to
 # the plotting routines. All sensitivities can be set up here and used in the maindoc. The names are
@@ -261,22 +262,14 @@ modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl
 \renewcommand{\thefigure}{\arabic{figure}}
 \renewcommand{\theequation}{\arabic{equation}}
 
-% \subimport{mainDoc/}{mainDocRev}
 <<main-doc, child='maindoc/maindoc.Rnw'>>=
 @
-%\input{maindoc/maindoc}
 
 \clearpage
 
-% \addcontentsline{toc}{chapter}{Appendices}
 \addtocontents{toc}{\par {\bf \vspace{10mm} APPENDICES} \par}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-\appendix           % Everything from now on will be an Appendix
-% \begin{appendices}
-
-% \renewcommand{\appendixname}{Appendix} - doesn't work
-% \renewcommand*{\chaptername}{Appendix} - never worked
-% Also tried in .sty file.
+\appendix
 
 % Now want to number sections, tables etc. as A.1, A.2, etc.
 % Thought these wouldn't be with the appendix package, as
@@ -292,47 +285,27 @@ modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl
 
 \lfoot{Arrowtooth Flounder - Coastwide}
 
-%\rfoot{Appendix A -- Request for Science Advice}
-%<<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
-%@
+\rfoot{Appendix A -- Request for Science Advice}
+<<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
+@
 
-%\rfoot{Appendix B -- Biological Data}
-%<<biological-data, child='app-biology/app-biology.Rnw'>>=
-%@
+\rfoot{Appendix B -- Biological Data}
+<<biological-data, child='app-biology/app-biology.Rnw'>>=
+@
 
-%\rfoot{Appendix C -- Age Composition weighting}
-%<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
-%@
+\rfoot{Appendix C -- Age Composition weighting}
+<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+@
 
-%\rfoot{Appendix D -- Proportion Female Analysis}
-%<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
-%@
+\rfoot{Appendix D -- Proportion Female Analysis}
+<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+@
 
 \rfoot{Appendix E -- Model Equations}
 <<model-equations, child='app-equations/app-equations.Rnw'>>=
 @
 
-%\rfoot{Appendix B -- Catch Data}
-%\input{app-catch/app-catch}
-
-%\rfoot{Appendix C -- Trawl Surveys}
-%\input{app-surveys/app-surveys}
-
-%\rfoot{Appendix C -- CPUE Analyses}
-%\input{app-cpue/app-cpue}
-
-%\setcounter{page}{68}
-
-%\rfoot{Appendix E -- Age Data}
-%\input{app-biology/app-agesrev}
-
-%\rfoot{Appendix G -- Results}
-%\input{app-results/app-results}
-
-%\rfoot{Appendix H -- Habitat}
-%\input{app-habitat/app-habitat}
-
-%\rfoot{Appendix I -- Sensitivities}
-%\input{app-sensitivities/app-sensitivities}
+Used when you need to insert outside documents:
+\setcounter{page}{68}
 
 \end{document}

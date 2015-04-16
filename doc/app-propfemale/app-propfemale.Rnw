@@ -5,46 +5,42 @@
 \label{chap:propfemale}
 
 \section{INTRODUCTION}
-This analysis was done to determine whether or not this stock has a sex proportion close to 50\% so that a sex-specific assessment model with an assumed sex proportion of 50\% could be used. If the proportion of females is large enough, a single-sex model could be employed. The weighting algorithm and proportion generation algorithm is similar to algorithm 2 in \citet{rocksole2013}. The analysis presented here assumes a coastwide stock.
+This analysis was done to determine whether or not this stock has a sex proportion close to 50\% so that a sex-specific assessment model with an assumed sex proportion of 50\% could be used. If the proportion of females is large enough, a single-sex model could be employed. The weighting algorithm and proportion generation algorithm is similar to algorithm 2 in the 2014 Rock Sole assessment (\citet{rocksole2014}). The analysis presented here assumes a coastwide stock.
 
 \section{DATA SELECTION}
+Age data were selected based on the following attributes:\\
 \textbf{Trawl Fishery}: \\
 TRIP\_SUB\_TYPE\_DESC equal to 1 or 4 (observed domestic or non-observed domestic) \\
 MORPHOMETRICS\_ATTRIBUTE\_CODE equal to 1 or 2 or 4 or 10 (Fork length, Standard length, Total length, Whole round weight) \\
-\mbox{ }\\
 
 \textbf{Surveys}: \\
 TRIP\_SUB\_TYPE\_DESC equal to 2 or 3 (research or charter) \\
 MORPHOMETRICS\_ATTRIBUTE\_CODE  equal to 1 or 2 or 4 or 10 (Fork length, Standard length, Total length, Whole round weight) \\
-\mbox{ }\\
 
 \textbf{Years}: \\
 Greater than or equal to 1996 \\
-\mbox{ }\\
 
 \textbf{Quarters of the year}: \\
 1 = Jan-Mar \\
 2 = Apr-Jun \\
 3 = Jul-Sep \\
 4 = Oct-Dec \\
-\mbox{ }\\
 
 \textbf{Areas}: \\
 3CD and 5ABCDE
-\mbox{ }\\
 
 \textbf{Sex}: \\
 Male or female only, no unknowns or null fields \\
-\mbox{ }\\
 
 \section{ALGORITHM}
+Pseudocode has been provided in Section \ref{sec:propfemale-pseudocode} to describe the weighting algorithm.
 
 \subsection{Trawl Fishery}
 Observations within a sample are likely to be correlated due to the small area which is trawled in a single fishing event. Also, trip samples
 are likely to be correlated due to the fact that it is the same vessel and captain. This algorithm calculates a sex-specific mean weight by
 trip, then combines the trips to get a mean weight within the quater of the year based on the total catch weight for the trip. It then combines
 these across quarters by weighting the commercial catch in each quarter. The routine was run for an assumed coastwide stock, and as two areas:
-the WCVI, and QCS+HS.
+the West coast of Vancouver Island, and the combination of Queen Charlotte Sound and Hecate Strait.
 
 \subsection{Surveys}
 For surveys, the same algorithm is followed except that the quarter of the year is not included in the calculation. This is because the surveys are
@@ -116,8 +112,9 @@ P_y=\frac{W_{s=Female,y}}{W_{s=Female,y}+W_{s=Male,y}}
 where $P_y$ is the proportion female by weight for year $y$.
 \end{addmargin}
 
-\subsection{Pseudocode}
 \clearpage
+
+\subsection{Pseudocode} \label{sec:propfemale-pseudocode}
 \begin{algorithm}[h]
 \caption{Algortihm for calculating the proportion female}
 \begin{algorithmic}[1]
@@ -155,7 +152,7 @@ where $P_y$ is the proportion female by weight for year $y$.
 \end{algorithm}
 
 \subsection{Results}
-The proportion of females resulting from this analysis are high, ranging from 0.714 for the 1998 HSMAS to 0.909 for the 2008 trawl fishery (Table \ref{tab:propfemale}).
+The proportion of females resulting from this analysis are high, ranging from 0.635 for the 1998 WCVI trawl fishery to 0.909 for the 2008 QCS+HS trawl fishery (Table \ref{tab:propfemale}).
 \clearpage
 \begin{table}[h]
 \centering

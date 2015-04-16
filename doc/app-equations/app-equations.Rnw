@@ -201,10 +201,10 @@ $a$ & & Index for age\\
 $t$ & & Index for year\\
 $k$ & & Index for gear\\
 \multicolumn{3}{l}{\underline{Model dimensions}}\\
-$S$ & 1 (Female) & Number of sexes\\
-$\acute{a}, A$ & 1, 20 & Youngest and oldest age class ($A$ is a plus group)\\
-$\acute{t}, T$ & 1996, 2014 & First and last year of catch data\\
-$K$ & 5 & Number of gears including survey gears\\
+$S$ & $\Sexpr{op[[1]]$inputs$data$nsex}$ & Number of sexes\\
+$\acute{a}, A$ & $\Sexpr{op[[1]]$inputs$data$sage}$, $\Sexpr{op[[1]]$inputs$data$nage}$ & Youngest and oldest age class ($A$ is a plus group)\\
+$\acute{t}, T$ & $\Sexpr{op[[1]]$inputs$data$syr}$, $\Sexpr{op[[1]]$inputs$data$nyr}$ & First and last year of catch data\\
+$K$ & $\Sexpr{op[[1]]$inputs$data$ngear}$ & Number of gears including survey gears\\
 \multicolumn{3}{l}{\underline{Observations (data)}}\\
 $C_{k,t}$ & & catch in weight by gear $k$ in year $t$\\
 $I_{k,t}$ & & relative abundance index for gear $k$ in year $t$\\
