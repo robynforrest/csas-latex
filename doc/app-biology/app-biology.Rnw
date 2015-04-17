@@ -75,7 +75,7 @@ plotGrowth(leg="bottomright")
 @
 \end{center}
 \vspace{0mm}
-\caption{Growth data and model fits for \fishname. Estimated parameters $L_{\infty}$, $k$, and $t_0$ are shown in the legend.}
+\caption{Growth data and model fits for \fishname. Estimated parameters $L_{\infty}$, $k$, and $t_0$ are shown in the legend. See Eq. \ref{eq:vonb}.}
 \label{fig:vonb}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -87,7 +87,7 @@ plotLW(leg="topleft")
 @
 \end{center}
 \vspace{0mm}
-\caption{Length/weight data and model fits for \fishname. Estimated parameters $\alpha$ and $\beta$ are shown in the legend.}
+\caption{Length/weight data and model fits for \fishname. Estimated parameters $\alpha$ and $\beta$ are shown in the legend. See Eq. \ref{eq:lw}.}
 \label{fig:lw}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -99,7 +99,7 @@ plotMA(leg="bottomright")
 @
 \end{center}
 \vspace{0mm}
-\caption{Maturity data and model fits for \fishname. Estimated parameters $a_{50\%}$ and $\sigma_{a_{50\%}}$ are shown in the legend.}
+\caption{Maturity data and model fits for \fishname. Estimated parameters $a_{50\%}$ and $\sigma_{a_{50\%}}$ are shown in the legend. See Eq. \ref{eq:ma}.}
 \label{fig:matage}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
