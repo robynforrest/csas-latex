@@ -8,7 +8,7 @@ All biological parameters were estimated from survey data only. These data were 
 
 \section{Length and Weight model}
 
-All valid length/weight pairs of data were extracted based on the criteria shown in table~\ref{tab:bioCrit}. The length-weight equation used was:
+All valid length/weight pairs of data were extracted based on the criteria shown in table~\ref{tab:biocrit}. The length-weight equation used was:
 
 \begin{align} \label{eq:lw}
 W_s=\alpha_s L_s^{\beta_s}
@@ -99,7 +99,7 @@ plotMA(leg="bottomright")
 @
 \end{center}
 \vspace{0mm}
-\caption{Maturity data and model fits for \fishname. Estimated parameters $a_{50\%}$ and $\sigma_{a_{50\%}}$ are shown in the legend. See Eq. \ref{eq:ma}.}
+\caption{Maturity data and model fits for \fishname. Estimated parameters $a_{50\%}$ and $\sigma_{a_{50\%}}$ are shown in the legend. See Eq. \ref{eq:matage}.}
 \label{fig:matage}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%

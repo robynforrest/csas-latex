@@ -23,6 +23,8 @@
 \usepackage{color, colortbl}
 \usepackage{arydshln}          % For dashed lines in tables (has to be loaded after other stuff)
 \usepackage{pdfpages}          % So we can import PDFs into the document (e.g. request for science advice).
+\usepackage[parfill]{parskip}  % So paragraphs will have a blank line between them
+\setlength{\parskip}{12pt}
 
 % For hyperlinked references (figures and citations, etc.). The bookmarksdepthlevel allows
 %  the TOC to be shown in the bookmarks tree in the output PDF.
@@ -207,42 +209,42 @@ sens <- list()
 modelcolors <- list()
 modellinetypes <- list()
 modelnames <- list()
-# Sensitivity group 1
+# Sensitivity group 1, changing sigma
 sens[[1]] <- c(1,2,3)
 modelcolors[[1]] <- list("black","red","green")
 modellinetypes[[1]] <- list(1,1,1)
 modelnames[[1]] <- list("Reference Model","Sigma=0.1","Estimated Total Variance")
-# Sensitivity group 2
+# Sensitivity group 2, changing tau
 sens[[2]] <- c(1,4,5)
 modelcolors[[2]] <- list("black","red","green")
 modellinetypes[[2]] <- list(1,1,1)
 modelnames[[2]] <- list("Reference Model, Tau=0.8","Tau=1.0","Tau=0.6")
-# Sensitivity group 3
+# Sensitivity group 3, changing steepness
 sens[[3]] <- c(1,6)
 modelcolors[[3]] <- list("black","red")
 modellinetypes[[3]] <- list(1,1)
 modelnames[[3]] <- list("Reference Model","Low steepness")
-# Sensitivity group 4
+# Sensitivity group 4, changing M standard deviation
 sens[[4]] <- c(1,7,8)
 modelcolors[[4]] <- list("black","red","green")
 modellinetypes[[4]] <- list(1,1,1)
 modelnames[[4]] <- list("Reference Model","M=0.2, SD=0.05","M=0.2, SD=0.25")
-# Sensitivity group 5
+# Sensitivity group 5, changing M value
 sens[[5]] <- c(1,9)
 modelcolors[[5]] <- list("black","red")
 modellinetypes[[5]] <- list(1,1)
 modelnames[[5]] <- list("Reference Model","M=0.3, SD=0.2")
-# Sensitivity group 6
+# Sensitivity group 6, changing priors on Q (value)
 sens[[6]] <- c(1,10)
 modelcolors[[6]] <- list("black","red")
 modellinetypes[[6]] <- list(1,1)
 modelnames[[6]] <- list("Reference Model","Q priors, mean=ln(1), SD=1")
-# Sensitivity group 7
+# Sensitivity group 7, changing priors on Q (standard deviation)
 sens[[7]] <- c(1,11)
 modelcolors[[7]] <- list("black","red")
 modellinetypes[[7]] <- list(1,1)
 modelnames[[7]] <- list("Reference Model","Q priors, mean=ln(0.5), SD=1.5")
-# Sensitivity group 8
+# Sensitivity group 8, fixing trawl selectivity
 sens[[8]] <- c(1,12,13)
 modelcolors[[8]] <- list("black","red","green")
 modellinetypes[[8]] <- list(1,1,1)
@@ -293,12 +295,12 @@ modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl
 <<biological-data, child='app-biology/app-biology.Rnw'>>=
 @
 
-\rfoot{Appendix C -- Age Composition weighting}
-<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+\rfoot{Appendix C -- Proportion Female Analysis}
+<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
 @
 
-\rfoot{Appendix D -- Proportion Female Analysis}
-<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+\rfoot{Appendix D -- Age Composition weighting}
+<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
 @
 
 \rfoot{Appendix E -- Model Equations}

@@ -443,7 +443,7 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      %%"{vv~}{ll}{, f.}{, jj}"     
+      %%"{vv~}{ll}{, f.}{, jj}"
       %% From other cjfas.bst, removes space between initials:
       "{vv~}{ll}{, jj}{, f{.}.}"
       format.name$

@@ -3,19 +3,14 @@
 \chapter{WEIGHTING OF AGE PROPORTIONS}
 \label{chap:agecompweight}
 
-This appendix summarizes a method for representing commercial and survey age structures for a given species through weighting observed age frequencies~$x_a$ or proportions~$x^\prime_a$ by \eor{catch}{density} in defined strata. 
-(Throughout this section, we use the symbol \sQuote{$\Vert$} to delimit parallel values for commercial and survey analyses, respectively, as the mechanics of the weighting procedure are similar for both.) 
-For commercial samples, these strata comprise quarterly periods within a year, while for survey samples, the strata are defined by longitude, latitude, and depth. 
-Within each stratum, commercial ages are weighted by the catch weight (kg) of the species in tows that were sampled, and survey ages are weighted by the catch density (kg/km$^2$) of the species in sampled tows. 
-A second weighting is then applied: quarterly commercial ages are weighted by the commercial catch weight of the species from all tows within each quarter; stratum survey ages are weighted by stratum areas (km$^2$) in the survey. 
+This appendix summarizes a method for representing commercial and survey age structures for a given species through weighting observed age frequencies~$x_a$ or proportions~$x^\prime_a$ by \eor{catch}{density} in defined strata. (Throughout this section, we use the symbol \sQuote{$\Vert$} to delimit parallel values for commercial and survey analyses, respectively, as the mechanics of the weighting procedure are similar for both.) For commercial samples, these strata comprise quarterly periods within a year, while for survey samples, the strata are defined by longitude, latitude, and depth. Within each stratum, commercial ages are weighted by the catch weight (kg) of the species in tows that were sampled, and survey ages are weighted by the catch density (kg/km$^2$) of the species in sampled tows. A second weighting is then applied: quarterly commercial ages are weighted by the commercial catch weight of the species from all tows within each quarter; stratum survey ages are weighted by stratum areas (km$^2$) in the survey.\\
+\bigskip
 
-Ideally, sampling effort would be proportional to the amount of the species caught, but this is not usually the case. 
-Personnel can control the sampling effort on surveys more than that aboard commercial vessels, but the relative catch among strata over the course of a year or survey cannot be known with certainty until the events have occurred. 
-Therefore, the stratified weighting scheme presented below attempts to adjust for unequal sampling effort among strata.
+Ideally, sampling effort would be proportional to the amount of the species caught, but this is not usually the case. Personnel can control the sampling effort on surveys more than that aboard commercial vessels, but the relative catch among strata over the course of a year or survey cannot be known with certainty until the events have occurred. Therefore, the stratified weighting scheme presented below attempts to adjust for unequal sampling effort among strata.\\
+\bigskip
 
-For simplicity herein, we illustrate the weighting of age frequencies~$x_a$, unless otherwise specified. 
-The weighting occurs at two levels: $h$ (quarters for commercial ages, strata for survey ages) and $i$ (years if commercial, surveys in series if survey). 
-Notation is summarised in Table~\ref{tab:wtdAges}.
+For simplicity herein, we illustrate the weighting of age frequencies~$x_a$, unless otherwise specified. The weighting occurs at two levels: $h$ (quarters for commercial ages, strata for survey ages) and $i$ (years if commercial, surveys in series if survey). Notation is summarised in Table~\ref{tab:wtdAges}.\\
+\bigskip
 
 \usefont{\encodingdefault}{\familydefault}{\seriesdefault}{\shapedefault}\small
 \begin{longtable}[1]{l>{\raggedright\arraybackslash}p{0.85\textwidth} }
@@ -86,7 +81,8 @@ Finally, we standardise the weighted frequencies to represent proportions-at-age
 %
 \eqn{p_{ai}^\prime = \gfrac{p_{ai}}{\sum_{a} p_{ai}}~.}
 %
-If initially we had used proportions $x_{adhi}^\prime$ instead of frequencies $x_{adhi}$ , the final standardisation would not be necessary; however, its application does not affect the outcome.
+If initially we had used proportions $x_{adhi}^\prime$ instead of frequencies $x_{adhi}$ , the final standardisation would not be necessary; however, its application does not affect the outcome.\\
+\bigskip
 
 The choice of data input (frequencies $x$ \emph{vs}. proportions $x^\prime$) can sometimes matter: the numeric outcome can be very different, especially if the input samples comprise few observations. Theoretically, weighting frequencies emphasises our belief in individual observations at specific ages while weighting proportions emphasises our belief in sampled age distributions. Neither method yields inherently better results; however, if the original sampling methodology favoured sampling few fish from many tows rather than sampling many fish from few tows, then weighting frequencies probably makes more sense than weighting proportions. In this assessment, we weight age frequencies $x$.
 
