@@ -248,7 +248,7 @@ $\acute{\gamma}_s$ & & Standard deviation at 50\% maturity for sex $s$\\
 \caption{\label{tab:steady-state-model} Steady-state age-structured model assuming unequal vulnerability-at-age, age-specific fecundity and Ricker type recruitment.}
 \begin{tabular}{l}
 \hline \\
-\vbox{\begin{center}\bf{Parameters}\end{center}\vspace{-4ex}} \\
+\vbox{\begin{center}\bf{Parameters}\end{center}\vspace{-1ex}} \\
 \vbox{\beq \Theta = (R_o,h,M)\,; \ \ \ R_o>0; \ \ \ 0.2 \leq h < 1.0; \ \ \ M > 0 \label{eq:df1} \eeq} \\
 \vbox{\beq \Phi = (l_{\infty,s},\acute{k}_s, t_{o,s},\acute{a}_s,\acute{b}_s,\dot{a}_s,\dot{\gamma}_s,\hat{a},\hat{\gamma}) \label{eq:df2} \eeq} \\
 \\
@@ -315,7 +315,7 @@ $\acute{\gamma}_s$ & & Standard deviation at 50\% maturity for sex $s$\\
 \caption{\label{tab:catch-age-model} Statistical catch-age model using Baranov catch.}
 \begin{tabular}{l}
 \hline \\
-\vbox{\begin{center}\bf{Estimated parameters}\end{center}\vspace{-4ex}} \\
+\vbox{\begin{center}\bf{Estimated parameters}\end{center}\vspace{-1ex}} \\
 \vbox{\beq \Theta= (R_0,h,M,\overline{R},\overline{R}_{init},\vartheta^2,\rho,\Gamma_{k,t},\{\omega_t\}_{\acute{t}=1-A}^{\acute{t}=T},\{\omega_{init,t}\}_{t=\acute{t}-A}^{t=\acute{t}-1})  \label{eq:df16} \eeq} \\
 \\
 \vbox{\beq \sigma=\frac{\sqrt{\rho}}{\vartheta}, \;  \;  \; \; \tau=\frac{\sqrt(1-\rho)}{\vartheta} \label{eq:df17} \eeq} \\

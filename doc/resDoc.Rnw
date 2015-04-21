@@ -307,7 +307,7 @@ modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl
 <<model-equations, child='app-equations/app-equations.Rnw'>>=
 @
 
-Used when you need to insert outside documents:
+%% Used when you need to insert outside documents:
 \setcounter{page}{68}
 
 \end{document}
