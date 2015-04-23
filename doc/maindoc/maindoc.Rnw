@@ -812,7 +812,7 @@ plotConvergence(1, 5, burnthin=burnthin, showtitle=FALSE, priorsonly=FALSE, late
 @
 \end{center}
 %\vspace{0mm}
-\caption{Prior probability distributions used in the Reference with comparative posterior histograms.  Parameters $q_k$ represent gears with: $k=1$ is the commercial trawl, $k=2$ is the QCSSS, $k=3$ is the HSMSAS, $k=4$ is the HSSS, and $k=5$ is the WCVISS. The dotted red lines are the MPD estimates from the Reference Case.}
+\caption{Prior probability distributions used in the Reference with comparative posterior histograms.  Parameters $q_k$ represent gears with: $k=1$ is QCSSS; $k=2$ is HSMSAS; $k=3$ is HSSS; $k=4$ is WCVISS. The dotted red lines are the MPD estimates from the Reference Case.}
 \label{fig:priorsvsposts}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -1263,7 +1263,8 @@ plotTS(plotNum=1,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCM
 <<fig.height=5,fig.width=8>>=
 # Plot Umsy/Bmsy boxplots for sens group 8
 g <- 8
-plotTS(plotNum=10,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, showumsy=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], opacity=opacity)
+shortnames <- c("Ref","Sc 12","Sc 13"))
+plotTS(plotNum=10,  sensGroup=g, ci=ci, burnthin=burnthin, multiple=TRUE, plotMCMC=TRUE, showumsy=TRUE, leg="topright", showtitle=FALSE, colors=modelcolors[[g]], linetypes=modellinetypes[[g]], names=modelnames[[g]], shortnames=shortnames, opacity=opacity)
 @
 \end{center}
 %\vspace{0mm}
