@@ -14,13 +14,13 @@
 
 \section{INTRODUCTION}
 
-Stock Assessment modelling was done using the Integrated Statistical Catch Age Model (iSCAM), developed by S. Martell (\citet{martell2011}). iSCAM is written in AD Model Builder and the source code and documentation for the original iSCAM is available at \hyperref[https://github.com/smartell/iSCAM]{\color{blue}https://github.com/smartell/iSCAM}. Code for the version used in this assessment can be found at \hyperref[https://github.com/cgrandin/iSCAM]{\color{blue}https://github.com/cgrandin/iSCAM} developed at the Pacific Biological Station by C. Grandin. iSCAM uses a statistical catch-at-age model implemented in a Bayesian estimation framework.
+Stock Assessment modelling was done using the Integrated Statistical Catch Age Model (iSCAM), developed by S. Martell (\citet{martell2011}). iSCAM is written in AD Model Builder and the source code and documentation for the original iSCAM is available at \hyperref[https://github.com/smartell/iSCAM]{\color{blue}https://github.com/smartell/iSCAM}. Code for the version used in this assessment can be found at \hyperref[https://github.com/cgrandin/iSCAM]{\color{blue}https://github.com/cgrandin/iSCAM}. iSCAM uses a statistical catch-at-age model implemented in a Bayesian estimation framework.
 
-Running of iSCAM and compilation of results figures was streamlined using the iscam-gui software package (\hyperref[https://github.com/cgrandin/iscam-gui]{\color{blue}https://github.com/cgrandin/iscam-gui}). iscam-gui is written in the statistical language R, and provides a graphical user interface that allows users to run and show output of multiple iSCAM model runs in a comparative fashion.
+Running of iSCAM and compilation of results figures was streamlined using the iscam-gui software package developed at the Pacific Biological Station by C. Grandin (\hyperref[https://github.com/cgrandin/iscam-gui]{\color{blue}https://github.com/cgrandin/iscam-gui}). iscam-gui is written in the statistical language R, and provides a graphical user interface that allows users to run and show output of multiple iSCAM model scenarios in a comparative fashion.
 
 \section{MODEL DESCRIPTION}
 
-This section contains the documentation in mathematical form of the underlying iSCAM age-structured model, its steady state version that is used to calculate reference points, the observation models used in predicting observations, and the components of the objective function that formulate the statistical criterion used to estimate model parameters. All of the model equations are provided in tables and are intended to represent the order of operations, or pseudocode, with which to implement the model. A documented list of symbols used in model equations is given in Table~\ref{tab:variables}. The documentation presented here is a revised version of the iscam user guide available at \hyperref[https://github.com/smartell/iSCAM]{\color{blue}https://github.com/smartell/iSCAM}. Much of the text and equations have been taken directly from the original iSCAM user guide.
+This section contains the documentation in mathematical form of the underlying iSCAM age-structured model, its steady state version that is used to calculate reference points, the observation models used in predicting observations, and the components of the objective function that formulate the statistical criterion used to estimate model parameters. A documented list of symbols used in model equations is given in Table \ref{tab:variables}. The documentation presented here is a revised version of the iscam user guide available at \hyperref[https://github.com/smartell/iSCAM]{\color{blue}https://github.com/smartell/iSCAM}. Much of the text and many of the equations have been taken directly from the original iSCAM user guide.
 
 Note that all the model equations are presented for a sex structured model with $S$ sexes. Models can therefore be constructed with data for females only, for males and females, or with unsexed data. This \fishname\ assessment is a female only model with $S=1$.
 
@@ -28,32 +28,33 @@ Note that all the model equations are presented for a sex structured model with 
 
 \subsection{A Steady-State Age-Structured Model}
 
-For the steady-state conditions represented in Table~\ref{tab:steady-state-model}, we assume the parameter vector $\Theta$ in Eq.~\ref{eq:df1} is unknown and would be estimated by fitting iSCAM to data. For a given set of sex-specific growth parameters and maturity-at-age parameters defined by Eq.~\ref{eq:df2}, growth is assumed to follow von Bertalanffy (Eq.~\ref{eq:df3}), mean weight-at-age is given by the allometric relationship in Eq.~\ref{eq:df4}, and the age and sex-specific vulnerability is given by an age-based logistic function (Eq.~\ref{eq:df5}). The terms vulnerability and selectivity are used interchangeably throughout this document, although, technically, selectivity refers to the fishing gear, while vulnerability refers to all processes affecting the availability of fish to the fishery. Selectivity parameters can be fixed or estimated.
+For the steady-state conditions represented in Table \ref{tab:steady-state-model}, we assume the parameter vector $\Theta$ in Eq. \ref{eq:df1} is unknown and would be estimated by fitting iSCAM to data. For a given set of sex-specific growth parameters and maturity-at-age parameters defined by Eq. \ref{eq:df2}, growth is assumed to follow von Bertalanffy (Eq. \ref{eq:df3}), mean weight-at-age is given by the allometric relationship in Eq. \ref{eq:df4}, and the age and sex-specific vulnerability is given by an age-based logistic function (Eq. \ref{eq:df5}). The terms vulnerability and selectivity are used interchangeably throughout this document, although, technically, selectivity refers to the fishing gear, while vulnerability refers to all processes affecting the availability of fish to the fishery. Selectivity parameters can be fixed or estimated.
 
-Survivorship for unfished and fished populations is defined by Eqns.~\ref{eq:df7} and ~\ref{eq:df8}, respectively. Note that in cases where more than one sex is modelled, fished survivorship is sex-specific to allow for sex-specific vulnerability-at-age $v_{a,s}$ when the age-based logistic function is used to model vulnerability. It is assumed that all individuals ages $A$ and older (i.e., the plus group) have the same total mortality rate. The incidence functions refer to the life-time or per-recruit quantities such as spawning biomass per recruit ($\phi_E$, Eq. \ref{eq:df9}) or vulnerable biomass per recruit ($\phi_B$, Eq. \ref{eq:df10}). Note that upper and lower case subscripts denote unfished and fished conditions, respectively. Unfished spawning biomass is given by Eq.~\ref{eq:df12} and the recruitment compensation ratio (\citet{myers1999}) is given by Eq. \ref{eq:df13}. The steady-state equilibrium recruitment for a given fishing mortality rate $F_e$ is given by Eq.~\ref{eq:df14}. Note that we assume that recruitment follows a Beverton-Holt stock recruitment model of the form shown in Equation \ref{eq:df27}, where the maximum juvenile survival rate $s_o$ is given by:
+Survivorship for unfished and fished populations is defined by Eqns. \ref{eq:df7} and \ref{eq:df8}, respectively. It is assumed that all individuals ages $A$ and older (i.e., the plus group) have the same total mortality rate. The incidence functions refer to the life-time or per-recruit quantities such as spawning biomass per recruit ($\phi_E$, Eq. \ref{eq:df9}) or vulnerable biomass per recruit ($\phi_B$, Eq. \ref{eq:df10}). Note that upper and lower case subscripts denote unfished and fished conditions, respectively. Unfished spawning biomass is given by Eq. \ref{eq:df12} and the recruitment compensation ratio (\citet{myers1999}) is given by Eq. \ref{eq:df13}. The steady-state equilibrium recruitment for a given fishing mortality rate $F_e$ is given by Eq. \ref{eq:df14}. Note that we assume that recruitment follows a Beverton-Holt stock recruitment model of the form shown in Equation \ref{eq:df27}, where the maximum juvenile survival rate $s_o$ is given by:
 
 \[s_o=\frac{\kappa}{\phi_E},\]
 and the density-dependent term is given by:
 \[\beta=\frac{\kappa-1}{R_{{o}}\phi_{{E}}}\]
-which simplifies to Eq.~\ref{eq:df14}.
+which simplifies to Eq. \ref{eq:df14}.
 
-The equilibrium yield $C_e$ for a given fishing mortality rate is given by Eq.~\ref{eq:df15}. These steady-state conditions are critical for determining various reference points such as F\subscr{MSY} and B\subscr{MSY}.
+The equilibrium yield $C_e$ for a given fishing mortality rate is given by Eq. \ref{eq:df15}. These steady-state conditions are critical for determining various reference points such as F\subscr{MSY} and B\subscr{MSY}.
 .
 \subsection{MSY-based Reference Points}
-When defining reference points for this assessment, only the commercial trawl fishery was used to calculate MSY quantities. In the case of a single fishery, iSCAM calculates F\subscr{MSY} by finding the value of $F_e$ that results in the zero derivative of \ref{eq:df15}. This is accomplished numerically using a Newton-Raphson method where an initial guess for F\subscr{MSY} is set equal to $M$. Given an estimate of F\subscr{MSY}, other reference points such as MSY and B\subscr{MSY} are calculated using the equations in Table~\ref{tab:steady-state-model}.
+When defining reference points for this assessment, only the commercial trawl fishery was used to calculate MSY quantities. In the case of a single fishery, iSCAM calculates F\subscr{MSY} by finding the value of $F_e$ that results in the zero derivative of \ref{eq:df15}. This is accomplished numerically using a Newton-Raphson method where an initial guess for F\subscr{MSY} is set equal to $M$. Given an estimate of F\subscr{MSY}, other reference points such as MSY and B\subscr{MSY} are calculated using the equations in Table \ref{tab:steady-state-model}.
 
 \section{ANALYTIC METHODS: STATE DYNAMICS}
-The estimated parameter vector in iSCAM is defined in Eq.~\ref{eq:df16} of Table~\ref{tab:catch-age-model}. The estimated parameters $R_0$, $h$, and $M$, are the leading population parameters that define the overall scale and productivity of the population.\\
+The estimated parameter vector in iSCAM is defined in Eq. \ref{eq:df16} of Table \ref{tab:catch-age-model}. The estimated parameters $R_0$, $h$, and $M$, are the leading population parameters that define the overall scale and productivity of the population.\\
 
 Variance components of the model were partitioned using an errors in variables approach. The key variance parameter is the inverse of the total variance $\vartheta^2$ (i.e., total precision). This parameter can be fixed or estimated, and was fixed for this model. The total variance is partitioned into observation and process error components by the model parameter $\rho$, which represents the proportion of the total variance that is due to observation error (Eq. \ref{eq:df17}) (\citet{punt1999} and \citet{deriso2007}).\\
+\bigskip
 
-The unobserved state variables in Eq.~\ref{eq:df18} include the numbers-at-age in year $t$ of sex $s$ ($N_{t,a,s}$), the spawning stock biomass in year $t$ of sex $s$ ($B_{t,s}$), and the total age- and sex-specific total mortality rate ($Z_{t,a,s}$).
-The initial numbers-at-age in the first year (Eq.~\ref{eq:df19}) and the annual recruits (Eq.~\ref{eq:df20}) are treated as estimated parameters and used to initialize the numbers-at-age array. 
+The unobserved state variables in Eq. \ref{eq:df18} include the numbers-at-age in year $t$ of sex $s$ ($N_{t,a,s}$), the spawning stock biomass in year $t$ of sex $s$ ($B_{t,s}$), and the total age- and sex-specific total mortality rate ($Z_{t,a,s}$).
+The initial numbers-at-age in the first year (Eq. \ref{eq:df19}) and the annual recruits (Eq. \ref{eq:df20}) are treated as estimated parameters and used to initialize the numbers-at-age array. 
 
-Vulnerability-at-age is here assumed time-invariant and is modelled using a two-parameter logistic function (Eq. \ref{eq:df21}). The annual fishing mortality for each gear $k$ in year $t$ is the exponent of the estimated vector $\Gamma_{k,t}$ (Eq.~\ref{eq:df22}). The vector of log fishing mortality rate parameters $\Gamma_{k,t}$ is a bounded vector with a minimum value of $-30.0$ and an upper bound of $3.0$. In arithmetic space this corresponds to a minimum value of $9.36e^{-14}$ and a maximum value of $20.01$ for annual fishing mortality rates. In years where there are zero reported catches for a given fleet, no corresponding fishing mortality rate parameter is estimated and the implicit assumption is there was no fishery in that year.
+Vulnerability-at-age is here assumed time-invariant and is modelled using a two-parameter logistic function (Eq. \ref{eq:df21}). The annual fishing mortality for each gear $k$ in year $t$ is the exponent of the estimated vector $\Gamma_{k,t}$ (Eq. \ref{eq:df22}). The vector of log fishing mortality rate parameters $\Gamma_{k,t}$ is a bounded vector with a minimum value of $-30.0$ and an upper bound of $3.0$. In arithmetic space this corresponds to a minimum value of $9.36e^{-14}$ and a maximum value of $20.01$ for annual fishing mortality rates. In years where there are zero reported catches for a given fleet, no corresponding fishing mortality rate parameter is estimated and the implicit assumption is there was no fishery in that year.
 
-State variables in each year are updated using Eqns.~\ref{eq:df23} - ~\ref{eq:df26}, where the spawning biomass is the product of the numbers-at-age and the mature biomass-at-age (Eq.~\ref{eq:df23}). The total mortality rate is given by Eq.~\ref{eq:df24}, and the total catch (in weight) for each gear is given by Eq.~\ref{eq:df25}, assuming that both natural and fishing mortality occur simultaneously throughout the year. The sex-specific numbers-at-age are propagated over time using Eq.~\ref{eq:df26}, where members of the plus group (age $A$) are all assumed to have the same total mortality rate.
-Recruitment to age $k$ is assumed to follow a Beverton-Holt model for \fishname\ (Eq.~\ref{eq:df27}) where the maximum juvenile survival rate ($s_o$) is defined by $s_o=\frac{\kappa}{\phi_E}$. For the Beverton-Holt model, $\beta$ is derived by solving Eq.~\ref{eq:df27} for $\beta$ conditional on estimates of $h$ and $R_o$.
+State variables in each year are updated using Eqns. \ref{eq:df23}--\ref{eq:df26}, where the spawning biomass is the product of the numbers-at-age and the mature biomass-at-age (Eq. \ref{eq:df23}). The total mortality rate is given by Eq. \ref{eq:df24}, and the total catch (in weight) for each gear is given by Eq. \ref{eq:df25}, assuming that both natural and fishing mortality occur simultaneously throughout the year. The sex-specific numbers-at-age are propagated over time using Eq. \ref{eq:df26}, where members of the plus group (age $A$) are all assumed to have the same total mortality rate.
+Recruitment to age $k$ is assumed to follow a Beverton-Holt model for \fishname\ (Eq. \ref{eq:df27}) where the maximum juvenile survival rate ($s_o$) is defined by $s_o=\frac{\kappa}{\phi_E}$. For the Beverton-Holt model, $\beta$ is derived by solving Eq. \ref{eq:df27} for $\beta$ conditional on estimates of $h$ and $R_o$.
 
 \section{RESIDUALS, LIKELIHOODS, AND OBJECTIVE FUNCTION VALUE COMPONENTS}
 The objective function contains five major components:
@@ -66,7 +67,7 @@ The objective function contains five major components:
   \begin{enumerate}[noitemsep,nolistsep]
     \item constrain the estimates of annual recruitment to conform to a Beverton-Holt stock-recruit function
     \item weakly constrain the log recruitment deviations to a normal distribution
-    \item weakly constrain estimates of log fishing mortality to a normal distribution ($N\sim(\ln(0.2), 4.0)$) to prevent estimates of catch from exceeding estimated biomass.
+    \item weakly constrain estimates of log fishing mortality to a normal distribution ($\sim N(\ln(0.2), 4.0)$) to prevent estimates of catch from exceeding estimated biomass.
     \end{enumerate}
 \end{enumerate}
 
@@ -134,7 +135,7 @@ where $\rho \varphi^2$ is the proportion of the total error that is associated w
 %% where $\rho \varphi^2$ is the proportion of the total error that is associated with observation errors, and $\omega_{k,t}$ is a user specified relative weight for observation $t$ from gear $k$.
 %% \end{addmargin}
 
-The $ \omega_{k,t}$ terms allow each observation to be weighted relative to the total error $\rho \varphi^2$; for example, to omit a particular observation, set $\omega_{k,t}=0$, or to give 2 times the weight, then set $\omega_{k,t}=2.0$. To assume all observations have the same variance then simply set $\omega_{k,t}=1$. Note that if $\omega_{k,t}=0$ then equation \ref{eq:df32} is undefined; therefore, iSCAM adds a small constant to $\omega_{k,t}$ ($e^{-10}$, which is equivalent to assuming an extremely large variance) to ensure the likelihood can be evaluated. In this assessment, values for $\omega{k,t}$ were set to the annual CVs from the survey (Table \ref{tab:Indices})
+The $ \omega_{k,t}$ terms allow each observation to be weighted relative to the total error $\rho \varphi^2$; for example, to omit a particular observation, set $\omega_{k,t}=0$, or to give 2 times the weight, then set $\omega_{k,t}=2.0$. To assume all observations have the same variance then simply set $\omega_{k,t}=1$. Note that if $\omega_{k,t}=0$ then equation \ref{eq:df32} is undefined; therefore, iSCAM adds a small constant to $\omega_{k,t}$ ($e^{-10}$, which is equivalent to assuming an extremely large variance) to ensure the likelihood can be evaluated. In this assessment, values for $\omega{k,t}$ were set to inverse of the annual CVs from the survey (Table \ref{tab:Indices})
 
 \subsection{Age composition data}
 Sampling theory suggest that age composition data are derived from a multinomial distribution \citet{fournier1982}. However, iSCAM assumes that age-proportions are obtained from a multivariate logistic distribution (\citet{sr95schnute,richards1997visualizing}). iSCAM departs from the traditional multinomial model due to choices regarding weighting of the age-composition data in the objective function. First, the multinomial distribution requires the specification of an effective sample size. This weighting may be done arbitrarily or through iterative re-weighting \citet{mcallister1997,gavaris2002}, and in the case of multiple and potentially conflicting age-proportions this procedure may fail to converge properly. The assumed effective sample size can have a large impact on the overall model results.
@@ -160,11 +161,11 @@ and the negative loglikelihood evaluated at the conditional maximum likelihood e
 In short, the multivariate logistic likelihood for age-composition data is just the log of the residual variance weighted by the number observations over years and ages.
 
 \subsection{Stock recruitment}
-There are two alternative stock-recruitment models available in iSCAM; the Beverton-Holt model and the Ricker model. Annual recruitment and the initial age-composition are treated as latent variables in iSCAM, and residuals between estimated recruits and the deterministic stock-recruitment models are used to estimate unfished spawning stock biomass and recruitment compensation. The residuals between the estimated and predicted recruits is given by:
+This stock assessment assumes Beverton-Holt recruitment. Annual recruitment and the initial age-composition are treated as latent variables in iSCAM, and residuals between estimated recruits and the deterministic stock-recruitment models are used to estimate unfished spawning stock biomass and recruitment compensation. The residuals between the estimated and predicted recruits is given by:
 \begin{equation}\label{eq:df35}
-\delta_t = \ln(\bar{R}e^{w_t}) - f(B_{t-k})
+\delta_t = \ln(\bar{R}e^{w_t}) - R_t)
 \end{equation}
-where $f(B_{t-k})$ is given by \ref{eq:df27}, and $k$ is the age at recruitment. Note that a bias correction term for the lognormal process errors is included in \ref{eq:df27}.
+where $R_t$ is given by \ref{eq:df27}, and $k$ is the age at recruitment. Note that a bias correction term for the lognormal process errors is included in \ref{eq:df27}.
 
 The negative log likelihood for the recruitment deviations is given by the normal density (ignoring the scaling constant):
 \begin{equation}\label{eq:df36}
@@ -237,7 +238,7 @@ $t_{o s}$ & & Theoretical age at zero length sex $s$ \\
 $\acute{a}_s$ & & Scalar in length-weight allometry for sex $s$\\
 $\acute{b}_s$ & & Power parameter in length-weight allometry for sex $s$\\
 $\dot{a}_s$ & & Age at 50\% maturity for sex $s$ \\
-$\acute{\gamma}_s$ & & Standard deviation at 50\% maturity for sex $s$\\
+$\dot{\gamma}_s$ & & Standard deviation at 50\% maturity for sex $s$\\
 \hline
 \end{tabular}
 \end{table}
@@ -250,15 +251,15 @@ $\acute{\gamma}_s$ & & Standard deviation at 50\% maturity for sex $s$\\
 \hline \\
 \vbox{\begin{center}\bf{Parameters}\end{center}\vspace{-1ex}} \\
 \vbox{\beq \Theta = (R_o,h,M)\,; \ \ \ R_o>0; \ \ \ 0.2 \leq h < 1.0; \ \ \ M > 0 \label{eq:df1} \eeq} \\
-\vbox{\beq \Phi = (l_{\infty,s},\acute{k}_s, t_{o,s},\acute{a}_s,\acute{b}_s,\dot{a}_s,\dot{\gamma}_s,\hat{a},\hat{\gamma}) \label{eq:df2} \eeq} \\
+\vbox{\beq \Phi = (l_{\infty,s},\acute{k}_s, t_{o,s},\acute{a}_s,\acute{b}_s,\dot{a}_s,\dot{\gamma}_s,\hat{a}_k,\hat{\gamma}_k) \label{eq:df2} \eeq} \\
 \\
 \vbox{\begin{center}\bf{Age-schedule information}\end{center}\vspace{-4ex}} \\
 \vbox{\beq l_{a,s}=l_{}\left(1-e^{\left(-k_s\left(a-t_{o,s}\right)\right)}\right) \label{eq:df3} \eeq} \\
 \vbox{\beq w_{a,s}=\acute{a}_s(l_{a,s})^{\acute{b}_s} \label{eq:df4} \eeq} \\
 \\
-\vbox{\beq v_{a,s}=\left(1+e^{\left(\frac{-(\hat{a}-l_{a,s})}{\hat{\gamma}}\right)}\right)^{-1} \label{eq:df5} \eeq} \\
+\vbox{\beq v_a=\left(1+e^{\left(\frac{-(\hat{a}-a)}{\hat{\gamma}}\right)}\right)^{-1} \label{eq:df5} \eeq} \\
 \\
-\vbox{\beq f_{a,s}=w_{a,s}\left(1+e^{\left(\frac{-\left(\dot{a}_s-a\right)}{\dot{\gamma}_s}\right)}\right)^{-1} \label{eq:df6} \eeq} \\
+\vbox{\beq f_{a,s}=w_{a,s}\left(1+e^{\left(\frac{-\left(\dot{a}_s-a_s\right)}{\dot{\gamma}_s}\right)}\right)^{-1} \label{eq:df6} \eeq} \\
 \\
 \vbox{\begin{center}\bf{Survivorship}\end{center}} \\
 \vbox{\beq \iota_a = \begin{cases}
@@ -332,7 +333,7 @@ $\acute{\gamma}_s$ & & Standard deviation at 50\% maturity for sex $s$\\
 \vbox{\beq N_{t,a,s}=\frac{1}{S}\bar{R}e^{\omega_{t}};\ \ \ 1\leq t\leq T;\ \ \ a=1 \label{eq:df20} \eeq} \\
 \\
 \\
-\vbox{\beq v_{k,a,s}= \frac{1}{1+e^{\left(-\frac{\left(a_s - \hat{a}_k\right)}{\hat{\gamma}_k}\right)}} \label{eq:df21} \eeq} \\
+\vbox{\beq v_{k,a}= \frac{1}{1+e^{\left(-\frac{\left(a - \hat{a}_k\right)}{\hat{\gamma}_k}\right)}} \label{eq:df21} \eeq} \\
 \\
 \vbox{\beq  F_{k,t}=e^{\Gamma_{k,t}} \label{eq:df22} \eeq} \\
 \\

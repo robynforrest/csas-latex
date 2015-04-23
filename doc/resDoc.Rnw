@@ -147,7 +147,7 @@
 \lhead{}
 \rhead{}
 \lfoot{\fishname}           % Species common name for left footer
-\rfoot{Coastwide}           % The area of the assessment for right footer
+\rfoot{DRAFT - DO NOT CITE}           % The area of the assessment for right footer
 %\rfoot{WP 2012/P02a}       % Change to appendix number for appendices
                             % Will probably delete footers in main text
                             %  for final Res Doc.
@@ -307,7 +307,7 @@ modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl
 <<model-equations, child='app-equations/app-equations.Rnw'>>=
 @
 
-%% Used when you need to insert outside documents:
-\setcounter{page}{68}
+%%Used when you need to insert outside documents:
+%%\setcounter{page}{68}
 
 \end{document}

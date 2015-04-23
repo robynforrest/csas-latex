@@ -5,29 +5,36 @@
 \label{chap:propfemale}
 
 \section{INTRODUCTION}
-This analysis was done to determine whether or not this stock has a sex proportion close to 50\% so that a sex-specific assessment model with an assumed sex proportion of 50\% could be used. If the proportion of females is large enough, a single-sex model could be employed. The weighting algorithm and proportion generation algorithm is similar to algorithm 2 in the 2014 Rock Sole assessment (\citet{rocksole2014}). The analysis presented here assumes a coastwide stock.
+We elected to use a female-only stock assessment model because catch and survey data suggested the majority of the catch is female. Proportion of females in the fishery and surveys is quantified in this appendix. The weighting algorithm and proportion generation algorithm is similar to algorithm 2 in the 2014 Rock Sole assessment (\citet{rocksole2014}). The analysis presented here assumes a coastwide stock.
 
 \section{DATA SELECTION}
 Age data were selected based on the following attributes:\\
+\bigskip
+
 \textbf{Trawl Fishery}: \\
 TRIP\_SUB\_TYPE\_DESC equal to 1 or 4 (observed domestic or non-observed domestic) \\
 MORPHOMETRICS\_ATTRIBUTE\_CODE equal to 1 or 2 or 4 or 10 (Fork length, Standard length, Total length, Whole round weight) \\
+\bigskip
 
 \textbf{Surveys}: \\
 TRIP\_SUB\_TYPE\_DESC equal to 2 or 3 (research or charter) \\
 MORPHOMETRICS\_ATTRIBUTE\_CODE  equal to 1 or 2 or 4 or 10 (Fork length, Standard length, Total length, Whole round weight) \\
+\bigskip
 
 \textbf{Years}: \\
 Greater than or equal to 1996 \\
+\bigskip
 
 \textbf{Quarters of the year}: \\
 1 = Jan-Mar \\
 2 = Apr-Jun \\
 3 = Jul-Sep \\
 4 = Oct-Dec \\
+\bigskip
 
 \textbf{Areas}: \\
 3CD and 5ABCDE
+\bigskip
 
 \textbf{Sex}: \\
 Male or female only, no unknowns or null fields \\
@@ -38,9 +45,7 @@ Pseudocode has been provided in Section \ref{sec:propfemale-pseudocode} to descr
 \subsection{Trawl Fishery}
 Observations within a sample are likely to be correlated due to the small area which is trawled in a single fishing event. Also, trip samples
 are likely to be correlated due to the fact that it is the same vessel and captain. This algorithm calculates a sex-specific mean weight by
-trip, then combines the trips to get a mean weight within the quater of the year based on the total catch weight for the trip. It then combines
-these across quarters by weighting the commercial catch in each quarter. The routine was run for an assumed coastwide stock, and as two areas:
-the West coast of Vancouver Island, and the combination of Queen Charlotte Sound and Hecate Strait.
+trip, calculated from individual sex-specific length observations converted to weight using Eq. \ref{eq:lw}, then uses Eqs. \ref{eq:samplewt}--\ref{eq:propfemale} to estimate proportion of females. The pseudocode for the algorithm is provided in Section \ref{sec:propfemale-pseudocode}.
 
 \subsection{Surveys}
 For surveys, the same algorithm is followed except that the quarter of the year is not included in the calculation. This is because the surveys are
@@ -56,28 +61,28 @@ where $\alpha_s$ and $\beta_s$ are parameters for sex $s$ and $w_{ijs}$ and $l_{
 \end{addmargin}
 
 \begin{align} \label{eq:samplewt}
-W_{js}=\sum_{i=1}^{N_{js}}\hat{w}_{ijs}
+W_{jst}=\sum_{i=1}^{N_{jst}}\hat{w}_{ijst}
 \end{align}
 \begin{addmargin}[3em]{1em}
-where $W_{js}$ is the total weight for sample $j$, sex $s$, and $N_{js}$ is the number of specimens in sample $j$ for sex $s$
+where $W_{jst}$ is the total weight for sample $j$, sex $s$, trip $t$, and $N_{jst}$ is the number of specimens in sample $j$ for sex $s$
 \end{addmargin}
 
 \begin{align} \label{eq:totaltripwt}
 W_{st}=\frac{\sum\limits_{j=1}^{K_t}W_{jst}S_{jt}}{\sum\limits_{j=1}^{K_t}S_{jt}}
 \end{align}
 \begin{addmargin}[3em]{1em}
-where $W_{st}$ is the total weight for sex $s$ and trip $t$, $K_t$ is the number of samples in trip $t$, and $S_{jt}$ is the sample weight for sample $j$ from trip $t$.
+where $W_{st}$ is the mean weight for sex $s$ and trip $t$, weighted by sample weight, where $K_t$ is the number of samples in trip $t$, and $S_{jt}$ is the sample weight for sample $j$ from trip $t$.
 \end{addmargin}
 
 \begin{align} \label{eq:totaltripcatchwt}
 C_t=\sum\limits_{j=1}^{K_t}C_{jt}
 \end{align}
 \begin{addmargin}[3em]{1em}
-where $C_t$ is the total catch weight for sampled hauls for trip $t$, $K_j$ is the number of samples in trip $t$, and $C_{jt}$ is the catch weight associted with sample $j$ and trip $t$.
+where $C_t$ is the total catch weight for sampled hauls for trip $t$, $K_t$ is the number of samples in trip $t$, and $C_{jt}$ is the catch weight associted with sample $j$ and trip $t$.
 \end{addmargin}
 
 \begin{align} \label{eq:totalquarterwt}
-W_{qs}=\frac{\sum\limits_{t=1}^{T_q}W_{qst}R_{qt}}{\sum\limits_{n=1}^{T_q}R_{qt}}
+W_{qs}=\frac{\sum\limits_{t=1}^{T_q}W_{qst}R_{qt}}{\sum\limits_{t=1}^{T_q}R_{qt}}
 \end{align}
 \begin{addmargin}[3em]{1em}
 where $W_{qs}$ is the total weight for sex $s$ and quarter of year $q$, $R_{qt}$ is the trip weight for all sampled trips in quarter $q$,
@@ -92,10 +97,10 @@ where $C_q$ is the total catch weight for sampled hauls for quarter $q$, $K_q$ i
 \end{addmargin}
 
 \begin{align} \label{eq:totalyearwt}
-W_y=\frac{\sum\limits_{q=1}^{4}W_{qy}C_{qy}}{\sum\limits_{q=1}^{4}C_{qy}}
+W_{ys}=\frac{\sum\limits_{q=1}^{4}W_{qys}C_{qy}}{\sum\limits_{q=1}^{4}C_{qy}}
 \end{align}
 \begin{addmargin}[3em]{1em}
-where $W_y$ is the total weight for year $y$, $W_{qy}$ is the weight in quarter $q$ of year $y$, and $C_{qy}$ is the catch in quarter $q$ of year $y$.
+where $W_{sy}$ is the total weight for year $y$, sex $s$, $W_{qys}$ is the weight in quarter $q$ of year $y$, and $C_{qy}$ is the catch in quarter $q$ of year $y$.
 \end{addmargin}
 
 \begin{align} \label{eq:totalyearcatchwt}
