@@ -1,0 +1,313 @@
+% resDoc.tex
+
+\documentclass[11pt]{book}
+\usepackage{resDocSty}
+\usepackage{appendix}
+\usepackage{cite}
+
+\usepackage{longtable,array}   % need array when specifying a ragged right column:  >{\raggedright\arraybackslash}{p2in}.
+% \renewcommand{\chaptername}{Appendix}
+% \renewcommand*{\chaptername}{Appendix}
+% \addto\captionsenglish{\renewcommand\chaptername{Part}}
+\usepackage{import}            % for figures in chapter subdirectories
+%\usepackage{float}             % Allow figures and tables to be controlled better (avoid the floating).
+
+% Had these for YMR Eqns appendix:
+% \renewcommand{\footrulewidth}{0.4pt}
+% \renewcommand{\headrulewidth}{0pt}
+
+% For appendices:
+\usepackage{graphicx}          % For inclusion of figures
+\usepackage{verbatim,fancyvrb} % Check - may be in .sty file
+\usepackage{xifthen}           % provides \ifthenelse and \isempty
+\usepackage{color, colortbl}
+\usepackage{arydshln}          % For dashed lines in tables (has to be loaded after other stuff)
+\usepackage{pdfpages}          % So we can import PDFs into the document (e.g. request for science advice).
+\usepackage[parfill]{parskip}  % So paragraphs will have a blank line between them
+\setlength{\parskip}{12pt}
+
+% For hyperlinked references (figures and citations, etc.). The bookmarksdepthlevel allows
+%  the TOC to be shown in the bookmarks tree in the output PDF.
+\usepackage[bookmarks,bookmarksopen,bookmarksdepth=4]{hyperref}
+\hypersetup{                   % Set up the hyperref options here
+    pdftitle={Arrowtooth Flounder},
+    pdfauthor={Chris Grandin},
+    pdfsubject={Stock Assessment},
+    %pdfkeywords={keyword1, keyword2},
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    colorlinks=true,
+    linkcolor=blue,
+    allcolors=blue,
+    citecolor=cyan,
+    pdfstartview=Fit,
+    pdfpagemode=UseOutlines
+    %pdfpagelayout=TwoPageRight
+}
+% Use the following codes for references within the document.
+%   chap: chapter
+%    sec: section
+% subsec: subsection
+%    fig: figure
+%    tab: table
+%     eq: equation
+%    lst: code listing
+%    itm: enumerated list item
+%    app: appendix subsection
+\usepackage{hypcap}            % So links will anchor at figure, not caption
+
+\usepackage{subfig}            % For two-panel plots
+\usepackage{scrextend}         % For indenting blocks of text with 'addmargin'
+\usepackage{relsize}           % For mathlarger, which makes equations bigger
+%\usepackage{mathtools}        % For mathmboxes for use in the equations appendix
+\usepackage{algorithm}         % For display of pseudocode
+\usepackage{algpseudocode}     % For display of pseudocode
+\usepackage{linegoal}          % For display of pseudocode
+% A \Let command for defining assignments within the algorithmic environment which
+% supports automatic indentation when the second argument is too long to fit
+% on one line
+\newcommand*{\Let}[2]{\State #1 $\gets$
+\parbox[t]{\linegoal}{#2\strut}}
+% A \State command that supports automatic indentation when the argument's
+% content is too long to fit on one line
+\newcommand*{\LongState}[1]{\State
+\parbox[t]{\linegoal}{#1\strut}}
+
+\usepackage{enumitem}          % To remove spacing between list items [noitemsep,nolistsep]
+\newlist{longitem}{enumerate}{5}
+\setlist[longitem,1]{label=\arabic*)}
+\setlist[longitem,2]{label=\alph*)}
+\setlist[longitem,3]{label=\roman*)}
+\setlist[longitem,4]{label=\arabic*)}
+\setlist[longitem,5]{label=\alph*)}
+
+\definecolor{rowclr}{RGB}{255, 192, 203}
+\newcommand{\sQuote}[1]{`#1'}
+\newcommand{\dQuote}[1]{``#1''}
+\newcommand{\eqn}[1]{\begin{equation}#1\end{equation}}
+\newcommand{\gfrac}[2]{\genfrac{}{}{}{0}{#1}{#2}}
+
+\newcommand\bestfig[6]{ % #1=filename, #2=main caption, #3=figure height, #4=short caption #5=file extension #6=directory
+	% needs package epstopdf to work
+	\begin{figure}[htpb] %[htbp]
+	\centering
+	\ifthenelse{ \isempty{#5} \OR \equal{#5}{eps} }
+		{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#6#1.eps}}
+		{\setlength\fboxsep{0pt}
+		 \setlength\fboxrule{0pt}
+		 \fbox{\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#6#1.#5}}}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+	\ifthenelse{\isempty{#4}}
+		{\caption[#2]{#2}}  % \vspace{-2ex}} AME removing
+		{\caption[#4]{#2}}  % \vspace{-2ex}}  ``
+	\label{fig:#1}
+	\end{figure}
+        }
+
+\newcommand\pbsfig[5]{    % #1=filename, #2=main caption, #3=figure height, #4=short caption, #5=directory
+	\begin{figure}[tp] %[htbp]  Rowan had ht!
+	\centering
+	\includegraphics[width=6.5in,height=#3in,keepaspectratio=TRUE]{#5#1.eps}
+	% source: http://xelatex.blogspot.ca/2008/03/newcommand-with-optional-argument.html
+	\ifthenelse{\isempty{#4}}
+		{\caption[#2]{#2}\vspace{-2ex}}
+		{\caption[#4]{#2}\vspace{-2ex}}
+	\label{fig:#1}
+	\end{figure}
+	%\clearpage
+}
+
+% eor - Show two things with a vertical bar between them
+\newcommand{\eor}[2]{{#1$\Vert$#2}}
+% bM - makes equations larger
+\newcommand{\bM}[1]{\mathlarger{\mathlarger{#1}}}
+% Allow newline breaks in a table cell: syntax is \specialcell{first line\\secondline}
+\newcommand{\specialcell}[2][c]{\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\newcommand{\fishname}{Arrowtooth Flounder}
+% sciencename - Science name for the species being assessed
+\newcommand{\sciencename}{Atheresthes stomias}
+\newcommand{\familyname}{Pleuronectidae}
+\newcommand{\commonname}{Turbot}
+\newcommand{\Avuln}{Age-at-50\%-vulnerability}
+\newcommand{\Amat}{Age-at-50\%-maturity}
+\newcommand{\amat}{age-at-50\%-maturity}
+
+\newcommand{\bc}{British Columbia}
+
+% For subscripts in text mode
+\newcommand{\subscr}[1]{$_{\text{#1}}$}
+
+% Headers and footers
+% For Res Doc, best to have a left and a right footer
+%  (and/or header), not just one (for double-sided printing).
+%
+% \lhead{DRAFT -- Non-citable working paper}  % Omit for final ResDoc.
+\lhead{}
+\rhead{}
+\lfoot{\fishname}           % Species common name for left footer
+\rfoot{DRAFT - DO NOT CITE}           % The area of the assessment for right footer
+%\rfoot{WP 2012/P02a}       % Change to appendix number for appendices
+                            % Will probably delete footers in main text
+                            %  for final Res Doc.
+
+% \linenumbers              % uncomment to add in line numbers
+% \modulolinenumbers[5]     % just number every 5th line
+
+% \def\AppLet{F}            % Appendix letter - we had this
+                            %  to number equations in Appendix
+                            %  F as (F.17) etc.
+% \def\StartP{102}          % page start
+
+\newcommand{\Bmsy}{B_\mathrm{MSY}}
+\newcommand{\umsy}{u_\mathrm{MSY}}
+\newcommand{\MapData}{C:/Work/ArrowtoothFlounder/2014Assessment/data/MapData}
+
+\newcommand{\EstM}{`Estimate \emph{M}'}
+\newcommand{\FixM}{`Fix \emph{M}'}
+
+% MCMC globals to use in all MCMC related text and discussions
+\newcommand{\mcmclength}{10 million} % MCMC Chain length
+\newcommand{\mcmcsampfreq}{5,000}    % Sampling frequency
+\newcommand{\mcmcnsamp}{2,000}       % Number of samples saved
+\newcommand{\mcmcburnin}{1,000}      % Number of samples removed from the beginning of the chain
+\newcommand{\mcmcndata}{1,000}       % nsamp - burnin, this is the actual number of samples used
+\newcommand{\mcmcci}{95\%}           % The confidence interval used in MCMC. Must be the same as what's in the knitr code block
+
+\begin{document}
+
+\def \KnitrHomePath {C:/github/csas-latex/doc}
+% Load iscam-gui list object scenarios - Make sure all are set up in correct order before running this
+% Also, set up standard plot sizes for the document
+<<>>=
+# If you source the file, it will load all the scenarios. A quicker way is to load the Rdata file
+# directly from the gui directory. Make sure all scenarios are correct and then do iscam(T) from the
+# .Rdata environment in the iscam-gui directory and save the file when you close Rgui. Then this will
+# source that binary file directly, which is much faster.
+#
+#setwd('../../iscam-gui')
+#source('iscam-gui.r')
+#iscam(showgui=FALSE)
+load("../../iscam-gui/.RData")
+require(PBSmodelling)
+require(tcltk)
+require(coda)
+require(ggplot2) # Only used for Observed landings plot.
+require(reshape2)
+require(Hmisc)
+require(xtable) # For tables which can be inserted into latex docs with knitr
+ci <- 95
+ps <- list(res=300,w=400,h=300)
+burnthin <- list(1000,1)
+opacity <- 30 # opaqueness of the envelope plots, i.e. biomass, depletion, and any barplots
+# 'sens' is the object required by the iscam-gui plot routines. It defines groups to be used for
+# sensitivities. It is a list of vectors, with the list's index being the sensGroup number passed to
+# the plotting routines. All sensitivities can be set up here and used in the maindoc. The names are
+# what will be displayed on plots. The lines can be any color or linetype.
+sens <- list()
+modelcolors <- list()
+modellinetypes <- list()
+modelnames <- list()
+# Sensitivity group 1, changing sigma
+sens[[1]] <- c(1,2,3)
+modelcolors[[1]] <- list("black","red","green")
+modellinetypes[[1]] <- list(1,1,1)
+modelnames[[1]] <- list("Reference Model","Sigma=0.1","Estimated Total Variance")
+# Sensitivity group 2, changing tau
+sens[[2]] <- c(1,4,5)
+modelcolors[[2]] <- list("black","red","green")
+modellinetypes[[2]] <- list(1,1,1)
+modelnames[[2]] <- list("Reference Model, Tau=0.8","Tau=1.0","Tau=0.6")
+# Sensitivity group 3, changing steepness
+sens[[3]] <- c(1,6)
+modelcolors[[3]] <- list("black","red")
+modellinetypes[[3]] <- list(1,1)
+modelnames[[3]] <- list("Reference Model","Low steepness")
+# Sensitivity group 4, changing M standard deviation
+sens[[4]] <- c(1,7,8)
+modelcolors[[4]] <- list("black","red","green")
+modellinetypes[[4]] <- list(1,1,1)
+modelnames[[4]] <- list("Reference Model","M=0.2, SD=0.05","M=0.2, SD=0.25")
+# Sensitivity group 5, changing M value
+sens[[5]] <- c(1,9)
+modelcolors[[5]] <- list("black","red")
+modellinetypes[[5]] <- list(1,1)
+modelnames[[5]] <- list("Reference Model","M=0.3, SD=0.2")
+# Sensitivity group 6, changing priors on Q (value)
+sens[[6]] <- c(1,10)
+modelcolors[[6]] <- list("black","red")
+modellinetypes[[6]] <- list(1,1)
+modelnames[[6]] <- list("Reference Model","Q priors, mean=ln(1), SD=1")
+# Sensitivity group 7, changing priors on Q (standard deviation)
+sens[[7]] <- c(1,11)
+modelcolors[[7]] <- list("black","red")
+modellinetypes[[7]] <- list(1,1)
+modelnames[[7]] <- list("Reference Model","Q priors, mean=ln(0.5), SD=1.5")
+# Sensitivity group 8, fixing trawl selectivity
+sens[[8]] <- c(1,12,13)
+modelcolors[[8]] <- list("black","red","green")
+modellinetypes[[8]] <- list(1,1,1)
+modelnames[[8]] <- list("Reference Model","Trawl selex fixed at maturity","Trawl selex fixed at 6yr")
+@
+
+\input{preamble}              % Table of contents, etc.
+% \setcounter{chapter}{0}
+% \setcounter{table}{0}
+% \setcounter{figure}{0}
+\setcounter{secnumdepth}{5}    % To number subsubheadings-ish
+
+% To number sections, tables etc. as 1, 2, 3, not 1.1 etc. (where
+%  the first 1 would be chapter number).
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\theequation}{\arabic{equation}}
+
+<<main-doc, child='maindoc/maindoc.Rnw'>>=
+@
+
+\clearpage
+
+\addtocontents{toc}{\par {\bf \vspace{10mm} APPENDICES} \par}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\appendix
+
+% Now want to number sections, tables etc. as A.1, A.2, etc.
+% Thought these wouldn't be with the appendix package, as
+%  automatic, but do need them even if use \begin{appendices}:
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+% Not including Appendix figures and tables in contents, and just
+%  including the Appendix (chapter) names (not sections or
+%  subsections):
+
+\lfoot{Arrowtooth Flounder - Coastwide}
+
+\rfoot{Appendix A -- Request for Science Advice}
+<<advice-request, child='app-requestforscienceadvice/app-requestforscienceadvice.Rnw'>>=
+@
+
+\rfoot{Appendix B -- Biological Data}
+<<biological-data, child='app-biology/app-biology.Rnw'>>=
+@
+
+\rfoot{Appendix C -- Proportion Female Analysis}
+<<prop-female, child='app-propfemale/app-propfemale.Rnw'>>=
+@
+
+\rfoot{Appendix D -- Age Composition weighting}
+<<agecomp-weighting, child='app-agecompweighting/app-agecompweighting.Rnw'>>=
+@
+
+\rfoot{Appendix E -- Model Equations}
+<<model-equations, child='app-equations/app-equations.Rnw'>>=
+@
+
+%%Used when you need to insert outside documents:
+%%\setcounter{page}{68}
+
+\end{document}
